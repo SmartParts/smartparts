@@ -4,14 +4,7 @@ import {makeStyles} from "@material-ui/core/styles";
 import {Link} from 'react-router-dom';
 import MenuIcon from '@material-ui/icons/Menu';
 
-// const useStyles = makeStyles((theme)=>({
-//     root:{
-//         width: "100vw",
-//         height:"100vh",
-//         backgroundColor: theme.palette.grey[300],
-//         paddingTop: theme.spacing(5),
-//     }
-// }))
+
 
 const useStyles = makeStyles((theme) =>({
     sectionDesktop: {
@@ -48,14 +41,15 @@ export default function Navbar() {
     );
     return (
         <>
-        <AppBar>
+        <AppBar position="sticky">
             <Toolbar>
                 <Typography variant="h5" style={{flexGrow:1}}>
                        OneLogView
                 </Typography>
                 <div className={classes.sectionDesktop}>
-                    <Button color="inherit" component={Link} to="/">Home</Button>
-                    <Button color="inherit" component={Link} to="/about">About</Button>
+                    <Button color="inherit">Home</Button>  
+                    {/*  component={Link} to="/" */}
+                    <Button color="inherit">About</Button>
                     <Button color="inherit">Contact</Button>
                 </div>
                 <IconButton className={classes.hideIcon} color="inherit" onClick={openMobileMenu}>
