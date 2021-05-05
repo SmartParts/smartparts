@@ -1,5 +1,5 @@
 import React, { Fragment,useState } from 'react';
-import {Menu,MenuItem,AppBar,Typography,Toolbar,Button,IconButton} from "@material-ui/core";
+import {Menu,MenuItem,AppBar,Typography,Toolbar,Button,IconButton,Switch} from "@material-ui/core";
 import {makeStyles} from "@material-ui/core/styles";
 import {Link} from 'react-router-dom';
 import MenuIcon from '@material-ui/icons/Menu';
@@ -17,10 +17,13 @@ const useStyles = makeStyles((theme) =>({
         [theme.breakpoints.up("md")]:{
             display:"none"
         }
+    },
+    root:{
+        backgroundColor:theme.palette.primary.dark
     }
 }))
 
-export default function Navbar() {
+export default function Navbar(props) {
     const [mobileMenuAnchorEl, setMobileMenuAnchorEl] = useState(null);
     const classes = useStyles();
     const isMobileMenuOpen = Boolean(mobileMenuAnchorEl);
@@ -41,7 +44,7 @@ export default function Navbar() {
     );
     return (
         <>
-        <AppBar position="sticky">
+        <AppBar position="sticky" className={classes.root}>
             <Toolbar>
                 <Typography variant="h5" style={{flexGrow:1}}>
                        OneLogView
@@ -51,6 +54,7 @@ export default function Navbar() {
                     {/*  component={Link} to="/" */}
                     <Button color="inherit">About</Button>
                     <Button color="inherit">Contact</Button>
+                    <Switch onChange={props.onThemeChangeHandler}></Switch>
                 </div>
                 <IconButton className={classes.hideIcon} color="inherit" onClick={openMobileMenu}>
                     <MenuIcon/>
