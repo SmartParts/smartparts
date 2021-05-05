@@ -50,10 +50,10 @@ export default function Navbar(props) {
                        OneLogView
                 </Typography>
                 <div className={classes.sectionDesktop}>
-                    <Button color="inherit">Home</Button>  
+                    <Button color="inherit" component={Link} to="/">Home</Button>  
                     {/*  component={Link} to="/" */}
-                    <Button color="inherit">About</Button>
-                    <Button color="inherit">Contact</Button>
+                    <Button color="inherit" component={Link} to="/result">Result</Button>
+                    <Button color="inherit" component={Link} to="/login">Login</Button>
                     <Switch onChange={props.onThemeChangeHandler}></Switch>
                 </div>
                 <IconButton className={classes.hideIcon} color="inherit" onClick={openMobileMenu}>

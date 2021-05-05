@@ -20,7 +20,8 @@ const useStyles = makeStyles((theme)=>({
         marginTop:"5px"
     },
     button:{
-        margin:"10px"
+        marginLeft:"10px",
+        marginTop:"15px"
     }
 }))
 

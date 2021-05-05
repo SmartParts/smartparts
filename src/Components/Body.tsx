@@ -2,6 +2,8 @@ import React from 'react';
 import {Grid,Button} from "@material-ui/core";
 import {makeStyles} from "@material-ui/core/styles";
 import Sidebar from './Sidebar';
+import { Route, Switch} from 'react-router-dom';
+import Home from './Home'
 
 const useStyles = makeStyles((theme)=>({
     root:{
@@ -22,7 +24,13 @@ export default function Body() {
     return (
         <Grid container className={classes.root}> 
             <Grid item xs={3} className={classes.item1} container><Sidebar/></Grid>
-            <Grid item xs={9} className={classes.item2} container></Grid>
+            <Grid item xs={9} className={classes.item2} container>
+                <Switch>
+                    <Route exact path="/" component={Home}/>
+                    <Route exact path="/result" component={Home}/>
+                    <Route exact path="/login" component={Home}/>
+                </Switch> 
+            </Grid>
         </Grid>
     )
 }

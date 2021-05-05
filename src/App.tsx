@@ -14,10 +14,12 @@ const useStyles = makeStyles((theme)=>({
     root:{
         width: "100vw",
         height:"100vh",
-        padding:"0px"
+        padding:"0px",
+        
     },
     paper:{
-      height:"100%"
+      height:"100%",
+      backgroundColor:theme.palette.background.default
     }
 }))
 
@@ -43,11 +45,6 @@ const App = ()=> {
       <Paper square className={classes.paper}>
       <BrowserRouter>
         <Navbar onThemeChangeHandler={onThemeChangeHandler}/>
-          {/* <Switch>
-            <Route exact path="/" component={Home}/>
-            <Route exact path="/about" component={Others}/>
-            <Route exact path="/contact" component={Others}/>
-          </Switch> */}
         <Body/>
       </BrowserRouter>
       </Paper>
