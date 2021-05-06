@@ -3,7 +3,8 @@ import {Grid,Button} from "@material-ui/core";
 import {makeStyles} from "@material-ui/core/styles";
 import Sidebar from './Sidebar';
 import { Route, Switch} from 'react-router-dom';
-import Home from './Home'
+import Home from './Home';
+import Results from './Results';
 
 const useStyles = makeStyles((theme)=>({
     root:{
@@ -27,7 +28,7 @@ export default function Body() {
             <Grid item xs={9} className={classes.item2} container>
                 <Switch>
                     <Route exact path="/" component={Home}/>
-                    <Route exact path="/result" component={Home}/>
+                    <Route exact path="/result" component={Results}/>
                     <Route exact path="/login" component={Home}/>
                 </Switch> 
             </Grid>

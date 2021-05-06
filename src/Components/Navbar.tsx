@@ -52,7 +52,7 @@ export default function Navbar(props) {
                 <div className={classes.sectionDesktop}>
                     <Button color="inherit" component={Link} to="/">Home</Button>  
                     {/*  component={Link} to="/" */}
-                    <Button color="inherit" component={Link} to="/result">Result</Button>
+                    <Button color="inherit" component={Link} to="/result">Results</Button>
                     <Button color="inherit" component={Link} to="/login">Login</Button>
                     <Switch onChange={props.onThemeChangeHandler}></Switch>
                 </div>
