@@ -6,6 +6,7 @@ function Results() {
     return (
         <React.Fragment>
            <Tabs></Tabs>
+           
         </React.Fragment>
     )
 }
