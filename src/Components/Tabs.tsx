@@ -1,11 +1,15 @@
 import React from 'react';
 import {Tab,Divider,Tabs,Paper} from '@material-ui/core';
 import {makeStyles} from "@material-ui/core/styles";
-import BasicDetails from "./BasicDetails";
+import Overview from './Overview';
 
 const useStyles = makeStyles((theme)=>({
     paper:{
       width:"100%",
+    },
+    tabStructure:{
+      padding:"30px",
+      height:"93.5%"
     }
 }))
 export default function DisabledTabs() {
@@ -18,7 +22,7 @@ export default function DisabledTabs() {
   const classes= useStyles();
 
   return (
-    <Paper square className={classes.paper}>
+    <Paper square className={classes.paper} elevation={0}>
       <Tabs
         value={value}
         indicatorColor="primary"
@@ -34,7 +38,9 @@ export default function DisabledTabs() {
         <Tab label="Latency" />
       </Tabs>
       <Divider/> 
-      <BasicDetails/>     
+      <Paper square className={classes.tabStructure}>
+        <Overview/>
+      </Paper>    
     </Paper>
   );
 }
