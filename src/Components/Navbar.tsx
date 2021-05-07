@@ -3,8 +3,8 @@ import {Menu,MenuItem,AppBar,Typography,Toolbar,Button,IconButton,Switch} from "
 import {makeStyles} from "@material-ui/core/styles";
 import {Link} from 'react-router-dom';
 import MenuIcon from '@material-ui/icons/Menu';
-
-
+import {UserAgentApplication} from 'msal';
+import {config} from'../config';
 
 const useStyles = makeStyles((theme) =>({
     sectionDesktop: {
@@ -35,6 +35,15 @@ export default function Navbar(props) {
         setMobileMenuAnchorEl(null);
     }
 
+    const login= async ()=>{
+        var client = new UserAgentApplication(config);
+        var request ={
+            scopes: ['https://o365mon.kusto.windows.net/user_impersonation']
+        }
+        let loginResponse= await client.loginPopup(request);
+        console.log(loginResponse);
+    }
+
     const mobileMenu =(
         <Menu id="mobile-menu" anchorEl={mobileMenuAnchorEl} keepMounted open={isMobileMenuOpen} >
             <MenuItem>Home</MenuItem>
@@ -53,7 +62,7 @@ export default function Navbar(props) {
                     <Button color="inherit" component={Link} to="/">Home</Button>  
                     {/*  component={Link} to="/" */}
                     <Button color="inherit" component={Link} to="/result">Results</Button>
-                    <Button color="inherit" component={Link} to="/login">Login</Button>
+                    <Button color="inherit" onClick={login}>Login</Button>
                     <Switch onChange={props.onThemeChangeHandler}></Switch>
                 </div>
                 <IconButton className={classes.hideIcon} color="inherit" onClick={openMobileMenu}>
