@@ -5,10 +5,19 @@ import Sidebar from './Sidebar';
 import { Route, Switch} from 'react-router-dom';
 import Home from './Home';
 import Results from './Results';
-
+import Footer from './Footer';
+import Login from './Login';
+import Registration from './Registration';
+import Shoppingcart from './Shoppingcart';
+import WishList from './Wishlist';
+import MyProfile from './MyProfile';
+import Dashboard from './UserDashboard';
+import ProductList from './ProductList';
+import UnlockPremium from './UnlockPremium';
+import BrandList from './BrandList';
 const useStyles = makeStyles((theme)=>({
     root:{
-        height:"91.35%"
+        height:"91.35%" //check
     },
     item1:{
         backgroundColor:theme.palette.grey[200],
@@ -23,15 +32,25 @@ const useStyles = makeStyles((theme)=>({
 export default function Body() {
     const classes= useStyles();
     return (
-        <Grid container className={classes.root}> 
-            <Grid item xs={3} className={classes.item1} container><Sidebar/></Grid>
-            <Grid item xs={9} className={classes.item2} container>
-                <Switch>
+        // <Grid container className={classes.root}> 
+        //     {/* <Grid item xs={3} className={classes.item1} container><Sidebar/></Grid> */}
+        //     <Grid item lg={12} className={classes.item2} container>
+                 <Switch>
                     <Route exact path="/" component={Home}/>
-                    <Route exact path="/result" component={Results}/>
-                    <Route exact path="/login" component={Home}/>
-                </Switch> 
-            </Grid>
-        </Grid>
+                    <Route path="/footer" component={Footer} />
+                    <Route path="/login" component={Login} />
+                    <Route path="/registration" component={Registration} />
+                    <Route path="/shoppingcart" component={Shoppingcart} />
+                    <Route path="/wishlist" component={WishList} />
+                    <Route path="/myprofile" component={MyProfile} />
+                    <Route path="/dashboard" component={Dashboard} />
+                    <Route path="/productlist" component={ProductList} />
+                    <Route path="/unlockpremium" component={UnlockPremium} />
+                    <Route path="/brandlist" component={BrandList} />
+                    {/* <Route exact path="/result" component={Results}/>
+                    <Route exact path="/login" component={Home}/> */}
+                </Switch>   
+        //     </Grid>
+        // </Grid>
     )
 }
