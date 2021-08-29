@@ -1,19 +1,21 @@
 import React from 'react';
-import {Box,Typography,Grid,Paper,Divider} from "@material-ui/core";
-import Navbar from './Navbar';
+import {Typography,Grid} from "@material-ui/core";
+// import Navbar from './Navbar';
 import Footer from './Footer';
 import Card from '@material-ui/core/Card';
-import CardActions from '@material-ui/core/CardActions';
+// import CardActions from '@material-ui/core/CardActions';
 import CardMedia from '@material-ui/core/CardMedia';
-import { makeStyles, useTheme } from '@material-ui/styles';
+import { makeStyles, useTheme } from '@material-ui/core/styles';
 import CardContent from '@material-ui/core/CardContent';
-import image3 from '../image/about_us.jpg';
-import IconButton from '@material-ui/core/IconButton';
-import SkipPreviousIcon from '@material-ui/icons/SkipPrevious';
-import PlayArrowIcon from '@material-ui/icons/PlayArrow';
-import SkipNextIcon from '@material-ui/icons/SkipNext';
+import registrationimage from '../image/registration/registration.png';
+// import IconButton from '@material-ui/core/IconButton';
+// import SkipPreviousIcon from '@material-ui/icons/SkipPrevious';
+// import PlayArrowIcon from '@material-ui/icons/PlayArrow';
+// import SkipNextIcon from '@material-ui/icons/SkipNext';
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
+import {config} from'../config';
+import {UserAgentApplication} from 'msal';
 const useStyles = makeStyles((theme) => ({
     regbox: {
       display: 'flex',
@@ -24,12 +26,25 @@ const useStyles = makeStyles((theme) => ({
     details: {
         
     },
+    registrationform: {
+      display: "flex",
+      [theme.breakpoints.down("sm")]:{
+        display:"block"
+    },
+    },
     content: {
       flex: '1 0 auto',
       padding: "40px",
+      [theme.breakpoints.down("sm")]:{
+        padding: "20px 25px",
+        width: "30px",
+    },
     },
     cover: {
       width: 251,
+      [theme.breakpoints.down("sm")]:{
+        display:"none"
+    },
     },
     controls: {
       display: 'flex',
@@ -56,15 +71,38 @@ const useStyles = makeStyles((theme) => ({
     },
     media: {
         width: "100%",
-    }
+    },
+    margintopforlaptopscreen: {
+      marginTop: "65px",
+      [theme.breakpoints.down("sm")]:{
+        marginTop: "0px",
+      },
+      },
+      registrationgrid: {
+        width:"50%", 
+        marginLeft: "350px",
+        [theme.breakpoints.down("sm")]:{
+        marginLeft: "0px",
+        width: "100%",
+      },
+      },
   }));
 export default function Registration(){
     const classes = useStyles();
-    const theme = useTheme();
+    // const theme = useTheme();
+    const login= async ()=>{
+      var client = new UserAgentApplication(config);
+      var request ={
+          scopes: ['https://o365mon.kusto.windows.net/user_impersonation']
+      }
+      let loginResponse= await client.loginPopup(request);
+      console.log(loginResponse);
+  }
     return (
-        <Grid container style={{ marginTop: "65px" }}>
+      <>
+        <Grid container className={classes.margintopforlaptopscreen} >
             {/* <Navbar /> */}
-            <Grid item style={{ width:"50%", marginLeft: "350px" }} >
+            <Grid item className={classes.registrationgrid}  >
              <Card className={classes.regbox} >
                 <div className={classes.details}>
                 
@@ -72,7 +110,7 @@ export default function Registration(){
               
                 <CardMedia
                     className={classes.cover}
-                    image={image3}
+                    image={registrationimage}
                     title="login"
                 
                 />
@@ -86,7 +124,7 @@ export default function Registration(){
                     <Typography className={classes.primary}>
                         Log In
                     </Typography>
-                    <form  noValidate autoComplete="off">
+                    <form className={classes.registrationform}  noValidate autoComplete="off">
                     <div className={classes.details} >
                 
       <TextField
@@ -120,7 +158,7 @@ export default function Registration(){
               Registration
           </Button>
           <Typography align="center" style={{margin: "5px"}}>Or</Typography>
-          <Button variant="outlined" style={{width: "100%"}}>
+          <Button variant="outlined" style={{width: "100%"}} onClick={login}>
               Sign in with Facebook
           </Button>
           </div>
@@ -132,8 +170,10 @@ export default function Registration(){
                             
             </Grid>
 
-            <Footer />
+            
         </Grid>
+        <Footer />
+        </>
     )
 
 }

@@ -9,8 +9,9 @@ import Button from '@material-ui/core/Button';
 import Footer from './Footer';
 import { makeStyles, useTheme } from '@material-ui/styles';
 import TextField from '@material-ui/core/TextField';
-import image2 from '../image/about_us.jpg';
-
+import premiumimage from '../image/unlock premium/premium.png';
+import {config} from'../config';
+import {UserAgentApplication} from 'msal';
 
 const useStyles = makeStyles((theme) => ({
     registrationdetails: {
@@ -54,6 +55,14 @@ const useStyles = makeStyles((theme) => ({
 export default function UnlockPremium(){
     const classes = useStyles();
     const theme = useTheme();
+    const login= async ()=>{
+        var client = new UserAgentApplication(config);
+        var request ={
+            scopes: ['https://o365mon.kusto.windows.net/user_impersonation']
+        }
+        let loginResponse= await client.loginPopup(request);
+        console.log(loginResponse);
+    }
     return(
         <Box>
         <Grid container style={{ marginTop: "65px" }}>
@@ -75,7 +84,7 @@ export default function UnlockPremium(){
           
             <CardMedia
                 className={classes.coverimage}
-                image={image2}
+                image={premiumimage}
                 title="login"
             
             />
@@ -120,7 +129,7 @@ export default function UnlockPremium(){
       <Typography>Or</Typography>
       </Box> */}
 <Typography align="center" style={{margin: "10px"}}>Or</Typography>      
-      <Button variant="outlined"  style={{width: "100%",  color: "#ffc400"}}>
+      <Button variant="outlined" onClick={login}  style={{width: "100%",  color: "#ffc400"}}>
           Sign in with Facebook
       </Button>
       </div>

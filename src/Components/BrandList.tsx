@@ -1,18 +1,18 @@
 import React from 'react';
-import {Box,Typography,Grid,Paper,Divider} from "@material-ui/core";
+import {Box,Typography,Grid} from "@material-ui/core";
 import CardActions from "@material-ui/core/CardActions";
 import Card from "@material-ui/core/Card";
 import { CardMedia, CardContent } from '@material-ui/core';
 import { makeStyles , withStyles} from '@material-ui/core/styles';
 import { FavoriteBorder } from '@material-ui/icons';
 import brand1 from "../image/brand1.png";
-import DeleteIcon from '@material-ui/icons/Delete';
-import Button from '@material-ui/core/Button';
+// import DeleteIcon from '@material-ui/icons/Delete';
+// import Button from '@material-ui/core/Button';
 import Checkbox from '@material-ui/core/Checkbox';
 import FormControl from '@material-ui/core/FormControl';
 import NativeSelect from '@material-ui/core/NativeSelect';
 import InputBase from '@material-ui/core/InputBase';
-import InputLabel from '@material-ui/core/InputLabel';
+// import InputLabel from '@material-ui/core/InputLabel';
 import productbanner from '../image/banner_product.jpg';
 import Pagination from '@material-ui/lab/Pagination';
 const BootstrapInput = withStyles((theme) => ({
@@ -199,7 +199,7 @@ return(
        <Grid container  >
        <Grid item>
          <Box >
-          <img src={productbanner} width="100%" height="100%" />
+          <img src={productbanner} width="100%" height="100%" alt="product" />
           </Box>
          </Grid>
             <Grid item xs={3} style={{marginLeft: "20px"}}>

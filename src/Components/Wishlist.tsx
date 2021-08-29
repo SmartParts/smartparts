@@ -1,4 +1,4 @@
-import React from 'react';
+import React ,{useState} from 'react';
 import {Box,Typography,Grid,Paper,Divider} from "@material-ui/core";
 import CardActions from "@material-ui/core/CardActions";
 import Card from "@material-ui/core/Card";
@@ -8,9 +8,19 @@ import { FavoriteBorder } from '@material-ui/icons';
 import brand1 from "../image/brand1.png";
 import DeleteIcon from '@material-ui/icons/Delete';
 import Button from '@material-ui/core/Button';
+import ReorderIcon from '@material-ui/icons/Reorder';
+import AppsIcon from '@material-ui/icons/Apps';
 const useStyles = makeStyles((theme) =>({
 productimage: {
     height: 150,
+    margin: "10px",
+},
+// addtocartbttn: {
+//     width: "10%",
+// },
+listviewimage: {
+    height: 140,
+    width: "20%",
     margin: "10px",
 },
 icon: {
@@ -22,10 +32,36 @@ icon: {
   }
 }));
 export default function Wishlist() {
-const classes = useStyles();
+  const classes = useStyles();
+  const [reorderlist, setReorderList] = useState(false);
+ const reorderlistbtnClicked =() => {
+    setReorderList(true);
+
+  }
+  const listview = () => {
+      setReorderList(false);
+  }
+
 return(
     <Box style={{marginTop: "60px", marginLeft: "120px"}}>
-        <Typography variant="h4" style={{padding: '20px'}}>My <span style={{color: "#8517FF"}}>Wishlist</span></Typography>
+       
+       <Box style={{display: "flex", flexDirection: "row"}}>
+
+           <Grid container>
+          
+               <Grid item xs={10}>
+                <Typography variant="h4" style={{padding: '20px'}}>My <span style={{color: "#8517FF"}}>Wishlist</span></Typography>
+        
+        </Grid>
+        <Grid item xs={2}>
+        <ReorderIcon fontSize="large" onClick={listview} style={{ marginLeft: "50px", marginTop: "30px"}}></ReorderIcon>
+        <AppsIcon onClick={reorderlistbtnClicked} fontSize="large"></AppsIcon>
+        </Grid>
+        </Grid>
+        </Box>
+        
+        {reorderlist ? 
+       
        <Grid container >
             <Grid item xs={3}>
                 <Card style={{marginTop: "10px", marginBottom: "10px", borderRadius: "35px"}}>
@@ -98,6 +134,43 @@ return(
                 </Grid>
              
        </Grid>
+       : 
+  <Grid container>
+      <Grid item xs={11}>
+        <Card >
+            <CardActions>
+                <CardMedia image={brand1} className={classes.listviewimage}  />
+                    
+                
+                <CardContent>
+                <Box style={{display: "flex", flexDirection: "row"}}>
+                    
+                <Grid container >
+                    <Grid item xs={9} style={{width: "900px"}}>
+                    <Typography variant="h5"><strong>Clutch Master Cylinder</strong></Typography>
+                    <Typography>Number</Typography>
+                    </Grid>
+                    
+                    {/* <Button variant="outlined"  style={{backgroundColor: "black", color: "white" }}>Add to Cart</Button> */}
+                    <Box style={{display: "flex", justifyContent: "flex-end" ,flexDirection: "column"}}>
+                    <FavoriteBorder fontSize="large" style={{marginBottom: "50px", marginLeft: "45px"}}></FavoriteBorder>
+                    <DeleteIcon fontSize="large" style={{marginLeft: "45px"}}></DeleteIcon>
+                    </Box>
+                    
+                    </Grid>
+                    </Box>
+                    
+                </CardContent>
+            </CardActions>
+            </Card>   
+      </Grid>
+      <Grid item xs={12}>
+          
+          </Grid>
+          <Grid item xs={12}>
+          
+          </Grid>
+  </Grid>}
     </Box>
 )
 

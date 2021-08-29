@@ -1,36 +1,48 @@
 import React from 'react';
-import {Box,Typography,Grid,Paper,Divider} from "@material-ui/core";
-import Navbar from './Navbar';
+import {Box,Typography,Grid} from "@material-ui/core";
+// import Navbar from './Navbar';
 import Footer from './Footer'; 
 import Card from '@material-ui/core/Card';
-import CardActions from '@material-ui/core/CardActions';
+// import CardActions from '@material-ui/core/CardActions';
 import CardMedia from '@material-ui/core/CardMedia';
-import { makeStyles, useTheme } from '@material-ui/styles';
+import { makeStyles, useTheme } from '@material-ui/core/styles';
 import CardContent from '@material-ui/core/CardContent';
-import image2 from '../image/about_us.jpg';
-import IconButton from '@material-ui/core/IconButton';
-import SkipPreviousIcon from '@material-ui/icons/SkipPrevious';
-import PlayArrowIcon from '@material-ui/icons/PlayArrow';
-import SkipNextIcon from '@material-ui/icons/SkipNext';
+import loginimage from '../image/login/login.png';
+// import IconButton from '@material-ui/core/IconButton';
+// import SkipPreviousIcon from '@material-ui/icons/SkipPrevious';
+// import PlayArrowIcon from '@material-ui/icons/PlayArrow';
+// import SkipNextIcon from '@material-ui/icons/SkipNext';
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
+import {UserAgentApplication} from 'msal';
+import {config} from'../config';
 const useStyles = makeStyles((theme) => ({
     main: {
       display: 'flex',
       marginTop: "60px",
       marginBottom: "60px",
       borderRadius: "25px",
+      
     },
     details: {
         
     },
     content: {
       flex: '1 0 auto',
-      padding: "40px",
+    //  padding: "40px",
+      padding: "68px", width: "80px",
+      [theme.breakpoints.down("sm")]:{
+        padding: "20px 25px",
+        width: "30px",
+    },
     },
     cover: {
       width: 251,
+      [theme.breakpoints.down("sm")]:{
+        display:"none"
     },
+    },
+
     controls: {
       display: 'flex',
       alignItems: 'center',
@@ -63,16 +75,43 @@ const useStyles = makeStyles((theme) => ({
     },
     formdetails: {
       display: "flex",
-    }
+      [theme.breakpoints.down("sm")]:{
+        display:"block"
+    },
+    },
+    logingrid: {
+      width:"50%", 
+      marginLeft: "350px",
+      [theme.breakpoints.down("sm")]:{
+      marginLeft: "0px",
+      width: "100%",
+    },
+    },
+    marginlaptopscreen: {
+    marginTop: "65px",
+    [theme.breakpoints.down("sm")]:{
+      marginTop: "0px",
+    },
+    },
   }));
 export default function Login(){
 
     const classes = useStyles();
     const theme = useTheme();
+    const isMatchscreensize = theme.breakpoints.down("sm");
+    const login= async ()=>{
+      var client = new UserAgentApplication(config);
+      var request ={
+          scopes: ['https://o365mon.kusto.windows.net/user_impersonation']
+      }
+      let loginResponse= await client.loginPopup(request);
+      console.log(loginResponse);
+  }
     return (
-        <Box>
-            <Grid container style={{ marginTop: "65px" }}>
-            <Grid item  style={{ width:"50%", marginLeft: "350px"}}>
+   
+        <Box >
+            <Grid container className={classes.marginlaptopscreen} >
+            <Grid item  className={classes.logingrid} >
              <Card className={classes.main}  >
                 <div className={classes.details}>
                 
@@ -80,11 +119,11 @@ export default function Login(){
               
                 <CardMedia
                     className={classes.cover}
-                    image={image2}
+                    image={loginimage}
                     title="login"
                 
                 />
-                <CardContent className={classes.content} style={{padding: "68px", width: "80px"}}>
+                <CardContent className={classes.content} >
                     <Typography component="h5" variant="h5">
                         Login Form
                     </Typography>
@@ -123,7 +162,7 @@ export default function Login(){
           {/* Theme provider button */}
           <Typography align="center" style={{margin: "5px"}}><a href="">Forgot Password?</a></Typography>
           <Typography align="center" style={{margin: "5px"}}>Or</Typography>
-          <Button variant="outlined" style={{width: "100%"}}>
+          <Button variant="outlined" style={{width: "100%"}} onClick={login}>
               Sign in with Facebook
           </Button>
           </div>
@@ -137,7 +176,7 @@ export default function Login(){
             </Grid>
             <Footer />
         </Box>
-            
+ 
     )
 
 }

@@ -1,10 +1,10 @@
 import {useState} from 'react'; 
 import Navbar from './Components/Navbar';
-import {BrowserRouter, Route, Switch} from 'react-router-dom';
-import Home from './Components/Home';
-import Others from './Components/Others';
+import {BrowserRouter} from 'react-router-dom';
+// import Home from './Components/Home';
+// import Others from './Components/Others';
 import Body from './Components/Body';
-import {Box,Grid,Paper,CssBaseline} from "@material-ui/core";
+import {Grid,Paper,CssBaseline} from "@material-ui/core";
 import {makeStyles} from "@material-ui/core/styles";
 import {createMuiTheme,ThemeProvider} from "@material-ui/core/styles";
 
