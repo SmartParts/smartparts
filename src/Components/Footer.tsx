@@ -61,6 +61,10 @@ const useStyles = makeStyles((theme)=>({
         fontSize: "15",
         
         fontFamily: 'nano-sans',
+        [theme.breakpoints.down("md")] :{ 
+            fontSize: "1.3rem",
+             },
+
         [theme.breakpoints.down("sm")] :{ 
             fontSize: "1.3rem",
              },
@@ -125,6 +129,30 @@ const useStyles = makeStyles((theme)=>({
   
           },
       },
+      locationone: {
+        width: "115px",
+         height: "115px", 
+        marginLeft: "155px",
+        [theme.breakpoints.down("md")]: {
+            marginLeft: "100px",
+        },
+      },
+      locationtwo: {
+        width: "115px",
+         height: "115px", 
+        marginLeft: "130px",
+        [theme.breakpoints.down("md")]: {
+            marginLeft: "70px",
+        },
+      },
+      locationthree: {
+        width: "115px", 
+        height: "115px", 
+        marginLeft: "130px",
+        [theme.breakpoints.down("md")]: {
+            marginLeft: "70px",
+        },
+      },
 
 }));
 export default function Footer(){
@@ -138,8 +166,8 @@ export default function Footer(){
                         <CardActions>
                         <Grid container justify="space-evenly">
                         <Grid item xs={3} alignItems="center" style={{margin:"90px 0px"}}>
-                        <Box style={{width: "115px", height: "115px", marginLeft: "155px"}}>
-                            <img src={singaporeimg} width="100%" height="100%" alt="image" />
+                        <Box className={classes.locationone} >
+                            <img src={singaporeimg} width="100%" height="100%" alt="Singapore image" />
                             </Box>
                             <Box className={classes.zoomtext}>
 
@@ -148,8 +176,8 @@ export default function Footer(){
                         </Box>
                         </Grid>
                         <Grid item xs={3} style={{margin:"90px 0px"}}>
-                        <Box style={{width: "115px", height: "115px", marginLeft: "135px"}}>
-                            <img src={indiaimg} width="100%" height="100%" alt="image" />
+                        <Box className={classes.locationtwo} >
+                            <img src={indiaimg} width="100%" height="100%" alt="India image" />
                             </Box>
                         <Box className={classes.zoomtext}>
 
@@ -159,8 +187,8 @@ export default function Footer(){
                             </Grid>
 
                             <Grid item xs={3} style={{margin:"90px 0px"}}>
-                            <Box style={{width: "115px", height: "115px", marginLeft: "130px"}}>
-                            <img src={dubaiimg} width="100%" height="100%" alt="image"/>
+                            <Box className={classes.locationthree} >
+                            <img src={dubaiimg} width="100%" height="100%" alt="Dubai image"/>
                             </Box>
                             <Box className={classes.zoomtext}>
                             
@@ -291,7 +319,7 @@ export default function Footer(){
                     </Typography>
                 </Box>
             </Grid>
-            <Grid item xs={1}>
+            <Grid item xs={2}>
                 <Box component="span">
                     <Typography variant="h5" align="left" className={classes.footerheadings}>
                         
@@ -319,7 +347,7 @@ export default function Footer(){
                     </Box>
                 </Box>
             </Grid>
-            <Grid item xs={1}>
+            <Grid item xs={2}>
                 <Box component="span">
                     <Typography variant="h5" align="left" className={classes.footerheadings}>
                         

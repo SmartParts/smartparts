@@ -1,7 +1,7 @@
 import React from 'react';
-import {Box, Typography, Grid, TextField} from '@material-ui/core';
+import {Box, Grid, TextField} from '@material-ui/core';
 import Card from '@material-ui/core/Card';
-import CardActionArea from '@material-ui/core/CardActionArea';
+// import CardActionArea from '@material-ui/core/CardActionArea';
 import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
 import Modal from '@material-ui/core/Modal';

@@ -7,7 +7,7 @@ import '../Components/Carousel.css';
 import React from 'react';
 // import product1 from "../image/products/productimage.png";
 const slideWidth = 19;
-
+ const featureprod = require('../image/products/featuredproduct.jpg');
 const _items = [
     {
         player: {

@@ -20,7 +20,7 @@ export default function UserDashboard(){
         <Box>
             <Grid container>
             <Grid item xs={2} style={{ backgroundColor: "#141A26", marginRight: "25px"}}>
-              <img src={logo} style={{marginTop: 10, width: 80 ,height:40}}  />
+              <img src={logo} style={{marginTop: 10, width: 80 ,height:40}}  alt="logo" />
              <IconButton  style={{color: "white", marginLeft: "95px", top: "-16px"}}>
                     <MenuIcon/>
                 </IconButton>
@@ -31,7 +31,7 @@ export default function UserDashboard(){
         inputProps={{ 'aria-label': 'secondary checkbox' }}
         className={classes.sizeofcheckbox}
       />   
-            <Link to="/dashboard" ><Typography style={{color: "white", marginTop: "8px"}}>Home</Typography></Link> </Box>
+            <Link to="/myprofile" ><Typography style={{color: "white", marginTop: "8px"}}>Home</Typography></Link> </Box>
 
 
                   <Box style={{display: "flex", flexDirection: "row"}}>

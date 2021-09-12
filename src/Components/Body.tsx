@@ -19,6 +19,7 @@ import ProductItem from './ProductItem';
 import Carousel from './Carousel';
 import Helpsupport from './Helpsupport';
 // import Navbar from './Navbar';
+import Chatbot from './chatbot';
 
 const useStyles = makeStyles((theme)=>({
     root:{
@@ -35,7 +36,7 @@ const useStyles = makeStyles((theme)=>({
 
 
 export default function Body() {
-    // const classes= useStyles();
+    
     return (
         // <Grid container className={classes.root}> 
         //     {/* <Grid item xs={3} className={classes.item1} container><Sidebar/></Grid> */}
@@ -57,6 +58,8 @@ export default function Body() {
                     <Route path="/example" component={Carousel}/> 
                     <Route path="/helpsupport" component={Helpsupport} />
                     <Route path="/carousel" component={Carousel} />
+                    <Route path="/chatbot" component={Chatbot} />
+                    
                     {/* <Route exact path="/result" component={Results}/>
                     <Route exact path="/login" component={Home}/> */}
                 </Switch>   

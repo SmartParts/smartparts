@@ -75,14 +75,12 @@ icon: {
 }));
 export default function BrandList() {
     
-    const [checked, setChecked] = React.useState(true)
+
     const [age, setAge] = React.useState('');
     const vehicleSelect = (event) => {
       setAge(event.target.value);
     };
-    const handleChange = (event) => {
-        setChecked(event.target.checked);
-      };
+
 
     const classes = useStyles();
 return(

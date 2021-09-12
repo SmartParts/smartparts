@@ -16,6 +16,8 @@ import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 import {UserAgentApplication} from 'msal';
 import {config} from'../config';
+import {useHistory} from 'react-router-dom';
+import { userInfo } from 'os';
 const useStyles = makeStyles((theme) => ({
     main: {
       display: 'flex',
@@ -31,6 +33,10 @@ const useStyles = makeStyles((theme) => ({
       flex: '1 0 auto',
     //  padding: "40px",
       padding: "68px", width: "80px",
+      [theme.breakpoints.down("md")]:{
+        padding: "30px",
+
+    },
       [theme.breakpoints.down("sm")]:{
         padding: "20px 25px",
         width: "30px",
@@ -82,6 +88,10 @@ const useStyles = makeStyles((theme) => ({
     logingrid: {
       width:"50%", 
       marginLeft: "350px",
+      [theme.breakpoints.down("md")]:{
+        marginLeft: "220px",
+        width: "60%",
+      },
       [theme.breakpoints.down("sm")]:{
       marginLeft: "0px",
       width: "100%",
@@ -98,7 +108,7 @@ export default function Login(){
 
     const classes = useStyles();
     const theme = useTheme();
-    const isMatchscreensize = theme.breakpoints.down("sm");
+    // const isMatchscreensize = theme.breakpoints.down("sm");
     const login= async ()=>{
       var client = new UserAgentApplication(config);
       var request ={
@@ -107,6 +117,52 @@ export default function Login(){
       let loginResponse= await client.loginPopup(request);
       console.log(loginResponse);
   }
+  const handeldetails = (e) => {
+
+    console.log(loginuser);
+    name = e.target.name;
+    value = e.target.value;
+    setLoginUser({ ...loginuser, [name]: value});
+  }
+  const history = useHistory();
+  const [loginuser, setLoginUser] = React.useState({
+    email: "", password: "",
+     });
+     let name, value;
+   const postHandler = async(e) => {
+   
+
+     // post request
+     e.preventDefault();
+     const {email, password} = loginuser;
+     const res = await fetch("/login", {
+       method: "POST",
+      headers: {
+       "Content-Type": "application/json",
+     
+      },
+     body: JSON.stringify({
+         email, password
+       })
+      
+   
+     })
+  //  //  .then(res => res.text())
+  //  //  .then((data) => console.log(data));
+    
+      //const data = await res.json();
+      console.log(res);
+    if (res.status === 422 || !res){
+         window.alert("Invalid User");
+         console.log("Invalid User");
+      }else {
+        window.alert("Login successfull");
+        console.log("Successfull Login");
+    
+      history.push('/myprofile');
+       }
+      }
+ //     if (res.email == loginuser.email)
     return (
    
         <Box >
@@ -144,7 +200,10 @@ export default function Login(){
           placeholder="Enter Email Id"
           variant="outlined"
           className={classes.formcolor}
-
+          type="text"
+          value={loginuser.email}
+          name="email"
+          onChange={handeldetails}
         />
       <TextField
           
@@ -155,8 +214,11 @@ export default function Login(){
           autoComplete="current-password"
           variant="outlined"
           className={classes.formcolor}
+          value={loginuser.password}
+          name="password"
+          onChange={handeldetails}
         />
-          <Button className={classes.loginbutton} style={{width: "100%"}}>
+          <Button onClick={postHandler} className={classes.loginbutton} style={{width: "100%"}}>
               Login 
           </Button>
           {/* Theme provider button */}

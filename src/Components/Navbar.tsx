@@ -3,12 +3,12 @@ import {Menu,MenuItem,AppBar,Typography,Toolbar,Button,IconButton,Switch} from "
 import {makeStyles, useTheme} from "@material-ui/core/styles";
 import Modal from '@material-ui/core/Modal';
 import TextField from '@material-ui/core/TextField';
- import Autocomplete from '@material-ui/lab/Autocomplete';
+//  import Autocomplete from '@material-ui/lab/Autocomplete';
 import Grid from '@material-ui/core/Grid';
 import {Link} from 'react-router-dom';
 import MenuIcon from '@material-ui/icons/Menu';
-import {UserAgentApplication} from 'msal';
-import {config} from'../config';
+// import {UserAgentApplication} from 'msal';
+// import {config} from'../config';
 import Box from '@material-ui/core/Box';
 // import { MailOutline } from '@material-ui/icons';
 import { FavoriteBorder } from '@material-ui/icons';
@@ -171,14 +171,14 @@ const [myprofilescreen, setMyProfielScreen] = React.useState(true);
         </Menu>
     );
     
-     const products = [
-         { name: 'The Shawshank Redemption', year: 1994 },
-         { name: 'The Godfather', year: 1972 },
-         { name: 'The Godfather: Part II', year: 1974 }];
+    //  const products = [
+    //      { name: 'The Shawshank Redemption', year: 1994 },
+    //      { name: 'The Godfather', year: 1972 },
+    //      { name: 'The Godfather: Part II', year: 1974 }];
 
         const [opend, setOpend] = React.useState(false);
         const [settingopen, setSettingopen] = React.useState(false);
-        const [isClicked, setIsClicked] = React.useState(false);
+        // const [isClicked, setIsClicked] = React.useState(false);
         const [colorred, setColorred] = React.useState(false);
       const [legalIsClicked, setLegalIsClicked] = React.useState(false);
       const [open, setOpen] = React.useState(false);
@@ -194,12 +194,12 @@ const [myprofilescreen, setMyProfielScreen] = React.useState(true);
         const handleSettingDrawerClose = () => {
           setSettingopen(false);
         };  
-         const helpsupport = () => { // modal should be displayed on screen
-         console.log("hello");
-            // if clicked again the list should not be displayed
+        //  const helpsupport = () => { // modal should be displayed on screen
+        //  console.log("hello");
+        //     // if clicked again the list should not be displayed
      
-        setIsClicked(true);
-         };
+        // setIsClicked(true);
+        //  };
          const legaldetails = () => { // modal should be displayed on screen
           console.log("hello");
              // if clicked again the list should not be displayed
@@ -302,7 +302,7 @@ setDarkTheme(true);
          return ( 
       
         <>
-        {myprofilescreen ? <>
+        
         <AppBar position="fixed"  className={classes.root}>
             <Toolbar>
                
@@ -338,7 +338,7 @@ setDarkTheme(true);
                     <Link to="/shoppingcart">{darktheme ?<AddShoppingCart  className={classes.hideIcon} style={{marginLeft: 30,  marginTop: 10, color: "white"}}></AddShoppingCart> :<AddShoppingCart  className={classes.hideIcon} style={{marginLeft: 30,  marginTop: 10, color: "black"}}></AddShoppingCart>}</Link>
                     {colorred ?  <Link to="/wishlist"><FavoriteIcon onClick={addedtowishlist}  style={{marginLeft: 30,  marginTop: 10, color:  "red"}}></FavoriteIcon></Link>:
                     <Link to="/wishlist">{darktheme ?<FavoriteBorder onClick={addedtowishlist} className={classes.hideIcon} style={{marginLeft: 30,  marginTop: 10, color: "white"}}></FavoriteBorder>: <FavoriteBorder onClick={addedtowishlist} className={classes.hideIcon} style={{marginLeft: 30,  marginTop: 10, color: "black"}}></FavoriteBorder>}</Link>}
-                    <Link to="/myprofile">{darktheme ?<PersonOutline className={classes.hideIcon} onClick={ScreenIsClicked} style={{marginLeft: 30, marginTop: 10, color: "white"}}></PersonOutline>:<PersonOutline className={classes.hideIcon} onClick={ScreenIsClicked} style={{marginLeft: 30, marginTop: 10, color: "black"}}></PersonOutline>}</Link>
+                    <Link to="/login">{darktheme ?<PersonOutline className={classes.hideIcon} onClick={ScreenIsClicked} style={{marginLeft: 30, marginTop: 10, color: "white"}}></PersonOutline>:<PersonOutline className={classes.hideIcon} onClick={ScreenIsClicked} style={{marginLeft: 30, marginTop: 10, color: "black"}}></PersonOutline>}</Link>
                     {/* <Button color="inherit" component={Link} to="/result">My Profile</Button> */}
                     <SettingsIcon style={{marginLeft: 30, marginRight: 30, marginTop: 10}}className={classes.hideIcon} onClick={handleSettingDrawerOpen}></SettingsIcon>
                     {/* <Switch onChange={props.onThemeChangeHandler}></Switch> */}
@@ -422,9 +422,9 @@ setDarkTheme(true);
         <List>
           {['Light Mode', 'Language', 'Currency','Help & Support', 'Unlock Premium'].map((text, index) => (
             <ListItem button key={text}>
-              <ListItemIcon>{ index === 0 ?  <Switch onChange={props.onThemeChangeHandler} onClick={changedtodarktheme}></Switch> : <div>{index === 1 ? <Language /> : <div>{index === 2  ? <AttachMoney /> : <div>{index === 3  ? <div ><Infoicon  ></Infoicon ></div> : <Link to="/unlockpremium"><Lock /></Link>}</div>}</div>}</div>}</ListItemIcon>
+              <ListItemIcon>{ index === 0 ?  <Switch onChange={props.onThemeChangeHandler} onClick={changedtodarktheme}></Switch> : <div>{index === 1 ? <Language /> : <div>{index === 2  ? <AttachMoney /> : <div>{index === 3  ? <div ><Infoicon  ></Infoicon ></div> : <Lock />}</div>}</div>}</div>}</ListItemIcon>
 
-              {index === 3  ? <><ListItemText primary={text} onClick={handleOpen} /></>: <><ListItemText primary={text} /></> 
+              {index === 3  ? <><ListItemText primary={text} onClick={handleOpen} /></>: index === 4 ? <><Link to="/unlockpremium"><ListItemText primary={text} /></Link></>: <><ListItemText primary={text} /></> 
               }
             </ListItem>
           ))}
@@ -460,7 +460,7 @@ setDarkTheme(true);
       </Drawer>
 
       
-</> : " "}
+
 
         </>
 

@@ -1,8 +1,8 @@
 import React from 'react';
-import {Box,Typography,Grid,Paper,Divider} from "@material-ui/core";
+import {Box,Typography,Grid} from "@material-ui/core";
 import Navbar from './Navbar';
 import Footer from './Footer'; 
-import profile from '../image/profile.svg'; 
+// import profile from '../image/profile.svg'; 
 import Button from '@material-ui/core/Button';
 import { makeStyles, withStyles} from '@material-ui/core/styles';
 import Avatar from '@material-ui/core/Avatar';

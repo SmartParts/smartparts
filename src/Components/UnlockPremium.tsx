@@ -54,7 +54,7 @@ const useStyles = makeStyles((theme) => ({
 
 export default function UnlockPremium(){
     const classes = useStyles();
-    const theme = useTheme();
+    // const theme = useTheme();
     const login= async ()=>{
         var client = new UserAgentApplication(config);
         var request ={
