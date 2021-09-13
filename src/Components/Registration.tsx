@@ -3,6 +3,7 @@ import {Typography,Grid} from "@material-ui/core";
 // import Navbar from './Navbar';
 import Footer from './Footer';
 import Card from '@material-ui/core/Card';
+import {Link} from 'react-router-dom';
 // import CardActions from '@material-ui/core/CardActions';
 import CardMedia from '@material-ui/core/CardMedia';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
@@ -71,10 +72,14 @@ const useStyles = makeStyles((theme) => ({
         width: "100%",
         marginTop: "15px",
     },
-    loginbutton: {
+    registrationbutton: {
         marginTop: "10px",
         backgroundColor: "#8517FF",
         color: "white",
+        '&:hover': {
+          backgroundColor: "#8517FF",
+          color: "white",
+        }
     },
     media: {
         width: "100%",
@@ -225,9 +230,11 @@ const validate = () => {
                     <Typography variant="subtitle1" color="textSecondary">
                         Register an account and start browsing thousands of Aftermarket and OEM car parts. Already have an account?
                     </Typography>
+                    <Link to="/login">
                     <Typography className={classes.primary}>
                         Log In
                     </Typography>
+                    </Link>
                     <form method="POST" onSubmit={submitHandler}  className={classes.registrationform}   noValidate autoComplete="off">
                     <div className={classes.details} >
                 
@@ -277,11 +284,11 @@ const validate = () => {
         <span style={{fontSize: "12", color: "red"}}>
 {repeatpassworderror}
 </span>
-          <Button onClick={submitHandler}  className={classes.loginbutton} style={{width: "100%"}}>
+          <Button onClick={submitHandler}  className={classes.registrationbutton} style={{width: "100%"}}>
               Registration
           </Button>
           <Typography align="center" style={{margin: "5px"}}>Or</Typography>
-          <Button variant="outlined" style={{width: "100%"}} onClick={login}>
+          <Button variant="outlined" style={{width: "100%"}} >
               Sign in with Facebook
           </Button>
           </div>

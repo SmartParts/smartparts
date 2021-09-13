@@ -35,7 +35,7 @@ const useStyles = makeStyles((theme)=>({
 }))
 
 
-export default function Body() {
+export default function Body(props) {
     
     return (
         // <Grid container className={classes.root}> 
@@ -45,7 +45,7 @@ export default function Body() {
                     <Route exact path="/" component={Home}/>
                     {/* <Route path="/navbar" component={Navbar} />  */}
                     <Route path="/footer" component={Footer} />
-                    <Route path="/login" component={Login} />
+                    <Route path="/login" render={()=><Login {...props}/>}/>
                     <Route path="/registration" component={Registration} />
                     <Route path="/shoppingcart" component={Shoppingcart} />
                     <Route path="/wishlist" component={WishList} />

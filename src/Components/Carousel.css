@@ -98,7 +98,7 @@ html {
     align-items: center;
     background: rgba(0, 0, 0, 0.5);
     color: white;
-    content: "read more";
+    /* content: "read more"; */
     display: flex;
     height: 100%;
     justify-content: center;

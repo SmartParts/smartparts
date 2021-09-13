@@ -5,7 +5,10 @@ import Card from "@material-ui/core/Card";
 import { CardMedia, CardContent } from '@material-ui/core';
 import { makeStyles , withStyles} from '@material-ui/core/styles';
 import { FavoriteBorder } from '@material-ui/icons';
-import brand1 from "../image/brand1.png";
+import servicepart1 from "../image/home/HYUNDAI OIL.jpg";
+import servicepart2 from "../image/home/Front Pad Set.jpg";
+import servicepart3 from "../image/home/SUZUKI AIR FILTER.jpg";
+import servicepart4 from '../image/home/nissan Spark plugs post.jpg';
 // import DeleteIcon from '@material-ui/icons/Delete';
 // import Button from '@material-ui/core/Button';
 import Checkbox from '@material-ui/core/Checkbox';
@@ -209,13 +212,13 @@ return(
                     <CardActions style={{display: "block"}}>
                      
                     
-                        <CardMedia  className={classes.productimage}  image={brand1} title="Product image" > 
+                        <CardMedia  className={classes.productimage}  image={servicepart1} title="Product image" > 
                         {/* <DeleteIcon className={classes.icon} /> */}
                         <FavoriteBorder style={{marginLeft: 170,  marginTop: 10, position: 'absolute'}}></FavoriteBorder>
                         </CardMedia>
                         <CardContent>
                             <Box >
-                            <Typography>Product name</Typography>
+                            <Typography>HYUNDAI OIL</Typography>
                             <Box style={{display: "flex", flexDirection: "row"}}>
                             <Typography>Product description</Typography>
                             {/* <Button style={{backgroundColor: "black", color: "white",  marginLeft: '40px'}}>Add to Cart</Button> */}
@@ -232,13 +235,13 @@ return(
                     <CardActions style={{display: "block"}}>
                      
                     
-                        <CardMedia  className={classes.productimage}  image={brand1} title="Product image" > 
+                        <CardMedia  className={classes.productimage}  image={servicepart2} title="Product image" > 
                         
                         <FavoriteBorder style={{marginLeft: 170,  marginTop: 10, position: 'absolute'}}></FavoriteBorder>
                         </CardMedia>
                         <CardContent>
                             <Box>
-                            <Typography>Product name</Typography>
+                            <Typography>FRONT PAD SET</Typography>
                             <Box style={{display: "flex", flexDirection: "row"}}>
                             <Typography>Product description</Typography>
                             {/* <Button style={{backgroundColor: "black", color: "white",  marginLeft: '40px'}}>Add to Cart</Button> */}
@@ -256,13 +259,13 @@ return(
                     <CardActions style={{display: "block"}}>
                      
                     
-                        <CardMedia  className={classes.productimage}  image={brand1} title="Product image" > 
+                        <CardMedia  className={classes.productimage}  image={servicepart3} title="Product image" > 
                         
                         <FavoriteBorder style={{marginLeft: 170,  marginTop: 10, position: 'absolute'}}></FavoriteBorder>
                         </CardMedia>
                         <CardContent>
                             <Box >
-                            <Typography>Product name</Typography>
+                            <Typography>SUZUKI AIR FILTER</Typography>
                             <Box style={{display: "flex", flexDirection: "row"}}>
                             <Typography>Product description</Typography>
                             {/* <Button style={{backgroundColor: "black", color: "white",  marginLeft: '40px'}}>Add to Cart</Button> */}
@@ -280,13 +283,13 @@ return(
                     <CardActions style={{display: "block"}}>
                      
                     
-                        <CardMedia  className={classes.productimage}  image={brand1} title="Product image" > 
+                        <CardMedia  className={classes.productimage}  image={servicepart4} title="Product image" > 
                         
                         <FavoriteBorder style={{marginLeft: 170,  marginTop: 10, position: 'absolute'}}></FavoriteBorder>
                         </CardMedia>
                         <CardContent>
                             <Box>
-                            <Typography>Product name</Typography>
+                            <Typography>SPARK PLUG POST</Typography>
                             <Box style={{display: "flex", flexDirection: "row"}}>
                             <Typography>Product description</Typography>
                             {/* <Button style={{backgroundColor: "black", color: "white",  marginLeft: '40px'}}>Add to Cart</Button> */}

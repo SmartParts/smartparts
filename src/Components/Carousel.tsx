@@ -6,42 +6,48 @@
 import '../Components/Carousel.css';
 import React from 'react';
 // import product1 from "../image/products/productimage.png";
-const slideWidth = 19;
- const featureprod = require('../image/products/featuredproduct.jpg');
+
+ import featureprod from '../image/products/featuredproduct.jpg';
+ import featureprodtwo from '../image/home/Front Pad Set.jpg';
+ import featureprodthree from '../image/home/HYUNDAI OIL.jpg';
+ import featureprodfour from '../image/home/nissan Spark plugs post.jpg';
+ import featureprodfive from '../image/home/featureimage.jpg';
+ import featureprodsix from '../image/home/SUZUKI AIR FILTER.jpg';
+ const slideWidth = 19;
 const _items = [
     {
         player: {
             title: 'Efren Reyes',
             desc: 'Known as "The Magician", Efren Reyes is well regarded by many professionals as the greatest all around player of all time.',
-            image: 'https://www.smartpartsexport.com/assets/img/product/suzuki/engine/1.jpg',
+            image: featureprodsix,
         },
     },
     {
         player: {
             title: "Ronnie O'Sullivan",
             desc: "Ronald Antonio O'Sullivan is a six-time world champion and is the most successful player in the history of snooker.",
-            image: 'https://www.smartpartsexport.com/assets/img/product/hyundai/engine/9.jpg',
+            image: featureprodtwo,
         },
     },
     {
         player: {
             title: 'Shane Van Boening',
             desc: 'The "South Dakota Kid" is hearing-impaired and uses a hearing aid, but it has not limited his ability.',
-            image: 'https://www.smartpartsexport.com/assets/img/product/hyundai/engine/10.jpg',
+            image: featureprodthree,
         },
     },
     {
         player: {
             title: 'Mike Sigel',
             desc: 'Mike Sigel or "Captain Hook" as many like to call him is an American professional pool player with over 108 tournament wins.',
-            image: 'https://www.smartpartsexport.com/assets/img/product/hyundai/engine/11.jpg',
+            image: featureprodfour,
         },
     },
     {
         player: {
             title: 'Willie Mosconi',
             desc: 'Nicknamed "Mr. Pocket Billiards," Willie Mosconi was among the first Billiard Congress of America Hall of Fame inductees.',
-            image: 'https://www.smartpartsexport.com/assets/img/product/suzuki/suspension&brakes/16.jpg',
+            image: featureprodfive,
         },
     },
 ];

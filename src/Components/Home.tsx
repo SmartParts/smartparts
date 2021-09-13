@@ -245,12 +245,11 @@ const useStyles = makeStyles((theme)=>({
         margin: "0px",
         padding: "10px 20px",
         fontSize: 20,
-        backgroundColor: "blue",
-        color: "white",
+
 
     },
       [theme.breakpoints.down("sm")] :{
-        backgroundColor: "black",
+
         margin: "0px",
         padding: "10px 20px",
         fontSize: 20,
@@ -317,6 +316,7 @@ const useStyles = makeStyles((theme)=>({
         marginTop: "36px",
        [theme.breakpoints.down("sm")] :{
         fontSize: 20,
+        display: "none",
     },
     },
     category: {
@@ -674,7 +674,11 @@ const useStyles = makeStyles((theme)=>({
             marginLeft: "10px",
             marginRight: "10px",  
         },
-         [theme.breakpoints.down("sm")] :{
+        [theme.breakpoints.down("sm")] :{
+            marginLeft: "10px",
+            marginRight: "10px",  
+        },
+         [theme.breakpoints.down("xs")] :{
           
         //    width: "150px",
         //    height: "208px",
@@ -1004,6 +1008,7 @@ const [index, setIndex] = React.useState(0);
      const [articletwocollapsed, setArticletwoCollapsed] = React.useState(false);
      const [articlethreecollapsed, setArticleThreeCollapsed] = React.useState(false);
      const isMatch = useMediaQuery(theme.breakpoints.down('sm'));
+     const isMatchtabletscreen = useMediaQuery(theme.breakpoints.down('xs'));
      const isMatchmediumscreen = useMediaQuery(theme.breakpoints.down('md'));
      const isMatchlargescreen = useMediaQuery(theme.breakpoints.down("lg"));
 
@@ -1374,9 +1379,9 @@ setCarSearchClicked(!carsearchclicked);
                     <Grid item lg={2} >
                            
                            <Box className={classes.brandimages} >
-                               <Link to="/brandlist">
+                               
                            <img src={boschimg} style={{width: "100%", height: "100%"}} alt="bosch" />
-                           </Link>
+                           
                            </Box>
                           </Grid>
                         <Grid item lg={2} >
@@ -1514,8 +1519,9 @@ setCarSearchClicked(!carsearchclicked);
                         <Grid item lg={2} >
                            
                            <Box className={classes.brandimages}>
+                           <Link to="/brandlist">
                            <img src={suzukiimg} style={{width: "100%", height: "100%"}} alt="suzuki"/>
-
+                            </Link>
                            </Box>
                           </Grid>
                         <Grid item lg={2} >
@@ -2666,7 +2672,72 @@ setCarSearchClicked(!carsearchclicked);
             </Box>
         </Box>
     ) 
-:<>{isMatchmediumscreen ? <Box>
+:
+<>{isMatchtabletscreen ? <Box>    <Typography variant="h4" className={classes.articleheading}>
+        Why Choose AfterMarket Products?
+    </Typography>
+
+<Grid container>
+    <Grid item xs={4}>
+        <Card className={classes.whyprod} style={{ display: "flex" }}>
+            <CardActionArea style={{ alignItems: "center" }}>
+                <Box style={{ width: "115px", height: "115px", marginLeft: "95px", marginTop: "50px" }}>
+                    <img src={originalprodimg} width="100%" height="100%" alt="Original products image" />
+                </Box>
+
+                <CardContent>
+                    <Typography align="center" gutterBottom variant="h5" component="h2">
+                        Original Products
+                    </Typography>
+
+                    <Typography align="center" style={{ paddingBottom: "40px" }} variant="body2" component="p">
+                        Only reliable parts from trusted Aftermarket brands
+                    </Typography>
+                </CardContent>
+            </CardActionArea>
+        </Card>
+    </Grid>
+    <Grid item xs={4}>
+        <Card className={classes.whyprod} style={{ display: "flex" }}>
+            <CardActionArea style={{ alignItems: "center" }}>
+                <Box style={{ width: "115px", height: "135px", marginLeft: "95px", marginTop: "50px" }}>
+                    <img src={affordableratesimg} width="100%" height="100%" alt="affordable rates image"/>
+                </Box>
+
+                <CardContent>
+                    <Typography align="left" gutterBottom variant="h5" component="h2">
+                        Affordable Rates
+                    </Typography>
+
+                    <Typography align="left" variant="body2" component="p">
+                        Repairing a damaged vehicle can be expensive. Using the aftermrket products is a good situation if you're on a budget.
+                    </Typography>
+                </CardContent>
+            </CardActionArea>
+        </Card>
+    </Grid>
+    <Grid item xs={4}>
+        <Card className={classes.whyprod} style={{ display: "flex", marginRight: "30px" }}>
+            <CardActionArea style={{ alignItems: "left" }}>
+                <Box style={{ width: "115px", height: "115px", marginLeft: "95px", marginTop: "50px" }}>
+                    <img src={widevarietyimg} width="100%" height="100%" alt="wide variety image"/>
+                </Box>
+                <CardContent>
+                    <Typography align="left" gutterBottom variant="h5" component="h2">
+                        Wide variety
+                    </Typography>
+
+                    <Typography align="left" variant="body2" component="p">
+                        We have something for everyone when it comes to after market products. Just apply the "Aftermarket" filter in the catalogue and check the offers.
+                    </Typography>
+                </CardContent>
+            </CardActionArea>
+        </Card>
+    </Grid>
+</Grid>
+    </Box> :
+
+<>{isMatchmediumscreen ? <Box>
 <Box>
     <Typography variant="h4" className={classes.articleheading}>
         Why Choose AfterMarket Products?
@@ -2799,7 +2870,8 @@ setCarSearchClicked(!carsearchclicked);
         </Card>
     </Grid>
 </Grid>
-</Box>: ""}</>}</>}
+</Box>: ""}</>}</>}</>}
+
 
 {
     isMatch ? (

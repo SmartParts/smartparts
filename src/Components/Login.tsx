@@ -8,6 +8,7 @@ import CardMedia from '@material-ui/core/CardMedia';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
 import CardContent from '@material-ui/core/CardContent';
 import loginimage from '../image/login/login.png';
+import {Link} from 'react-router-dom';
 // import IconButton from '@material-ui/core/IconButton';
 // import SkipPreviousIcon from '@material-ui/icons/SkipPrevious';
 // import PlayArrowIcon from '@material-ui/icons/PlayArrow';
@@ -71,7 +72,7 @@ const useStyles = makeStyles((theme) => ({
         marginTop: "10px",
         backgroundColor: "#8517FF",
         color: "white",
-      '&: hover': {
+      '&:hover': {
         backgroundColor: "#8517FF",
         color: "white",
       }
@@ -104,7 +105,7 @@ const useStyles = makeStyles((theme) => ({
     },
     },
   }));
-export default function Login(){
+export default function Login(props){
 
     const classes = useStyles();
     const theme = useTheme();
@@ -133,8 +134,7 @@ export default function Login(){
    
 
      // post request
-     e.preventDefault();
-     const {email, password} = loginuser;
+   const {email, password} = loginuser;
      const res = await fetch("/login", {
        method: "POST",
       headers: {
@@ -152,14 +152,15 @@ export default function Login(){
     
       //const data = await res.json();
       console.log(res);
-    if (res.status === 422 || !res){
-         window.alert("Invalid User");
-         console.log("Invalid User");
-      }else {
-        window.alert("Login successfull");
-        console.log("Successfull Login");
-    
+    if (res.status === 200 || !res){
+      window.alert("Login successfull");
+      console.log("Successfull Login"); 
       history.push('/myprofile');
+      props.setIsLogin(true);
+      }else {  
+      window.alert("Invalid User");
+      console.log("Invalid User");
+      props.setIsLogin(false);
        }
       }
  //     if (res.email == loginuser.email)
@@ -187,9 +188,10 @@ export default function Login(){
                         Please use the form to Log In. Don't have any account yet?
 
                     </Typography>
+                    <Link to="/registration">
                     <Typography className={classes.primary}>
                         Sign Up
-                    </Typography>
+                    </Typography></Link>
                     <form className={classes.formdetails} noValidate autoComplete="off">
                     <div className={classes.details} >
                 
@@ -224,7 +226,7 @@ export default function Login(){
           {/* Theme provider button */}
           <Typography align="center" style={{margin: "5px"}}><a href="">Forgot Password?</a></Typography>
           <Typography align="center" style={{margin: "5px"}}>Or</Typography>
-          <Button variant="outlined" style={{width: "100%"}} onClick={login}>
+          <Button variant="outlined" style={{width: "100%"}} >
               Sign in with Facebook
           </Button>
           </div>

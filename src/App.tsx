@@ -3,7 +3,7 @@ import Navbar from './Components/Navbar';
 import {BrowserRouter} from 'react-router-dom';
 // import Home from './Components/Home';
 // import Others from './Components/Others';
-import Body from './Components/Body';
+import Body2 from './Components/Body2';
 import {Grid,Paper,CssBaseline} from "@material-ui/core";
 import {makeStyles} from "@material-ui/core/styles";
 import {createMuiTheme,ThemeProvider} from "@material-ui/core/styles";
@@ -12,6 +12,7 @@ const App = ()=> {
   
   
   const [lightTheme, setLightTheme] = useState(true);
+  const [isLogin, setIsLogin] = useState(false);
 
   const onThemeChangeHandler=()=>{
     setLightTheme(!lightTheme);
@@ -43,9 +44,9 @@ const classes= useStyles();
       <Paper square className={classes.paper} >
       <BrowserRouter>      
   
-        <Navbar  onThemeChangeHandler={onThemeChangeHandler}/> 
+        <Navbar isLogin={isLogin} setIsLogin ={setIsLogin} onThemeChangeHandler={onThemeChangeHandler}/> 
          {/* not required in myprofile */}
-        <Body/>
+        <Body2 setIsLogin ={setIsLogin} />
       </BrowserRouter>
       </Paper>
       </Grid>

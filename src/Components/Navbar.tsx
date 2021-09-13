@@ -32,6 +32,7 @@ import Infoicon from '@material-ui/icons/Info';
 // import Personicon from '@material-ui/icons/Person';
 // import Helpicon from '@material-ui/icons/Help';
 import AttachMoney from '@material-ui/icons/AttachMoney';
+import {useHistory} from 'react-router-dom';
 import Lock from '@material-ui/icons/Lock';
 import Language from '@material-ui/icons/Language';
 import SettingsIcon from '@material-ui/icons/Settings';
@@ -141,7 +142,7 @@ export default function Navbar(props) {
     const theme = useTheme();
 
 const [myprofilescreen, setMyProfielScreen] = React.useState(true);
-
+const history = useHistory();
     
   //  const isMatch = theme.breakpoints.down("md");
     
@@ -297,8 +298,38 @@ const [myprofilescreen, setMyProfielScreen] = React.useState(true);
 setDarkTheme(true);
   };
   
+  const showLoginScreen = () => {
+    props.setIsLogin(false);
+    history.push('/login');
+  }
+  const getHandler = async(e) => {
+   
+
+    // get request
   
+    const res = await fetch("/logout", {
+      method: "GET",
+     headers: {
+      "Content-Type": "application/json",
+    
+     },
+    
+     
   
+    })
+
+     console.log(res);
+   if (res.status === 200 || !res){
+     window.alert("Logout successfull");
+     console.log("Successfull Logout"); 
+     history.push('/login');
+     props.setIsLogin(false);
+     }else {  
+     
+     console.log("not working");
+     props.setIsLogin(true);
+      }
+     }  
          return ( 
       
         <>
@@ -334,7 +365,7 @@ setDarkTheme(true);
                     {/*  component={Link} to="/" */}
                     {/* <Button color="inherit" component={Link} to="/result">Messages</Button> */}
                     <Button color="inherit" variant="outlined" className={classes.hideIconsignup}  style={{borderRadius: "25px", padding: "5px", marginRight: "30px", border: "1px solid black"}}><Link to="/registration" className={classes.hyperlinksignup} >Sign Up</Link></Button>
-                    <Button color="inherit" variant="outlined" className={classes.hideIconlogin} style={{borderRadius: "25px", padding: "5px",  border: "1px solid black",  textDecoration: "none"}}><Link to="/login" className={classes.hyperlinklogin}>Login</Link></Button>
+                    {props.isLogin==true? <Button color="inherit" variant="outlined" className={classes.hideIconlogin} onClick={getHandler} style={{borderRadius: "25px", padding: "5px",  border: "1px solid black",  textDecoration: "none"}}>Logout</Button>:<Button color="inherit" variant="outlined" className={classes.hideIconlogin} style={{borderRadius: "25px", padding: "5px",  border: "1px solid black",  textDecoration: "none"}}><Link to="/login" className={classes.hyperlinklogin}>Login</Link></Button>}
                     <Link to="/shoppingcart">{darktheme ?<AddShoppingCart  className={classes.hideIcon} style={{marginLeft: 30,  marginTop: 10, color: "white"}}></AddShoppingCart> :<AddShoppingCart  className={classes.hideIcon} style={{marginLeft: 30,  marginTop: 10, color: "black"}}></AddShoppingCart>}</Link>
                     {colorred ?  <Link to="/wishlist"><FavoriteIcon onClick={addedtowishlist}  style={{marginLeft: 30,  marginTop: 10, color:  "red"}}></FavoriteIcon></Link>:
                     <Link to="/wishlist">{darktheme ?<FavoriteBorder onClick={addedtowishlist} className={classes.hideIcon} style={{marginLeft: 30,  marginTop: 10, color: "white"}}></FavoriteBorder>: <FavoriteBorder onClick={addedtowishlist} className={classes.hideIcon} style={{marginLeft: 30,  marginTop: 10, color: "black"}}></FavoriteBorder>}</Link>}

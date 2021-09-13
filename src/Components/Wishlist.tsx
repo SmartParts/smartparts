@@ -5,21 +5,23 @@ import Card from "@material-ui/core/Card";
 import { CardMedia, CardContent } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import { FavoriteBorder } from '@material-ui/icons';
-import brand1 from "../image/brand1.png";
+import brand1 from "../image/home/HYUNDAI OIL.jpg";
+import brand2 from "../image/home/Front Pad Set.jpg";
+import brand3 from "../image/home/SUZUKI AIR FILTER.jpg";
 import DeleteIcon from '@material-ui/icons/Delete';
 import Button from '@material-ui/core/Button';
 import ReorderIcon from '@material-ui/icons/Reorder';
 import AppsIcon from '@material-ui/icons/Apps';
 const useStyles = makeStyles((theme) =>({
 productimage: {
-    height: 150,
+    height: 220,
     margin: "10px",
 },
 // addtocartbttn: {
 //     width: "10%",
 // },
 listviewimage: {
-    height: 140,
+    height: 160,
     width: "20%",
     margin: "10px",
 },
@@ -74,7 +76,7 @@ return(
                         </CardMedia>
                         <CardContent>
                             <Box >
-                            <Typography style={{fontSize: "15px"}}>Product name</Typography>
+                            <Typography style={{fontSize: "15px"}}>HUNDAI OIL</Typography>
                             <Box style={{display: "flex", flexDirection: "row"}}>
                             <Typography style={{fontSize: "15px"}}>Product description</Typography>
                             <Button className={classes.addtocartbtn} style={{backgroundColor: "black", color: "white",  marginLeft: '40px'}}>Add to Cart</Button>
@@ -91,13 +93,13 @@ return(
                     <CardActions style={{display: "block"}}>
                      
                     
-                        <CardMedia  className={classes.productimage}  image={brand1} title="Product image"  > 
+                        <CardMedia  className={classes.productimage}  image={brand2} title="Product image"  > 
                         <DeleteIcon className={classes.icon} />
                         <FavoriteBorder style={{marginLeft: 230,  marginTop: 10, position: 'absolute'}}></FavoriteBorder>
                         </CardMedia>
                         <CardContent>
                             <Box >
-                            <Typography style={{fontSize: "15px"}}>Product name</Typography>
+                            <Typography style={{fontSize: "15px"}}>FRONT PAD SET</Typography>
                             <Box style={{display: "flex", flexDirection: "row"}}>
                             <Typography style={{fontSize: "15px"}}>Product description</Typography>
                             <Button className={classes.addtocartbtn} style={{backgroundColor: "black", color: "white",  marginLeft: '40px'}}>Add to Cart</Button>
@@ -114,13 +116,13 @@ return(
                     <CardActions style={{display: "block"}}>
                      
                     
-                        <CardMedia  className={classes.productimage}  image={brand1} title="Product image" > 
+                        <CardMedia  className={classes.productimage}  image={brand3} title="Product image" > 
                         <DeleteIcon className={classes.icon} />
                         <FavoriteBorder style={{marginLeft: 230,  marginTop: 10, position: 'absolute'}}></FavoriteBorder>
                         </CardMedia>
                         <CardContent>
                             <Box >
-                            <Typography style={{fontSize: "15px"}}>Product name</Typography>
+                            <Typography style={{fontSize: "15px"}}>SUZUKI AIR FILTER</Typography>
                             <Box style={{display: "flex", flexDirection: "row"}}>
                             <Typography style={{fontSize: "15px"}}>Product description</Typography>
                             <Button className={classes.addtocartbtn} style={{backgroundColor: "black", color: "white",  marginLeft: '40px'}}>Add to Cart</Button>
@@ -147,11 +149,12 @@ return(
                     
                 <Grid container >
                     <Grid item xs={9} style={{width: "900px"}}>
-                    <Typography variant="h5"><strong>Clutch Master Cylinder</strong></Typography>
+                    <Typography variant="h5" style={{marginTop: "20px"}}><strong>HYUNDAI OIL</strong></Typography>
                     <Typography>Number</Typography>
                     </Grid>
-                    
-                    {/* <Button variant="outlined"  style={{backgroundColor: "black", color: "white" }}>Add to Cart</Button> */}
+                    <Box style={{marginTop: "40px"}}>
+                    <Button variant="outlined"  style={{backgroundColor: "black", color: "white" }}>Add to Cart</Button> 
+                    </Box>
                     <Box style={{display: "flex", justifyContent: "flex-end" ,flexDirection: "column"}}>
                     <FavoriteBorder fontSize="large" style={{marginBottom: "50px", marginLeft: "45px"}}></FavoriteBorder>
                     <DeleteIcon fontSize="large" style={{marginLeft: "45px"}}></DeleteIcon>
