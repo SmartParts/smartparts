@@ -5,7 +5,7 @@ import Footer from './Footer';
 import Card from '@material-ui/core/Card';
 // import CardActions from '@material-ui/core/CardActions';
 import CardMedia from '@material-ui/core/CardMedia';
-import { makeStyles, useTheme } from '@material-ui/core/styles';
+import { makeStyles} from '@material-ui/core/styles';
 import CardContent from '@material-ui/core/CardContent';
 import loginimage from '../image/login/login.png';
 import {Link} from 'react-router-dom';

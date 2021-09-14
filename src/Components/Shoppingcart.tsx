@@ -81,12 +81,13 @@ export default function Shoppingcart() {
     React.useEffect(() => {
       const timer = setInterval(() => {
         setProgress((prevProgress) => (prevProgress >= 100 ? 10 : prevProgress + 10));
-        console.log(progress);
+        // console.log(progress);
       }, 800);
       return () => {
         clearInterval(timer);
       };
-    }, []);
+      
+    }, [progress]);
     return(
         <Box>
          <Navbar />
