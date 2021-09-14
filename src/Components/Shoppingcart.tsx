@@ -41,6 +41,7 @@ function LinearProgressWithLabel(props) {
     root: {
       height: 2,
       borderRadius: 5,
+      
     },
     colorPrimary: {
       backgroundColor: theme.palette.grey[theme.palette.type === 'light' ? 200 : 700],

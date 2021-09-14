@@ -18,7 +18,7 @@ import Button from '@material-ui/core/Button';
 import {UserAgentApplication} from 'msal';
 import {config} from'../config';
 import {useHistory} from 'react-router-dom';
-import { userInfo } from 'os';
+// import { userInfo } from 'os';
 const useStyles = makeStyles((theme) => ({
     main: {
       display: 'flex',
@@ -110,14 +110,14 @@ export default function Login(props){
     const classes = useStyles();
     const theme = useTheme();
     // const isMatchscreensize = theme.breakpoints.down("sm");
-    const login= async ()=>{
-      var client = new UserAgentApplication(config);
-      var request ={
-          scopes: ['https://o365mon.kusto.windows.net/user_impersonation']
-      }
-      let loginResponse= await client.loginPopup(request);
-      console.log(loginResponse);
-  }
+  //   const login= async ()=>{
+  //     var client = new UserAgentApplication(config);
+  //     var request ={
+  //         scopes: ['https://o365mon.kusto.windows.net/user_impersonation']
+  //     }
+  //     let loginResponse= await client.loginPopup(request);
+  //     console.log(loginResponse);
+  // }
   const handeldetails = (e) => {
 
     console.log(loginuser);
@@ -135,7 +135,7 @@ export default function Login(props){
 
      // post request
    const {email, password} = loginuser;
-     const res = await fetch("/login", {
+     const res = await fetch("https://smart-parts.herokuapp.com/login", {
        method: "POST",
       headers: {
        "Content-Type": "application/json",
@@ -224,7 +224,7 @@ export default function Login(props){
               Login 
           </Button>
           {/* Theme provider button */}
-          <Typography align="center" style={{margin: "5px"}}><a href="">Forgot Password?</a></Typography>
+          <Typography align="center" style={{margin: "5px"}}><a href="/login">Forgot Password?</a></Typography>
           <Typography align="center" style={{margin: "5px"}}>Or</Typography>
           <Button variant="outlined" style={{width: "100%"}} >
               Sign in with Facebook

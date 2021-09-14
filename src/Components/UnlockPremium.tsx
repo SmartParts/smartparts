@@ -7,11 +7,11 @@ import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
 import Footer from './Footer';
-import { makeStyles, useTheme } from '@material-ui/styles';
+import { makeStyles } from '@material-ui/styles';
 import TextField from '@material-ui/core/TextField';
 import premiumimage from '../image/unlock premium/premium.png';
-import {config} from'../config';
-import {UserAgentApplication} from 'msal';
+// import {config} from'../config';
+// import {UserAgentApplication} from 'msal';
 
 const useStyles = makeStyles((theme) => ({
     registrationdetails: {
@@ -41,8 +41,8 @@ const useStyles = makeStyles((theme) => ({
         marginTop: "10px",
         backgroundColor: "#ffc400",
         color: "white",
-      '&: hover': {
-        backgroundColor: "#8517FF",
+      '&:hover': {
+        backgroundColor: "#ffc400",
         color: "white",
       }
     },
@@ -55,14 +55,14 @@ const useStyles = makeStyles((theme) => ({
 export default function UnlockPremium(){
     const classes = useStyles();
     // const theme = useTheme();
-    const login= async ()=>{
-        var client = new UserAgentApplication(config);
-        var request ={
-            scopes: ['https://o365mon.kusto.windows.net/user_impersonation']
-        }
-        let loginResponse= await client.loginPopup(request);
-        console.log(loginResponse);
-    }
+    // const login= async ()=>{
+    //     var client = new UserAgentApplication(config);
+    //     var request ={
+    //         scopes: ['https://o365mon.kusto.windows.net/user_impersonation']
+    //     }
+    //     let loginResponse= await client.loginPopup(request);
+    //     console.log(loginResponse);
+    // }
     return(
         <Box>
         <Grid container style={{ marginTop: "65px" }}>
@@ -129,7 +129,7 @@ export default function UnlockPremium(){
       <Typography>Or</Typography>
       </Box> */}
 <Typography align="center" style={{margin: "10px"}}>Or</Typography>      
-      <Button variant="outlined" onClick={login}  style={{width: "100%",  color: "#ffc400"}}>
+      <Button variant="outlined"   style={{width: "100%",  color: "#ffc400"}}>
           Sign in with Facebook
       </Button>
       </div>

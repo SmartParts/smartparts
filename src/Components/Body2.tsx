@@ -8,7 +8,7 @@ import Home from './Home';
 import Footer from './Footer';
 import Login from './Login';
 import Registration from './Registration';
-import Shoppingcart from './Shoppingcart';
+import ShoppingCart from './Shoppingcart';
 import WishList from './Wishlist';
 import MyProfile from './MyProfile';
 import Dashboard from './UserDashboard';
@@ -47,7 +47,7 @@ export default function Body(props) {
                     <Route path="/footer" component={Footer} />
                     <Route path="/login" render={()=><Login {...props}/>}/>
                     <Route path="/registration" component={Registration} />
-                    <Route path="/shoppingcart" component={Shoppingcart} />
+                    <Route path="/shoppingcart" component={ShoppingCart} />
                     <Route path="/wishlist" component={WishList} />
                     <Route path="/myprofile" component={MyProfile} />
                     <Route path="/dashboard" component={Dashboard} />

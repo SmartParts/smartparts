@@ -59,17 +59,19 @@ export default function UserDashboard(){
       /><Typography style={{color: "white",  marginTop: "8px"}}>Products</Typography>    </Box>
       
             </Grid>
-                <Grid item style={{marginTop: "100px"}}>
+                <Grid item style={{marginTop: "150px", marginLeft: "200px", marginBottom: "110px"}}>
                     {/* avatar */}
-                    <Typography component="p"><strong>Good afternoon, Saloni!</strong></Typography>
-                    <Typography color="textSecondary" component="p">Welcome to Smart Parts Export! This is your home page where you can quickly see your wishlist and previous orders.</Typography>
-                    <Typography component="p"><strong>Post Orders</strong></Typography>
+                    <Typography component="p" style={{marginTop: "20px"}}><strong>Good afternoon,</strong></Typography>
+                    <Typography color="textSecondary" component="p" style={{marginTop: "20px"}}>Welcome to Smart Parts Export! This is your home page where you can quickly see your wishlist and previous orders.</Typography>
+                    <Typography component="p" style={{marginTop: "20px"}}><strong>Post Orders</strong></Typography>
                     <hr />
-                    <Typography component="p"><strong>Recent Products</strong></Typography>
+                    <Box style={{ margin: "165px"}}>
+                        </Box>
+                    <Typography component="p" style={{marginTop: "20px"}}><strong>Recent Products</strong></Typography>
                     <hr />
                     <Grid container>
                     <Grid item xs={2} >
-                    <Card style={{height: "125px", width: "125px", borderRadius: "25px"}}>
+                    <Card style={{height: "125px", width: "125px",marginTop: "20px", borderRadius: "25px"}}>
                         <CardActions>
                             <CardMedia>
 
@@ -78,7 +80,7 @@ export default function UserDashboard(){
                     </Card>
                     </Grid>
                     <Grid item xs={2}>
-                    <Card style={{height: "125px", width: "125px", borderRadius: "25px"}}>
+                    <Card style={{height: "125px", width: "125px",marginTop: "20px", borderRadius: "25px"}}>
                         <CardActions>
                             <CardMedia>
                                     {/* + icon      */}

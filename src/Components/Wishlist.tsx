@@ -8,6 +8,7 @@ import { FavoriteBorder } from '@material-ui/icons';
 import brand1 from "../image/home/HYUNDAI OIL.jpg";
 import brand2 from "../image/home/Front Pad Set.jpg";
 import brand3 from "../image/home/SUZUKI AIR FILTER.jpg";
+import suzukipart from "../image/brands/Air Filter.jpg";
 import DeleteIcon from '@material-ui/icons/Delete';
 import Button from '@material-ui/core/Button';
 import ReorderIcon from '@material-ui/icons/Reorder';
@@ -141,7 +142,7 @@ return(
       <Grid item xs={11}>
         <Card >
             <CardActions>
-                <CardMedia image={brand1} className={classes.listviewimage}  />
+                <CardMedia image={suzukipart} className={classes.listviewimage}  />
                     
                 
                 <CardContent>
@@ -149,8 +150,8 @@ return(
                     
                 <Grid container >
                     <Grid item xs={9} style={{width: "900px"}}>
-                    <Typography variant="h5" style={{marginTop: "20px"}}><strong>HYUNDAI OIL</strong></Typography>
-                    <Typography>Number</Typography>
+                    <Typography variant="h5" style={{marginTop: "20px"}}><strong>Air Filter</strong></Typography>
+                    <Typography>13870M53M00</Typography>
                     </Grid>
                     <Box style={{marginTop: "40px"}}>
                     <Button variant="outlined"  style={{backgroundColor: "black", color: "white" }}>Add to Cart</Button> 

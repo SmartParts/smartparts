@@ -5,7 +5,10 @@ import Card from "@material-ui/core/Card";
 import { CardMedia, CardContent } from '@material-ui/core';
 import { makeStyles , withStyles} from '@material-ui/core/styles';
 import { FavoriteBorder } from '@material-ui/icons';
-import brand1 from "../image/brand1.png";
+import suzukipartone from '../image/brands/Air Filter.jpg';
+import suzukiparttwo from '../image/brands/CLUTCH SETDISC & COVER.jpg';
+import suzukipartthree from '../image/brands/STRUT ASSY FRT SUSPENSION RH.jpg';
+import suzukipartfour from '../image/home/SUZUKI AIR FILTER.jpg';
 // import DeleteIcon from '@material-ui/icons/Delete';
 // import Button from '@material-ui/core/Button';
 import Checkbox from '@material-ui/core/Checkbox';
@@ -158,7 +161,7 @@ return(
       
       <Typography component="p" style={{fontSize: "13px", marginTop: "12px"}}>Hyundai</Typography>
       </Box>
-      // 30
+      {/* // 30 */}
       <Typography>Class</Typography>
       <Box style={{display: "flex", flexDirection: "row"}}>
         <Checkbox
@@ -205,13 +208,13 @@ return(
                     <CardActions style={{display: "block"}}>
                      
                     
-                        <CardMedia  className={classes.productimage}  image={brand1} title="Product image" > 
+                        <CardMedia  className={classes.productimage}  image={suzukipartone} title="Product image" > 
                         {/* <DeleteIcon className={classes.icon} /> */}
                         <FavoriteBorder style={{marginLeft: 170,  marginTop: 10, position: 'absolute'}}></FavoriteBorder>
                         </CardMedia>
                         <CardContent>
                             <Box >
-                            <Typography>Product name</Typography>
+                            <Typography>Air Filter</Typography>
                             <Box style={{display: "flex", flexDirection: "row"}}>
                             <Typography>Product description</Typography>
                             {/* <Button style={{backgroundColor: "black", color: "white",  marginLeft: '40px'}}>Add to Cart</Button> */}
@@ -228,13 +231,13 @@ return(
                     <CardActions style={{display: "block"}}>
                      
                     
-                        <CardMedia  className={classes.productimage}  image={brand1} title="Product image" > 
+                        <CardMedia  className={classes.productimage}  image={suzukiparttwo} title="Product image" > 
                         
                         <FavoriteBorder style={{marginLeft: 170,  marginTop: 10, position: 'absolute'}}></FavoriteBorder>
                         </CardMedia>
                         <CardContent>
                             <Box>
-                            <Typography>Product name</Typography>
+                            <Typography>Clutch Setdisc</Typography>
                             <Box style={{display: "flex", flexDirection: "row"}}>
                             <Typography>Product description</Typography>
                             {/* <Button style={{backgroundColor: "black", color: "white",  marginLeft: '40px'}}>Add to Cart</Button> */}
@@ -252,13 +255,13 @@ return(
                     <CardActions style={{display: "block"}}>
                      
                     
-                        <CardMedia  className={classes.productimage}  image={brand1} title="Product image" > 
+                        <CardMedia  className={classes.productimage}  image={suzukipartthree} title="Product image" > 
                         
                         <FavoriteBorder style={{marginLeft: 170,  marginTop: 10, position: 'absolute'}}></FavoriteBorder>
                         </CardMedia>
                         <CardContent>
                             <Box >
-                            <Typography>Product name</Typography>
+                            <Typography>Strut Suspension</Typography>
                             <Box style={{display: "flex", flexDirection: "row"}}>
                             <Typography>Product description</Typography>
                             {/* <Button style={{backgroundColor: "black", color: "white",  marginLeft: '40px'}}>Add to Cart</Button> */}
@@ -276,13 +279,13 @@ return(
                     <CardActions style={{display: "block"}}>
                      
                     
-                        <CardMedia  className={classes.productimage}  image={brand1} title="Product image" > 
+                        <CardMedia  className={classes.productimage}  image={suzukipartfour} title="Product image" > 
                         
                         <FavoriteBorder style={{marginLeft: 170,  marginTop: 10, position: 'absolute'}}></FavoriteBorder>
                         </CardMedia>
                         <CardContent>
                             <Box>
-                            <Typography>Product name</Typography>
+                            <Typography>SUZUKI Air Filter</Typography>
                             <Box style={{display: "flex", flexDirection: "row"}}>
                             <Typography>Product description</Typography>
                             {/* <Button style={{backgroundColor: "black", color: "white",  marginLeft: '40px'}}>Add to Cart</Button> */}

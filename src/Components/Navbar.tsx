@@ -298,16 +298,16 @@ const history = useHistory();
 setDarkTheme(true);
   };
   
-  const showLoginScreen = () => {
-    props.setIsLogin(false);
-    history.push('/login');
-  }
+  // const showLoginScreen = () => {
+  //   props.setIsLogin(false);
+  //   history.push('/login');
+  // }
   const getHandler = async(e) => {
    
 
     // get request
   
-    const res = await fetch("/logout", {
+    const res = await fetch("https://smart-parts.herokuapp.com/logout", {
       method: "GET",
      headers: {
       "Content-Type": "application/json",
@@ -366,10 +366,10 @@ setDarkTheme(true);
                     {/* <Button color="inherit" component={Link} to="/result">Messages</Button> */}
                     <Button color="inherit" variant="outlined" className={classes.hideIconsignup}  style={{borderRadius: "25px", padding: "5px", marginRight: "30px", border: "1px solid black"}}><Link to="/registration" className={classes.hyperlinksignup} >Sign Up</Link></Button>
                     {props.isLogin==true? <Button color="inherit" variant="outlined" className={classes.hideIconlogin} onClick={getHandler} style={{borderRadius: "25px", padding: "5px",  border: "1px solid black",  textDecoration: "none"}}>Logout</Button>:<Button color="inherit" variant="outlined" className={classes.hideIconlogin} style={{borderRadius: "25px", padding: "5px",  border: "1px solid black",  textDecoration: "none"}}><Link to="/login" className={classes.hyperlinklogin}>Login</Link></Button>}
-                    <Link to="/shoppingcart">{darktheme ?<AddShoppingCart  className={classes.hideIcon} style={{marginLeft: 30,  marginTop: 10, color: "white"}}></AddShoppingCart> :<AddShoppingCart  className={classes.hideIcon} style={{marginLeft: 30,  marginTop: 10, color: "black"}}></AddShoppingCart>}</Link>
+                    <Link to="/shoppingcart">{theme.palette.type=='dark'?<AddShoppingCart  className={classes.hideIcon} style={{marginLeft: 30,  marginTop: 10, color: "white"}}></AddShoppingCart> :<AddShoppingCart  className={classes.hideIcon} style={{marginLeft: 30,  marginTop: 10, color: "black"}}></AddShoppingCart>}</Link>
                     {colorred ?  <Link to="/wishlist"><FavoriteIcon onClick={addedtowishlist}  style={{marginLeft: 30,  marginTop: 10, color:  "red"}}></FavoriteIcon></Link>:
-                    <Link to="/wishlist">{darktheme ?<FavoriteBorder onClick={addedtowishlist} className={classes.hideIcon} style={{marginLeft: 30,  marginTop: 10, color: "white"}}></FavoriteBorder>: <FavoriteBorder onClick={addedtowishlist} className={classes.hideIcon} style={{marginLeft: 30,  marginTop: 10, color: "black"}}></FavoriteBorder>}</Link>}
-                    <Link to="/login">{darktheme ?<PersonOutline className={classes.hideIcon} onClick={ScreenIsClicked} style={{marginLeft: 30, marginTop: 10, color: "white"}}></PersonOutline>:<PersonOutline className={classes.hideIcon} onClick={ScreenIsClicked} style={{marginLeft: 30, marginTop: 10, color: "black"}}></PersonOutline>}</Link>
+                    <Link to="/wishlist">{theme.palette.type=='dark'?<FavoriteBorder onClick={addedtowishlist} className={classes.hideIcon} style={{marginLeft: 30,  marginTop: 10, color: "white"}}></FavoriteBorder>: <FavoriteBorder onClick={addedtowishlist} className={classes.hideIcon} style={{marginLeft: 30,  marginTop: 10, color: "black"}}></FavoriteBorder>}</Link>}
+                    <Link to="/login">{theme.palette.type=='dark' ?<PersonOutline className={classes.hideIcon} onClick={ScreenIsClicked} style={{marginLeft: 30, marginTop: 10, color: "white"}}></PersonOutline>:<PersonOutline className={classes.hideIcon} onClick={ScreenIsClicked} style={{marginLeft: 30, marginTop: 10, color: "black"}}></PersonOutline>}</Link>
                     {/* <Button color="inherit" component={Link} to="/result">My Profile</Button> */}
                     <SettingsIcon style={{marginLeft: 30, marginRight: 30, marginTop: 10}}className={classes.hideIcon} onClick={handleSettingDrawerOpen}></SettingsIcon>
                     {/* <Switch onChange={props.onThemeChangeHandler}></Switch> */}

@@ -7,7 +7,7 @@ import TextTransition, { presets } from "react-text-transition";
 // import Container from "@material-ui/core/Container";
 import mainimage from '../image/home/mainimage.png';
 import Autocomplete from '@material-ui/lab/Autocomplete';
-import {green} from "@material-ui/core/colors";
+// import {green} from "@material-ui/core/colors";
 import CardMedia from '@material-ui/core/CardMedia';
 import ChatIcon from '@material-ui/icons/Chat';
 import ChatBot from '../Components/chatbot.js';
@@ -21,7 +21,7 @@ import Popper from '@material-ui/core/Popper';
 // import image2 from '../image/logo2.png';
 // import image3 from '../image/aboutus.jpg';
 import LinearProgress from '@material-ui/core/LinearProgress';
-import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
+import { ThemeProvider } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
 //import bannerVideo from '../../src/video/bannervideo.mp4';
 import Card from '@material-ui/core/Card';
@@ -110,10 +110,10 @@ import articlethreeimage from '../image/article/Untitled-4.jpg';
 import Tooltip from '@material-ui/core/Tooltip';
 // import Navbar from './Navbar';
 import Carousel from './Carousel';
-import { ArrowRight } from '@material-ui/icons';
+// import { ArrowRight } from '@material-ui/icons';
 // const bannerVideo = require('../../src/video/bannervideo.mp4');
 import workflowimage from '../image/ordermanagementworkflow/workflow.png';
-import { url } from 'inspector';
+// import { url } from 'inspector';
 const TEXTS = [
     "FAST",
     "GENUINE",
@@ -128,22 +128,22 @@ const TEXTS = [
     }
   })(Tooltip);
   
-const BorderLinearProgress = withStyles((theme) => ({
-    root: {
-      height: 355,
-      borderRadius: 5,
-    },
+// const BorderLinearProgress = withStyles((theme) => ({
+//     root: {
+//       height: 355,
+//       borderRadius: 5,
+//     },
     
-    colorPrimary: {
-      backgroundColor: theme.palette.grey[theme.palette.type === 'light' ? 200 : 700],
-    },
-    bar: {
-      width: "201%",
-      borderRadius: 5,
-      backgroundColor: '#1a90ff',
+//     colorPrimary: {
+//       backgroundColor: theme.palette.grey[theme.palette.type === 'light' ? 200 : 700],
+//     },
+//     bar: {
+//       width: "201%",
+//       borderRadius: 5,
+//       backgroundColor: '#1a90ff',
 
-    },
-  }))(LinearProgress);
+//     },
+//   }))(LinearProgress);
  
 const useStyles = makeStyles((theme)=>({
 
@@ -888,9 +888,9 @@ export default function Home() {
     const  classes= useStyles();
     const [carmaker, setCarmaker] = React.useState('');
     const [expand, setExpand] = useState(false);
-    const [modalStyle] = React.useState(getModalStyle);
-    const [open, setOpen] = React.useState(false);
-    const [showImage, setShowImage] = React.useState(false);
+    // const [modalStyle] = React.useState(getModalStyle);
+    // const [open, setOpen] = React.useState(false);
+    // const [showImage, setShowImage] = React.useState(false);
 //    const [checked, setChecked] = React.useState(false);
     const [selectedbutton, setSelectedButton] = React.useState(false);
 
@@ -2616,7 +2616,7 @@ setCarSearchClicked(!carsearchclicked);
                         <Card className={classes.whyprod} >
                             <CardActionArea style={{ alignItems: "center" }}>
                                 <Box style={{ width: "55px", height: "35px", marginLeft: "20px", marginTop: "0.5rem" }}>
-                                    <img src={originalprodimg} style={{width: "100%", height: "100%"}} alt="Original Products image"/>
+                                    <img src={originalprodimg} style={{width: "100%", height: "100%"}} alt="Original Products"/>
                                 </Box>
 
                                 <CardContent>
@@ -2635,7 +2635,7 @@ setCarSearchClicked(!carsearchclicked);
                         <Card className={classes.whyprod} >
                             <CardActionArea style={{ alignItems: "center" }}>
                                 <Box style={{ width: "55px", height: "35px", marginLeft: "20px", marginTop: "0.5rem" }}>
-                                    <img src={affordableratesimg} style={{width: "100%", height: "100%"}} alt="Affordable rates image" />
+                                    <img src={affordableratesimg} style={{width: "100%", height: "100%"}} alt="Affordable rates" />
                                 </Box>
 
                                 <CardContent>
@@ -2654,7 +2654,7 @@ setCarSearchClicked(!carsearchclicked);
                         <Card className={classes.whyprod} >
                             <CardActionArea style={{ alignItems: "left" }}>
                                 <Box style={{ width: "55px", height: "35px", marginLeft: "20px", marginTop: "0.5rem" }}>
-                                    <img src={widevarietyimg} style={{width: "100%", height: "100%"}} alt="Wide variety image"/>
+                                    <img src={widevarietyimg} style={{width: "100%", height: "100%"}} alt="Wide variety"/>
                                 </Box>
                                 <CardContent>
                                     <Typography align="left" gutterBottom variant="body2" component="p" style={{paddingLeft: "8px"}}>
@@ -2682,7 +2682,7 @@ setCarSearchClicked(!carsearchclicked);
         <Card className={classes.whyprod} style={{ display: "flex" }}>
             <CardActionArea style={{ alignItems: "center" }}>
                 <Box style={{ width: "115px", height: "115px", marginLeft: "95px", marginTop: "50px" }}>
-                    <img src={originalprodimg} width="100%" height="100%" alt="Original products image" />
+                    <img src={originalprodimg} width="100%" height="100%" alt="Original products" />
                 </Box>
 
                 <CardContent>
@@ -2701,7 +2701,7 @@ setCarSearchClicked(!carsearchclicked);
         <Card className={classes.whyprod} style={{ display: "flex" }}>
             <CardActionArea style={{ alignItems: "center" }}>
                 <Box style={{ width: "115px", height: "135px", marginLeft: "95px", marginTop: "50px" }}>
-                    <img src={affordableratesimg} width="100%" height="100%" alt="affordable rates image"/>
+                    <img src={affordableratesimg} width="100%" height="100%" alt="affordable rates"/>
                 </Box>
 
                 <CardContent>
@@ -2720,7 +2720,7 @@ setCarSearchClicked(!carsearchclicked);
         <Card className={classes.whyprod} style={{ display: "flex", marginRight: "30px" }}>
             <CardActionArea style={{ alignItems: "left" }}>
                 <Box style={{ width: "115px", height: "115px", marginLeft: "95px", marginTop: "50px" }}>
-                    <img src={widevarietyimg} width="100%" height="100%" alt="wide variety image"/>
+                    <img src={widevarietyimg} width="100%" height="100%" alt="wide variety"/>
                 </Box>
                 <CardContent>
                     <Typography align="left" gutterBottom variant="h5" component="h2">
@@ -2748,7 +2748,7 @@ setCarSearchClicked(!carsearchclicked);
         <Card className={classes.whyprod} style={{ display: "flex" }}>
             <CardActionArea style={{ alignItems: "center" }}>
                 <Box style={{ width: "115px", height: "115px", marginLeft: "95px", marginTop: "50px" }}>
-                    <img src={originalprodimg} width="100%" height="100%" alt="Original products image" />
+                    <img src={originalprodimg} width="100%" height="100%" alt="Original products" />
                 </Box>
 
                 <CardContent>
@@ -2767,7 +2767,7 @@ setCarSearchClicked(!carsearchclicked);
         <Card className={classes.whyprod} style={{ display: "flex" }}>
             <CardActionArea style={{ alignItems: "center" }}>
                 <Box style={{ width: "115px", height: "135px", marginLeft: "95px", marginTop: "50px" }}>
-                    <img src={affordableratesimg} width="100%" height="100%" alt="affordable rates image"/>
+                    <img src={affordableratesimg} width="100%" height="100%" alt="affordable rates"/>
                 </Box>
 
                 <CardContent>
@@ -2786,7 +2786,7 @@ setCarSearchClicked(!carsearchclicked);
         <Card className={classes.whyprod} style={{ display: "flex", marginRight: "30px" }}>
             <CardActionArea style={{ alignItems: "left" }}>
                 <Box style={{ width: "115px", height: "115px", marginLeft: "95px", marginTop: "50px" }}>
-                    <img src={widevarietyimg} width="100%" height="100%" alt="wide variety image"/>
+                    <img src={widevarietyimg} width="100%" height="100%" alt="wide variety"/>
                 </Box>
                 <CardContent>
                     <Typography align="left" gutterBottom variant="h5" component="h2">
@@ -2817,7 +2817,7 @@ setCarSearchClicked(!carsearchclicked);
         <Card className={classes.whyprod} style={{ display: "flex", marginLeft: " 25px", marginRight: "55px" }}>
             <CardActionArea style={{ alignItems: "center" }}>
                 <Box style={{ width: "115px", height: "115px", marginLeft: "135px", marginTop: "50px" }}>
-                    <img src={originalprodimg} width="100%" height="100%" alt="Original products image" />
+                    <img src={originalprodimg} width="100%" height="100%" alt="Original products" />
                 </Box>
 
                 <CardContent>
@@ -2836,7 +2836,7 @@ setCarSearchClicked(!carsearchclicked);
         <Card className={classes.whyprod} style={{ display: "flex" }}>
             <CardActionArea style={{ alignItems: "center" }}>
                 <Box style={{ width: "115px", height: "115px", marginLeft: "135px", marginTop: "50px" }}>
-                    <img src={affordableratesimg} width="100%" height="100%" alt="affordable rates image"/>
+                    <img src={affordableratesimg} width="100%" height="100%" alt="affordable rates"/>
                 </Box>
 
                 <CardContent>
@@ -2855,7 +2855,7 @@ setCarSearchClicked(!carsearchclicked);
         <Card className={classes.whyprod} style={{ display: "flex", marginRight: "30px" }}>
             <CardActionArea style={{ alignItems: "left" }}>
                 <Box style={{ width: "115px", height: "115px", marginLeft: "135px", marginTop: "50px" }}>
-                    <img src={widevarietyimg} width="100%" height="100%" alt="wide variety image"/>
+                    <img src={widevarietyimg} width="100%" height="100%" alt="wide variety"/>
                 </Box>
                 <CardContent>
                     <Typography align="left" gutterBottom variant="h5" component="h2">

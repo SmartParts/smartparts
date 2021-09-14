@@ -167,7 +167,7 @@ export default function Footer(){
                         <Grid container justify="space-evenly">
                         <Grid item xs={3} alignItems="center" style={{margin:"90px 0px"}}>
                         <Box className={classes.locationone} >
-                            <img src={singaporeimg} width="100%" height="100%" alt="Singapore image" />
+                            <img src={singaporeimg} width="100%" height="100%" alt="Singapore" />
                             </Box>
                             <Box className={classes.zoomtext}>
 
@@ -177,7 +177,7 @@ export default function Footer(){
                         </Grid>
                         <Grid item xs={3} style={{margin:"90px 0px"}}>
                         <Box className={classes.locationtwo} >
-                            <img src={indiaimg} width="100%" height="100%" alt="India image" />
+                            <img src={indiaimg} width="100%" height="100%" alt="India" />
                             </Box>
                         <Box className={classes.zoomtext}>
 
@@ -188,7 +188,7 @@ export default function Footer(){
 
                             <Grid item xs={3} style={{margin:"90px 0px"}}>
                             <Box className={classes.locationthree} >
-                            <img src={dubaiimg} width="100%" height="100%" alt="Dubai image"/>
+                            <img src={dubaiimg} width="100%" height="100%" alt="Dubai"/>
                             </Box>
                             <Box className={classes.zoomtext}>
                             

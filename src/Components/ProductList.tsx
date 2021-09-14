@@ -165,7 +165,7 @@ return(
       
       <Typography component="p" style={{fontSize: "13px", marginTop: "12px"}}>Hyundai</Typography>
       </Box>
-      // 30
+      {/* // 30 */}
       <Typography>Class</Typography>
       <Box style={{display: "flex", flexDirection: "row"}}>
         <Checkbox

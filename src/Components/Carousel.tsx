@@ -7,7 +7,7 @@ import '../Components/Carousel.css';
 import React from 'react';
 // import product1 from "../image/products/productimage.png";
 
- import featureprod from '../image/products/featuredproduct.jpg';
+//  import featureprod from '../image/products/featuredproduct.jpg';
  import featureprodtwo from '../image/home/Front Pad Set.jpg';
  import featureprodthree from '../image/home/HYUNDAI OIL.jpg';
  import featureprodfour from '../image/home/nissan Spark plugs post.jpg';
