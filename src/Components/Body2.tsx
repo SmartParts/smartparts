@@ -21,20 +21,6 @@ import Helpsupport from './Helpsupport';
 // import Navbar from './Navbar';
 import Chatbot from './chatbot';
 
-const useStyles = makeStyles((theme)=>({
-    root:{
-        height:"91.35%" //check
-    },
-    item1:{
-        backgroundColor:theme.palette.grey[200],
-        height:"100%"
-    },
-    item2:{
-        height:"100%"
-    }
-}))
-
-
 export default function Body(props) {
     
     return (

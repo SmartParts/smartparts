@@ -20,7 +20,7 @@ import InputLabel from '@material-ui/core/InputLabel';
 import Popper from '@material-ui/core/Popper';
 // import image2 from '../image/logo2.png';
 // import image3 from '../image/aboutus.jpg';
-import LinearProgress from '@material-ui/core/LinearProgress';
+// import LinearProgress from '@material-ui/core/LinearProgress';
 import { ThemeProvider } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
 //import bannerVideo from '../../src/video/bannervideo.mp4';
@@ -854,16 +854,16 @@ const useStyles = makeStyles((theme)=>({
      return Math.round(Math.random() * 20) - 10;
    }
   
-   function getModalStyle() {
-     const top = 50 + rand();
-     const left = 50 + rand();
+//    function getModalStyle() {
+//      const top = 50 + rand();
+//      const left = 50 + rand();
   
-     return {
-      top: `${top}%`,
-       left: `${left}%`,
-       transform: `translate(-${top}%, -${left}%)`,
-     };
-   }
+//      return {
+//       top: `${top}%`,
+//        left: `${left}%`,
+//        transform: `translate(-${top}%, -${left}%)`,
+//      };
+//    }
 
 // const theme = createMuiTheme({
 //     palette : {
@@ -1001,7 +1001,7 @@ const [index, setIndex] = React.useState(0);
      };
 
      const [progress, setProgress] = React.useState(0);
-     const [buffer, setBuffer] = React.useState(10);
+       const [buffer, setBuffer] = React.useState(10);
      const [carsearchclicked, setCarSearchClicked] = React.useState(false);
      const theme = useTheme();
      const [iscollapsed, setIsCollapsed] = React.useState(false);
@@ -1031,7 +1031,7 @@ setCarSearchClicked(!carsearchclicked);
        progressRef.current = () => {
          if (progress > 100) {
            setProgress(0);
-           setBuffer(10);
+           setBuffer(buffer);
          } else {
            const diff = Math.random() * 10;
            const diff2 = Math.random() * 10;

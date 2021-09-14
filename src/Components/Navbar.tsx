@@ -88,12 +88,12 @@ const useStyles = makeStyles((theme) =>({
     }
     },
     root:{
-        backgroundColor:theme.palette.type=='dark'?'black':'white',
+        backgroundColor:theme.palette.type==='dark'?'black':'white',
         color:theme.palette.text.primary, 
 
     },
     myprofilebar: {
-      backgroundColor:theme.palette.type=='dark'?'black':'white',
+      backgroundColor:theme.palette.type==='dark'?'black':'white',
       color:theme.palette.text.primary, 
     },
      searchbar: {
@@ -137,7 +137,7 @@ const useStyles = makeStyles((theme) =>({
 
 
 export default function Navbar(props) {
-    const [mobileMenuAnchorEl, setMobileMenuAnchorEl] = useState(null);
+    const [mobileMenuAnchorEl] = useState(null);
     const classes = useStyles();
     const theme = useTheme();
 
@@ -211,9 +211,9 @@ const history = useHistory();
          }
          const ScreenIsClicked = () => {
         console.log('hi');
-          setMyProfielScreen(false);
+          setMyProfielScreen(!myprofilescreen);
          }
-         const [array, setarray] = useState(['Search by Vehicle', 'Search by VIN','Cart', 'Legal and others']);
+         const [array] = useState(['Search by Vehicle', 'Search by VIN','Cart', 'Legal and others']);
   
          const [modalStyle] = React.useState(getModalStyle);
    const [darktheme, setDarkTheme] = React.useState(false);
@@ -295,7 +295,7 @@ const history = useHistory();
   
   
   const changedtodarktheme = () => {
-setDarkTheme(true);
+setDarkTheme(!darktheme);
   };
   
   // const showLoginScreen = () => {
@@ -365,11 +365,11 @@ setDarkTheme(true);
                     {/*  component={Link} to="/" */}
                     {/* <Button color="inherit" component={Link} to="/result">Messages</Button> */}
                     <Button color="inherit" variant="outlined" className={classes.hideIconsignup}  style={{borderRadius: "25px", padding: "5px", marginRight: "30px", border: "1px solid black"}}><Link to="/registration" className={classes.hyperlinksignup} >Sign Up</Link></Button>
-                    {props.isLogin==true? <Button color="inherit" variant="outlined" className={classes.hideIconlogin} onClick={getHandler} style={{borderRadius: "25px", padding: "5px",  border: "1px solid black",  textDecoration: "none"}}>Logout</Button>:<Button color="inherit" variant="outlined" className={classes.hideIconlogin} style={{borderRadius: "25px", padding: "5px",  border: "1px solid black",  textDecoration: "none"}}><Link to="/login" className={classes.hyperlinklogin}>Login</Link></Button>}
-                    <Link to="/shoppingcart">{theme.palette.type=='dark'?<AddShoppingCart  className={classes.hideIcon} style={{marginLeft: 30,  marginTop: 10, color: "white"}}></AddShoppingCart> :<AddShoppingCart  className={classes.hideIcon} style={{marginLeft: 30,  marginTop: 10, color: "black"}}></AddShoppingCart>}</Link>
+                    {props.isLogin===true? <Button color="inherit" variant="outlined" className={classes.hideIconlogin} onClick={getHandler} style={{borderRadius: "25px", padding: "5px",  border: "1px solid black",  textDecoration: "none"}}>Logout</Button>:<Button color="inherit" variant="outlined" className={classes.hideIconlogin} style={{borderRadius: "25px", padding: "5px",  border: "1px solid black",  textDecoration: "none"}}><Link to="/login" className={classes.hyperlinklogin}>Login</Link></Button>}
+                    <Link to="/shoppingcart">{theme.palette.type==='dark'?<AddShoppingCart  className={classes.hideIcon} style={{marginLeft: 30,  marginTop: 10, color: "white"}}></AddShoppingCart> :<AddShoppingCart  className={classes.hideIcon} style={{marginLeft: 30,  marginTop: 10, color: "black"}}></AddShoppingCart>}</Link>
                     {colorred ?  <Link to="/wishlist"><FavoriteIcon onClick={addedtowishlist}  style={{marginLeft: 30,  marginTop: 10, color:  "red"}}></FavoriteIcon></Link>:
-                    <Link to="/wishlist">{theme.palette.type=='dark'?<FavoriteBorder onClick={addedtowishlist} className={classes.hideIcon} style={{marginLeft: 30,  marginTop: 10, color: "white"}}></FavoriteBorder>: <FavoriteBorder onClick={addedtowishlist} className={classes.hideIcon} style={{marginLeft: 30,  marginTop: 10, color: "black"}}></FavoriteBorder>}</Link>}
-                    <Link to="/login">{theme.palette.type=='dark' ?<PersonOutline className={classes.hideIcon} onClick={ScreenIsClicked} style={{marginLeft: 30, marginTop: 10, color: "white"}}></PersonOutline>:<PersonOutline className={classes.hideIcon} onClick={ScreenIsClicked} style={{marginLeft: 30, marginTop: 10, color: "black"}}></PersonOutline>}</Link>
+                    <Link to="/wishlist">{theme.palette.type==='dark'?<FavoriteBorder onClick={addedtowishlist} className={classes.hideIcon} style={{marginLeft: 30,  marginTop: 10, color: "white"}}></FavoriteBorder>: <FavoriteBorder onClick={addedtowishlist} className={classes.hideIcon} style={{marginLeft: 30,  marginTop: 10, color: "black"}}></FavoriteBorder>}</Link>}
+                    <Link to="/login">{theme.palette.type==='dark' ?<PersonOutline className={classes.hideIcon} onClick={ScreenIsClicked} style={{marginLeft: 30, marginTop: 10, color: "white"}}></PersonOutline>:<PersonOutline className={classes.hideIcon} onClick={ScreenIsClicked} style={{marginLeft: 30, marginTop: 10, color: "black"}}></PersonOutline>}</Link>
                     {/* <Button color="inherit" component={Link} to="/result">My Profile</Button> */}
                     <SettingsIcon style={{marginLeft: 30, marginRight: 30, marginTop: 10}}className={classes.hideIcon} onClick={handleSettingDrawerOpen}></SettingsIcon>
                     {/* <Switch onChange={props.onThemeChangeHandler}></Switch> */}
@@ -399,7 +399,7 @@ setDarkTheme(true);
         <List>
           {array.map((text, index) => (
             <ListItem button key={text}>
-              {index!=3?<><ListItemIcon>{index  === 1 || index === 0 ? <InboxIcon /> : <div>{index === 2 ? <CartIcon  /> : <div><Infoicon /><KeyboardArrowDownOutlinedIcon onClick={legaldetails} /></div>}</div>}</ListItemIcon>
+              {index!==3?<><ListItemIcon>{index  === 1 || index === 0 ? <InboxIcon /> : <div>{index === 2 ? <CartIcon  /> : <div><Infoicon /><KeyboardArrowDownOutlinedIcon onClick={legaldetails} /></div>}</div>}</ListItemIcon>
               <ListItemText primary={text} /></>:<><ListItemIcon><Infoicon /><ListItemText primary={text} style={{paddingLeft: "33px", color: "black"}}/><div><KeyboardArrowDownOutlinedIcon onClick={legaldetails} /></div></ListItemIcon>
               </>}
               

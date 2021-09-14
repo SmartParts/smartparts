@@ -135,7 +135,7 @@ const submitHandler = async(e) => {
 
  // post request
  e.preventDefault();
- const {email, password, repeatpassword} = user;
+ const {email, password} = user;
  const res = await fetch("https://smart-parts.herokuapp.com/signup", {
    method: "POST",
    headers: {
@@ -189,7 +189,7 @@ const validate = () => {
    }else if(!user.password.match(passwordregularExpression)){
      passworderror="Password must contain more than 6 characters including one uppercase, one lowercase, one digit and one special character";
    }
-  else if(user.password!= user.repeatpassword){
+  else if(user.password!== user.repeatpassword){
     repeatpassworderror="password doesnot match";
   }
 

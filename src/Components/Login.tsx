@@ -15,8 +15,8 @@ import {Link} from 'react-router-dom';
 // import SkipNextIcon from '@material-ui/icons/SkipNext';
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
-import {UserAgentApplication} from 'msal';
-import {config} from'../config';
+// import {UserAgentApplication} from 'msal';
+// import {config} from'../config';
 import {useHistory} from 'react-router-dom';
 // import { userInfo } from 'os';
 const useStyles = makeStyles((theme) => ({
@@ -108,7 +108,7 @@ const useStyles = makeStyles((theme) => ({
 export default function Login(props){
 
     const classes = useStyles();
-    const theme = useTheme();
+    // const theme = useTheme();
     // const isMatchscreensize = theme.breakpoints.down("sm");
   //   const login= async ()=>{
   //     var client = new UserAgentApplication(config);
