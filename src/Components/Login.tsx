@@ -72,7 +72,7 @@ const useStyles = makeStyles((theme) => ({
         marginTop: "10px",
         backgroundColor: "#8517FF",
         color: "white",
-      '&:hover': {
+      '&: hover': {
         backgroundColor: "#8517FF",
         color: "white",
       }
