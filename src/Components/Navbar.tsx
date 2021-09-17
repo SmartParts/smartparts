@@ -338,7 +338,7 @@ setDarkTheme(!darktheme);
             <Toolbar>
                
                 <Typography variant="h6"  style={{flexGrow:1}}>                                           
-                <Link to="/" ><img style={{marginTop: 10, width: 80 ,height:40}} src={logo} alt="logo" /></Link>
+                <Link to="/" ><img style={{marginTop: 10 ,height:40}} src={logo} alt="logo" /></Link>
                      {/* <Box component="span" style={{position: 'relative',bottom:12 }} >Smart Export</Box>   */}
                 </Typography>
                   {/* <Autocomplete
