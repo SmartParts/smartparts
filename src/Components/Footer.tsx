@@ -336,11 +336,7 @@ export default function Footer(){
                             Career
                         </Typography>
                     </Box>
-                    <Box pb={1} className={classes.footertext}>
-                        <Typography variant="h6" align="left" className={classes.footercontent} >
-                            Career
-                        </Typography>
-                    </Box>
+                  
                 </Box>
             </Grid>
             <Grid item xs={2}>

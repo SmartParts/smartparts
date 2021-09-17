@@ -18,6 +18,7 @@ import Fade from '@material-ui/core/Fade';
 import Paper from '@material-ui/core/Paper';
 import InputLabel from '@material-ui/core/InputLabel';
 import Popper from '@material-ui/core/Popper';
+import workflowlogo from '../image/ordermanagementworkflow/logoworkflow.png';
 // import image2 from '../image/logo2.png';
 // import image3 from '../image/aboutus.jpg';
 // import LinearProgress from '@material-ui/core/LinearProgress';
@@ -382,6 +383,7 @@ const useStyles = makeStyles((theme)=>({
              borderRadius: "20px",        },
     },
     typescontent: {
+        padding: "50px",
         [theme.breakpoints.down("sm")] :{
             padding: "0px 20px",
         },
@@ -801,6 +803,7 @@ const useStyles = makeStyles((theme)=>({
         },
     },
     parts: {
+        paddingLeft: "50px",
         color: "black",
     },
     productbackground: {
@@ -1752,7 +1755,7 @@ setCarSearchClicked(!carsearchclicked);
                     <Box style={{ width:"10rem", height: "5rem"}}>
                             <Link to="/productlist"><img src={bodyimg} style={{width: "100%", height: "100%"}} alt="body" /></Link>
                             </Box>
-                        <Typography className={classes.typescontent} style={{padding: "20px"}}>Body</Typography>
+                        <Typography className={classes.typescontent} style={{padding: "80px"}}>Body</Typography>
                         </CardContent>
                     </CardActions>
                 </Card>
@@ -1776,7 +1779,7 @@ setCarSearchClicked(!carsearchclicked);
                     <Box style={{ width:"10rem", height: "5rem"}}>
                             <Link to="/productlist"><img src={engineimg} style={{width: "100%", height: "100%"}} alt="engine" /></Link>
                             </Box>
-                        <Typography className={classes.typescontent}>Engine</Typography>
+                        <Typography className={classes.typescontent} style={{padding: "80px"}}>Engine</Typography>
                         </CardContent>
                     </CardActions>
                 </Card>
@@ -1887,7 +1890,7 @@ setCarSearchClicked(!carsearchclicked);
                 <Box style={{ width:"10rem", height: "5rem"}}>
                         <Link to="/productlist"><img src={filtersimg} style={{width: "100%", height: "100%"}} alt="filters"/></Link>
                         </Box>
-                    <Typography className={classes.parts}>Filters</Typography>
+                    <Typography className={classes.parts} style={{padding: "80px"}}>Filters</Typography>
                     </CardContent>
                 </CardActions>
             </Card>
@@ -2108,7 +2111,7 @@ setCarSearchClicked(!carsearchclicked);
                <Box style={{ width:"10rem", height: "5rem"}}>
                        <Link to="/productlist"><img src={engineimg} style={{width: "100%", height: "100%"}} alt="engine"/></Link>
                        </Box>
-                   <Typography className={classes.parts}>Engine</Typography>
+                   <Typography className={classes.parts} style={{padding: "80px"}}>Engine</Typography>
                    </CardContent>
                </CardActions>
            </Card>
@@ -2163,7 +2166,7 @@ setCarSearchClicked(!carsearchclicked);
                <Box style={{ width:"10rem", height: "5rem"}}>
                        <Link to="/productlist"><img src={filtersimg} style={{width: "100%", height: "100%"}} alt="filters"/></Link>
                        </Box>
-                   <Typography className={classes.parts}>Filters</Typography>
+                   <Typography className={classes.parts} style={{padding: "80px"}}>Filters</Typography>
                    </CardContent>
                </CardActions>
            </Card>
@@ -2228,7 +2231,7 @@ setCarSearchClicked(!carsearchclicked);
                <Box style={{ width:"10rem", height: "5rem"}}>
                        <Link to="/productlist"><img src={lighteningimg} style={{width: "100%", height: "100%"}} alt="lightening" /></Link>
                        </Box>
-                   <Typography className={classes.parts}>Lighting</Typography>
+                   <Typography className={classes.parts} style={{padding: "80px"}}>Lighting</Typography>
                    </CardContent>
                </CardActions>
            </Card>
@@ -3170,7 +3173,7 @@ setCarSearchClicked(!carsearchclicked);
                         <Grid item xs={2} style={{display: "flex"}} justify="flex-start">
                         <TextOnlyTooltip title="Smart Parts Export" aria-label="add" >
                         <Avatar className={classes.avatarremaining}>
-                        <img src={logo} style={{width: "55px", height: "55px"}} alt="logo"/>
+                        <img src={workflowlogo} style={{width: "55px", height: "55px"}} alt="logo"/>
                         </Avatar>
                         </TextOnlyTooltip>
                         </Grid>
