@@ -13,7 +13,7 @@ import Box from '@material-ui/core/Box';
 // import { MailOutline } from '@material-ui/icons';
 import { FavoriteBorder } from '@material-ui/icons';
 import { PersonOutline } from '@material-ui/icons';
-import logo from '../image/logo22.png';
+import logo from '../image/logosmartparts.png';
 // import { createMuiTheme } from '@material-ui/core';
 // import { green } from '@material-ui/core/colors';
 import Drawer from '@material-ui/core/Drawer';

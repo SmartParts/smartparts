@@ -2114,7 +2114,7 @@ setCarSearchClicked(!carsearchclicked);
                <Box style={{ width:"10rem", height: "5rem"}}>
                        <Link to="/productlist"><img src={engineimg} style={{width: "100%", height: "100%"}} alt="engine"/></Link>
                        </Box>
-                   <Typography className={classes.parts} style={{padding: "80px"}}>Engine</Typography>
+                   <Typography className={classes.parts}>Engine</Typography>
                    </CardContent>
                </CardActions>
            </Card>
@@ -2169,7 +2169,7 @@ setCarSearchClicked(!carsearchclicked);
                <Box style={{ width:"10rem", height: "5rem"}}>
                        <Link to="/productlist"><img src={filtersimg} style={{width: "100%", height: "100%"}} alt="filters"/></Link>
                        </Box>
-                   <Typography className={classes.parts} style={{padding: "80px"}}>Filters</Typography>
+                   <Typography className={classes.parts}>Filters</Typography>
                    </CardContent>
                </CardActions>
            </Card>
