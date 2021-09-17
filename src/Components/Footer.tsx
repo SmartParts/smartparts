@@ -98,8 +98,8 @@ const useStyles = makeStyles((theme)=>({
     },
     downloadimages: {
         height: 140,
-        width: "10%",
-        marginLeft: "15px", //not taking , must be override
+        width: "15%",
+
       },
       footercontent:{
         fontSize: '1.1rem',
@@ -216,10 +216,14 @@ export default function Footer(){
                 And get the full smart parts experience in one go
             </Typography>
         </Typography>
-
+        <Grid container>
+            <Grid item>
         <CardMedia className={classes.downloadimages} image={appstore}/>
+        </Grid>
+        <Grid item>
         <CardMedia className={classes.downloadimages} image={googleplay}/>
-      
+      </Grid>
+          </Grid>
         </CardActions>
     </Card>
     </Box>

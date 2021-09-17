@@ -936,7 +936,38 @@ const [index, setIndex] = React.useState(0);
     return () => clearTimeout(intervalId);
   }, []);
   const text = "  Our project was established in 2015. Over this time we have been working on our goal – to help customers and suppliers in auto car spare parts sales and communication. This advertising platform was created to make online shopping easier for both automobile owners and parts dealers. Customers get an opportunity to buy car parts online, which are branded and original. Our continuously updated catalogues are filled with replacement parts, with well-known, and highly regarded brands. This provides auto parts suppliers with the ability to offer their products, communicate with clients, and increase sales along with their market share.How do we work: key features of Smartpartsexports.com Clear and transparent offers. We do not promote any particular suppliers, all parts are sorted by producers' information and filtered by customers’ choice. Quick and competent service. If any problems occur, Smartpartsexports.com will put its best foot forward to solve issues. Easy to read catalogues, with the latest offers. Every day  new products with actual prices appear. Simple and easy-to-understand website. We created it be both useful and mobile-friendly, so our visitors can order car parts from personal computer, laptop, tablet or smartphone.3 main reasons to choose Smartpartsexports.com 1. 10 Days Assured Return. If spare part will not be applicable to your car we will initiate return process after your request. The return process is very smooth and simple.   You will get new part or money back by your choice.  2. We are creating our catalogues by collecting relevant information from the market. We are responsible for Product description and keep our Sellers responsible for  offer terms and genuinity of the product sold.  3. Free website usage. There is no additional payment for auto car spare parts buyers. Only sellers have to pay a marketing fee.";
-   const smartexportparagraph = "All these reasons have a huge influence on the number of vehicles, on the road. Among them are passenger cars, lorries, buses, etc.Bringing this into focus: in 1986 there were only 500 million cars in the whole world. And in 2010 the number increased to 1 billion vehicles. Researchers with   the International Energy Agency suggest that by the year 2035 nearly 25 percent of the world population will own a car. According to research, the current number is going to increase to 1,7 billion. That's why auto car spare parts are in demand among car owners. Smartpartsexports.com is a car parts marketplace in India, which pursues the aim to organize the replacement parts market and make the shopping process easier and more convenient.The offer from Smartpartsexports.com - Our project was established in 2015. Over this time we have been working on our goal – to help customers and suppliers in auto car spare parts sales and communication. This advertising platform was created to make online shopping easier for both automobile owners and parts dealers. Customers get an opportunity to buy car parts online, which are branded and original. Our continuously updated catalogues are filled with replacement parts, with well-known, and highly regarded brands. This provides auto parts suppliers with the ability to offer their products, communicate with clients, and increase sales along with their market share.How do we work: key features of Smartpartsexports.com Clear and transparent offers. We do not promote any particular suppliers, all parts are sorted by producers' information and filtered by customers’ choice. Quick and competent service. If any problems occur, Smartpartsexports.com will put its best foot forward to solve issues. Easy to read catalogues, with the latest offers. Every day  new products with actual prices appear. Simple and easy-to-understand website. We created it be both useful and mobile-friendly, so our visitors can order car parts from personal computer, laptop, tablet or smartphone.3 main reasons to choose Smartpartsexports.com 1. 10 Days Assured Return. If spare part will not be applicable to your car we will initiate return process after your request. The return process is very smooth and simple.   You will get new part or money back by your choice.  2. We are creating our catalogues by collecting relevant information from the market. We are responsible for Product description and keep our Sellers responsible for  offer terms and genuinity of the product sold.  3. Free website usage. There is no additional payment for auto car spare parts buyers. Only sellers have to pay a marketing fee."
+   const smartexportparagraph = (
+        <Box>
+         <Typography>   We take pride in being among the top most preferred genuine automotive spare parts exporters in India. We specialize in the supply of genuine and aftermarket spare parts for passenger and commercial vehicles manufactured by Tata Motors, Mahindra, Ashok Leyland, Maruti Suzuki, Hyundai, Ford, Honda, EICHER, MAN and other Indian manufactured vehicles.</Typography>
+        <Typography>We are already serving our best products and services in more than 45 countries.</Typography>
+        <Typography>For Genuine automotive spare parts exports, we also have a very large product range and can undertake any customizations as per consumer or market requirements.</Typography>
+        <Typography>Genuine automotive spare parts component exporter from India specializing in complete product range like following :-</Typography>
+        <Typography>Suzuki Spare parts, 
+            Tata Motors Spare parts,
+            Ashok Leyland Spare parts, 
+            Mahindra Spare parts, 
+            Chevrolet Spare Parts, 
+            Ford Spare Parts,
+            Nissan Spare Parts, 
+            Man Spare parts for CLA , 
+            Ford Spare parts 
+            Hyundai spare parts (aftermarket).
+            </Typography>
+         <Typography>Any needs regarding automobile products for any Indian vehicles will be taken care of.</Typography>
+         <Typography>We deal in a complete range of genuine and aftermarket spare parts of all the top brands.</Typography>
+         <Typography>Smart Parts Exports is a leading automotive component market player</Typography>
+         <Typography>With us, You can expect the following:</Typography>
+         <Typography>World-class service to all our esteemed clients
+            • Highly efficient team and super quick response 
+            • Fulfill the bulk spare parts order of the products as we are strongly supported by our vendors 
+            • Superior quality products as there are various rounds of quality assurance tests done before the final delivery to customer
+            • A quick turnaround time for we have lightning fast dispatch facilities and highly efficient agents.
+         </Typography>
+        </Box>
+
+
+
+   );
 //    const body = (
 //      <Box style={modalStyle} className={classes.helpsupport} justifyContent="flex" alignItems="center">
 //        <Box style={{display: "flex", justifyContent: "center"}}> 
@@ -2953,10 +2984,10 @@ setCarSearchClicked(!carsearchclicked);
                       {iscollapsed ? 
                         <CardContent>
                         <Typography align="left" gutterBottom variant="h6" component="p" style={{fontSize: 18}}>
-                                <strong>Here's the benefits to buy TATA Genuine Spare Parts from the leading brand!</strong>
+                                <strong>Did you know the facts about Mahindra Spare Parts!!</strong>
                             </Typography>
                             <Typography align="left" variant="body2" color="textSecondary" component="p" style={{fontSize: 12}}>
-                               Smart Parts export is the largest provider of Automobile Genuine spare parts all over the world that has already created wonders in the market.
+                            Now, automotive spare parts are something that most of us hardly don’t care about. As a matter of fact, not many car owners hardly understand the difference between a genuine and a fake spare part.
                           </Typography>
                         </CardContent> : "" }
                     </CardActionArea>
@@ -2969,10 +3000,10 @@ setCarSearchClicked(!carsearchclicked);
                         {articletwocollapsed ? 
                         <CardContent>
                         <Typography align="left" gutterBottom variant="h6" component="p" style={{fontSize: 18}}>
-                                <strong>Here's the benefits to buy TATA Genuine Spare Parts from the leading brand!</strong>
+                                <strong>Benefits of buying TATA Genuine spares parts from the leading brand!</strong>
                             </Typography>
                             <Typography align="left" variant="body2" color="textSecondary" component="p" style={{fontSize: 12}}>
-                               Smart Parts export is the largest provider of Automobile Genuine spare parts all over the world that has already created wonders in the market.
+                            Smart Parts Export is the largest provider of automobile Genuine spare parts all over the world that has already created wonders in the market.
                           </Typography>
                         </CardContent> : "" }
                     </CardActionArea>
@@ -2985,11 +3016,11 @@ setCarSearchClicked(!carsearchclicked);
                         {articlethreecollapsed ? 
                         <CardContent>
                             <Typography align="left" gutterBottom variant="h6" component="p" style={{fontSize: 18}}>
-                                <strong>Here's the benefits to buy TATA Genuine Spare Parts from the leading brand!</strong>
+                                <strong>Fake Spare Parts OR Genuine Spare Parts? Choice is yours.</strong>
                             </Typography>
 {/* Date  */}
                             <Typography align="left" variant="body2" color="textSecondary" component="p" style={{fontSize: 12}}>
-                               Smart Parts export is the largest provider of Automobile Genuine spare parts all over the world that has already created wonders in the market.
+                            Fake has become a new reality, be it technology, accessories or clothing, everything in this world has a fake counterpart. Even the automobile spare parts industry is also flooded with fake spare parts and accessories.
                           </Typography>
                         </CardContent> : ""}
                     </CardActionArea>
@@ -3010,10 +3041,10 @@ setCarSearchClicked(!carsearchclicked);
                       {iscollapsed ? 
                         <CardContent>
                         <Typography align="left" gutterBottom variant="h6" component="p" style={{fontSize: 18}}>
-                                <strong>Here's the benefits to buy TATA Genuine Spare Parts from the leading brand!</strong>
+                                <strong>Did you know the facts about Mahindra Spare Parts!!</strong>
                             </Typography>
                             <Typography align="left" variant="body2" color="textSecondary" component="p" style={{fontSize: 12}}>
-                               Smart Parts export is the largest provider of Automobile Genuine spare parts all over the world that has already created wonders in the market.
+                            Now, automotive spare parts are something that most of us hardly don’t care about. As a matter of fact, not many car owners hardly understand the difference between a genuine and a fake spare part.
                           </Typography>
                         </CardContent> : "" }
                     </CardActionArea>
@@ -3026,10 +3057,10 @@ setCarSearchClicked(!carsearchclicked);
                         {articletwocollapsed ? 
                         <CardContent>
                         <Typography align="left" gutterBottom variant="h6" component="p" style={{fontSize: 18}}>
-                                <strong>Here's the benefits to buy TATA Genuine Spare Parts from the leading brand!</strong>
+                                <strong>Benefits of buying TATA Genuine spares parts from the leading brand!</strong>
                             </Typography>
                             <Typography align="left" variant="body2" color="textSecondary" component="p" style={{fontSize: 12}}>
-                               Smart Parts export is the largest provider of Automobile Genuine spare parts all over the world that has already created wonders in the market.
+                            Smart Parts Export is the largest provider of automobile Genuine spare parts all over the world that has already created wonders in the market.
                           </Typography>
                         </CardContent> : "" }
                     </CardActionArea>
@@ -3042,11 +3073,11 @@ setCarSearchClicked(!carsearchclicked);
                         {articlethreecollapsed ? 
                         <CardContent>
                             <Typography align="left" gutterBottom variant="h6" component="p" style={{fontSize: 18}}>
-                                <strong>Here's the benefits to buy TATA Genuine Spare Parts from the leading brand!</strong>
+                                <strong>Fake Spare Parts OR Genuine Spare Parts? Choice is yours.</strong>
                             </Typography>
 {/* Date  */}
                             <Typography align="left" variant="body2" color="textSecondary" component="p" style={{fontSize: 12}}>
-                               Smart Parts export is the largest provider of Automobile Genuine spare parts all over the world that has already created wonders in the market.
+                              Fake has become a new reality, be it technology, accessories or clothing, everything in this world has a fake counterpart. Even the automobile spare parts industry is also flooded with fake spare parts and accessories.
                           </Typography>
                         </CardContent> : ""}
                     </CardActionArea>
@@ -3064,19 +3095,21 @@ setCarSearchClicked(!carsearchclicked);
                         <CardActions style={{ display: "flex", justifyContent: "flex-start" }}>
                             <CardContent>
                                 <Typography variant="h4" align="center" style={{ fontSize: 23,
-        fontFamily: 'nano-sans'}}>
-                                    Smartpartsexports.com – #1 Online Marketplace to Sell or Buy Car Parts
+        fontFamily: 'nano-sans'}}><strong>
+                                    Smart Parts Exports | Genuine Automotive Spare Parts 
+                                      (Online Marketplace to Buy Original Car Parts)
+                                    </strong>
                                 </Typography>
                                 <CardActions>
                                     <Typography style={{fontSize: 15}} align="center">
-                                        Using your own car gives you an independence from external circumstances and the opportunity to plan your day exactly how you want. No rush to miss urban transport and even be late for work, because of
-                                        outside factors.With an own car, you feel free, have the ability to address business and pleasure travel, as you want. 
+                                    Smart Parts Export is a leading exporter of auto spare parts for passenger and commercial vehicles in India. We strive to give world-class service to all our esteemed clients.
+                                    Our sheer professionalism has enabled us to make our presence felt in more than 50 countries spread over 5 continents. 
                                     </Typography>
                                 </CardActions>
                                 <CardActions>
                                     <Box component="span" >
                                         <Box style={{display: "flex", flexDirection: "row", margin: "0px 6px"}}>
-                                    <Typography style={{ marginRight: " 10px"}}     >Read More - About us</Typography>
+                                    <Typography style={{ marginRight: " 10px"}}     >Wanna Know More?</Typography>
                                     <Box style={{display: "flex", flexDirection: "column"}}>
 
                                         <ShowMoreText lines={1} more={<ExpandMore />} less={<ExpandLess />} onClick={onClick} expanded={expand} width={30}>
