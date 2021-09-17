@@ -1722,7 +1722,7 @@ setCarSearchClicked(!carsearchclicked);
                             <Box style={{ width:"10rem", height: "5rem"}}>
                             <Link to="/productlist"><img src={maintainanceimg} style={{width: "100%", height: "100%"}} alt="maintenance service parts" /></Link>
                             </Box>
-                        <Typography className={classes.typescontent}>Maintenance Service Parts</Typography>
+                        <Typography className={classes.typescontent} style={{paddingLeft: "30px"}}>Maintenance Service Parts</Typography>
                         </CardContent>
                     </CardActions>
                 </Card>
@@ -1734,7 +1734,7 @@ setCarSearchClicked(!carsearchclicked);
                     <Box style={{ width:"10rem", height: "5rem"}}>
                             <Link to="/productlist"><img src={airimg} style={{width: "100%", height: "100%"}} alt="air conditioning" /></Link>
                             </Box>
-                        <Typography className={classes.typescontent}>Air Conditioning</Typography>
+                        <Typography className={classes.typescontent} style={{paddingLeft: "30px"}}>Air Conditioning</Typography>
                         </CardContent>
                     </CardActions>
                 </Card>
@@ -1801,7 +1801,7 @@ setCarSearchClicked(!carsearchclicked);
                         <Box style={{ width:"10rem", height: "5rem"}}>
                         <Link to="/productlist"><img src={maintainanceimg} style={{width: "100%", height: "100%"}} alt="maintenance service parts" /></Link>
                         </Box>
-                    <Typography className={classes.parts}>Maintenance Service Parts</Typography>
+                    <Typography className={classes.parts} style={{paddingLeft: "30px"}}>Maintenance Service Parts</Typography>
                     </CardContent>
                 </CardActions>
             </Card>
@@ -1813,7 +1813,7 @@ setCarSearchClicked(!carsearchclicked);
                 <Box style={{ width:"10rem", height: "5rem"}}>
                         <Link to="/productlist"><img src={airimg} style={{width: "100%", height: "100%"}} alt="air conditioning"/></Link>
                         </Box>
-                    <Typography className={classes.parts}>Air Conditioning</Typography>
+                    <Typography className={classes.parts} style={{paddingLeft: "30px"}}>Air Conditioning</Typography>
                     </CardContent>
                 </CardActions>
             </Card>
@@ -1869,7 +1869,7 @@ setCarSearchClicked(!carsearchclicked);
                 <Box style={{ width:"10rem", height: "5rem"}}>
                         <Link to="/productlist"><img src={enginecoolingimg} style={{width: "100%", height: "100%"}} alt="engine cooling system" /></Link>
                         </Box>
-                    <Typography className={classes.parts}>Engine Cooling System</Typography>
+                    <Typography className={classes.parts} style={{paddingLeft: "30px"}}>Engine Cooling System</Typography>
                     </CardContent>
                 </CardActions>
             </Card>
@@ -1881,7 +1881,7 @@ setCarSearchClicked(!carsearchclicked);
                 <Box style={{ width:"10rem", height: "5rem"}}>
                         <Link to="/productlist"><img src={exhaustsystemimg} style={{width: "100%", height: "100%"}} alt="exhaust system" /></Link>
                         </Box>
-                    <Typography className={classes.parts}>Exhaust System</Typography>
+                    <Typography className={classes.parts} style={{paddingLeft: "30px"}}>Exhaust System</Typography>
                     </CardContent>
                 </CardActions>
             </Card>
@@ -1923,7 +1923,7 @@ setCarSearchClicked(!carsearchclicked);
                 <Box style={{ width:"10rem", height: "5rem"}}>
                         <Link to="/productlist"><img src={interiorimg} style={{width: "100%", height: "100%"}} alt="interior and comfort"/></Link>
                         </Box>
-                    <Typography className={classes.parts}>Interior and comfort</Typography>
+                    <Typography className={classes.parts} style={{paddingLeft: "30px"}}>Interior and comfort</Typography>
                     </CardContent>
                 </CardActions>
             </Card>
@@ -1988,7 +1988,7 @@ setCarSearchClicked(!carsearchclicked);
                 <Box style={{ width:"10rem", height: "5rem"}}>
                         <Link to="/productlist"><img src={suspensionimg} style={{width: "100%", height: "100%"}} alt="suspension and arms"/></Link>
                         </Box>
-                    <Typography className={classes.parts}>Suspension and Arms</Typography>
+                    <Typography className={classes.parts} style={{paddingLeft: "30px"}}>Suspension and Arms</Typography>
                     </CardContent>
                 </CardActions>
             </Card>
@@ -2054,7 +2054,7 @@ setCarSearchClicked(!carsearchclicked);
                        <Box style={{ width:"10rem", height: "5rem"}}>
                        <Link to="/productlist"><img src={maintainanceimg} style={{width: "100%", height: "100%"}} alt="maintenance service parts" /></Link>
                        </Box>
-                   <Typography className={classes.parts}>Maintenance Service Parts</Typography>
+                   <Typography className={classes.parts} style={{paddingLeft: "30px"}}>Maintenance Service Parts</Typography>
                    </CardContent>
                </CardActions>
            </Card>
@@ -2066,7 +2066,7 @@ setCarSearchClicked(!carsearchclicked);
                <Box style={{ width:"10rem", height: "5rem"}}>
                        <Link to="/productlist"><img src={airimg} style={{width: "100%", height: "100%"}} alt="air conditioning"/></Link>
                        </Box>
-                   <Typography className={classes.parts}>Air Conditioning</Typography>
+                   <Typography className={classes.parts} style={{paddingLeft: "30px"}}>Air Conditioning</Typography>
                    </CardContent>
                </CardActions>
            </Card>
@@ -2145,7 +2145,7 @@ setCarSearchClicked(!carsearchclicked);
                <Box style={{ width:"10rem", height: "5rem"}}>
                        <Link to="/productlist"><img src={enginecoolingimg} style={{width: "100%", height: "100%"}} alt="engine cooling system" /></Link>
                        </Box>
-                   <Typography className={classes.parts}>Engine Cooling System</Typography>
+                   <Typography className={classes.parts} style={{paddingLeft: "30px"}}>Engine Cooling System</Typography>
                    </CardContent>
                </CardActions>
            </Card>
@@ -2157,7 +2157,7 @@ setCarSearchClicked(!carsearchclicked);
                <Box style={{ width:"10rem", height: "5rem"}}>
                        <Link to="/productlist"><img src={exhaustsystemimg} style={{width: "100%", height: "100%"}} alt="exhaust system" /></Link>
                        </Box>
-                   <Typography className={classes.parts}>Exhaust System</Typography>
+                   <Typography className={classes.parts} style={{paddingLeft: "30px"}}>Exhaust System</Typography>
                    </CardContent>
                </CardActions>
            </Card>
@@ -2181,7 +2181,7 @@ setCarSearchClicked(!carsearchclicked);
                <Box style={{ width:"10rem", height: "5rem"}}>
                        <Link to="/productlist"><img src={fuelsupplyimg} style={{width: "100%", height: "100%"}} alt="fuel supply system"/></Link>
                        </Box>
-                   <Typography className={classes.parts}>Fuel Supply System</Typography>
+                   <Typography className={classes.parts} style={{paddingLeft: "30px"}}>Fuel Supply System</Typography>
                    </CardContent>
                </CardActions>
            </Card>
@@ -2222,7 +2222,7 @@ setCarSearchClicked(!carsearchclicked);
                <Box style={{ width:"10rem", height: "5rem"}}>
                        <Link to="/productlist"><img src={interiorimg} style={{width: "100%", height: "100%"}} alt="interior and comfort"/></Link>
                        </Box>
-                   <Typography className={classes.parts}>Interior and comfort</Typography>
+                   <Typography className={classes.parts} style={{paddingLeft: "30px"}}>Interior and comfort</Typography>
                    </CardContent>
                </CardActions>
            </Card>
@@ -2258,7 +2258,7 @@ setCarSearchClicked(!carsearchclicked);
                <Box style={{ width:"10rem", height: "5rem"}}>
                        <Link to="/productlist"><img src={pipesimg} style={{width: "100%", height: "100%"}} alt="pipes and hoses"/></Link>
                        </Box>
-                   <Typography className={classes.parts}>Pipes and Hoses</Typography>
+                   <Typography className={classes.parts} style={{paddingLeft: "30px"}}>Pipes and Hoses</Typography>
                    </CardContent>
                </CardActions>
            </Card>
@@ -2311,7 +2311,7 @@ setCarSearchClicked(!carsearchclicked);
                <Box style={{ width:"10rem", height: "5rem"}}>
                        <Link to="/productlist"><img src={suspensionimg} style={{width: "100%", height: "100%"}} alt="suspension and arms"/></Link>
                        </Box>
-                   <Typography className={classes.parts}>Suspension and Arms</Typography>
+                   <Typography className={classes.parts} style={{paddingLeft: "30px"}}>Suspension and Arms</Typography>
                    </CardContent>
                </CardActions>
            </Card>
