@@ -30,7 +30,7 @@ import {Link} from 'react-router-dom';
 import CardActionArea from '@material-ui/core/CardActionArea';
 import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
-import logo from '../image/logo22.png';
+// import logo from '../image/logo22.png';
 // import brand1 from '../image/brand1.png';
 import ShowMoreText from "react-show-more-text";
 import ExpandLess from "@material-ui/icons/ExpandLess";
@@ -1275,9 +1275,12 @@ setCarSearchClicked(!carsearchclicked);
        <Box>
 
            </Box>     
-     : <>{isMatchmediumscreen ? "change slide width of carousel using props" :<Box>
+     : <>{isMatchmediumscreen ? "" :<Box>            
          <Carousel />
-     {/* <Grid container  className={classes.featuredprod}  style={{margin: "0px"}}>
+     {/*  change slide width of carousel using props
+     
+     
+     <Grid container  className={classes.featuredprod}  style={{margin: "0px"}}>
          
          <Grid item xs={2} sm={2} md={2} >
              <Card className={classes.border}>

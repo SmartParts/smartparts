@@ -8,11 +8,11 @@ import React from 'react';
 // import product1 from "../image/products/productimage.png";
 
 //  import featureprod from '../image/products/featuredproduct.jpg';
- import featureprodtwo from '../image/home/Front Pad Set.jpg';
- import featureprodthree from '../image/home/HYUNDAI OIL.jpg';
- import featureprodfour from '../image/home/nissan Spark plugs post.jpg';
- import featureprodfive from '../image/home/featureimage.jpg';
- import featureprodsix from '../image/home/SUZUKI AIR FILTER.jpg';
+ import featureprodtwo from '../image/featured products/featuredproduct1.jpg';
+ import featureprodthree from '../image/featured products/featuredproduct2.jpg';
+ import featureprodfour from '../image/featured products/featuredproduct3.jpg';
+ import featureprodfive from '../image/featured products/featuredproduct4.jpg';
+ import featureprodsix from '../image/featured products/featuredproduct5.jpg';
  const slideWidth = 19;
 const _items = [
     {
