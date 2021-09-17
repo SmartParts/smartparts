@@ -1869,7 +1869,7 @@ setCarSearchClicked(!carsearchclicked);
                 <Box style={{ width:"10rem", height: "5rem"}}>
                         <Link to="/productlist"><img src={enginecoolingimg} style={{width: "100%", height: "100%"}} alt="engine cooling system" /></Link>
                         </Box>
-                    <Typography className={classes.parts} style={{paddingLeft: "20px"}}>Engine Cooling System</Typography>
+                    <Typography className={classes.parts} style={{paddingLeft: "5px"}}>Engine Cooling System</Typography>
                     </CardContent>
                 </CardActions>
             </Card>
@@ -1988,7 +1988,7 @@ setCarSearchClicked(!carsearchclicked);
                 <Box style={{ width:"10rem", height: "5rem"}}>
                         <Link to="/productlist"><img src={suspensionimg} style={{width: "100%", height: "100%"}} alt="suspension and arms"/></Link>
                         </Box>
-                    <Typography className={classes.parts} style={{paddingLeft: "20px"}}>Suspension and Arms</Typography>
+                    <Typography className={classes.parts} style={{paddingLeft: "10px"}}>Suspension and Arms</Typography>
                     </CardContent>
                 </CardActions>
             </Card>
@@ -2145,7 +2145,7 @@ setCarSearchClicked(!carsearchclicked);
                <Box style={{ width:"10rem", height: "5rem"}}>
                        <Link to="/productlist"><img src={enginecoolingimg} style={{width: "100%", height: "100%"}} alt="engine cooling system" /></Link>
                        </Box>
-                   <Typography className={classes.parts} style={{paddingLeft: "20px"}}>Engine Cooling System</Typography>
+                   <Typography className={classes.parts} style={{paddingLeft: "5px"}}>Engine Cooling System</Typography>
                    </CardContent>
                </CardActions>
            </Card>
@@ -2311,7 +2311,7 @@ setCarSearchClicked(!carsearchclicked);
                <Box style={{ width:"10rem", height: "5rem"}}>
                        <Link to="/productlist"><img src={suspensionimg} style={{width: "100%", height: "100%"}} alt="suspension and arms"/></Link>
                        </Box>
-                   <Typography className={classes.parts} style={{paddingLeft: "20px"}}>Suspension and Arms</Typography>
+                   <Typography className={classes.parts} style={{paddingLeft: "10px"}}>Suspension and Arms</Typography>
                    </CardContent>
                </CardActions>
            </Card>

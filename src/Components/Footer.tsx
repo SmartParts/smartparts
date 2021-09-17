@@ -98,7 +98,7 @@ const useStyles = makeStyles((theme)=>({
     },
     downloadimages: {
         height: 140,
-        width: "20%",
+        width: "10%",
         marginLeft: "15px", //not taking , must be override
       },
       footercontent:{
