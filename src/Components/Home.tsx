@@ -1752,7 +1752,7 @@ setCarSearchClicked(!carsearchclicked);
                     <Box style={{ width:"10rem", height: "5rem"}}>
                             <Link to="/productlist"><img src={bodyimg} style={{width: "100%", height: "100%"}} alt="body" /></Link>
                             </Box>
-                        <Typography className={classes.typescontent}>Body</Typography>
+                        <Typography className={classes.typescontent} style={{padding: "20px"}}>Body</Typography>
                         </CardContent>
                     </CardActions>
                 </Card>

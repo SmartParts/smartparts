@@ -251,11 +251,7 @@ export default function Footer(){
                             Career
                         </Typography>
                     </Box>
-                    <Box pb={1} className={classes.footertext}>
-                        <Typography variant="h6" align="left" color="textSecondary" className={classes.footercontent} >
-                            Career
-                        </Typography>
-                    </Box>
+
                 </Box>
             </Grid>
             <Grid item xs={6}>
@@ -427,12 +423,7 @@ export default function Footer(){
                             Site Map
                         </Typography>
                     </Box>
-                    <Box pb={1}>
-                        <Typography variant="h6" align="left" style={{ fontSize: '1.1rem',
-       fontFamily: 'nano-sans'}}>
-                            Site Map2
-                        </Typography>
-                    </Box>
+                    
                 </Box>
             </Grid>
         </Grid>

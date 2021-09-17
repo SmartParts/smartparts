@@ -16,7 +16,7 @@ import FormControl from '@material-ui/core/FormControl';
 import NativeSelect from '@material-ui/core/NativeSelect';
 import InputBase from '@material-ui/core/InputBase';
 // import InputLabel from '@material-ui/core/InputLabel';
-import productbanner from '../image/banner_product.jpg';
+import productbanner from '../image/brands_banner/Suzuki.jpg';
 import Pagination from '@material-ui/lab/Pagination';
 const BootstrapInput = withStyles((theme) => ({
     root: {
