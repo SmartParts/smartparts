@@ -938,11 +938,11 @@ const [index, setIndex] = React.useState(0);
   const text = "  Our project was established in 2015. Over this time we have been working on our goal – to help customers and suppliers in auto car spare parts sales and communication. This advertising platform was created to make online shopping easier for both automobile owners and parts dealers. Customers get an opportunity to buy car parts online, which are branded and original. Our continuously updated catalogues are filled with replacement parts, with well-known, and highly regarded brands. This provides auto parts suppliers with the ability to offer their products, communicate with clients, and increase sales along with their market share.How do we work: key features of Smartpartsexports.com Clear and transparent offers. We do not promote any particular suppliers, all parts are sorted by producers' information and filtered by customers’ choice. Quick and competent service. If any problems occur, Smartpartsexports.com will put its best foot forward to solve issues. Easy to read catalogues, with the latest offers. Every day  new products with actual prices appear. Simple and easy-to-understand website. We created it be both useful and mobile-friendly, so our visitors can order car parts from personal computer, laptop, tablet or smartphone.3 main reasons to choose Smartpartsexports.com 1. 10 Days Assured Return. If spare part will not be applicable to your car we will initiate return process after your request. The return process is very smooth and simple.   You will get new part or money back by your choice.  2. We are creating our catalogues by collecting relevant information from the market. We are responsible for Product description and keep our Sellers responsible for  offer terms and genuinity of the product sold.  3. Free website usage. There is no additional payment for auto car spare parts buyers. Only sellers have to pay a marketing fee.";
    const smartexportparagraph = (
         <Box>
-         <Typography align="left" variant="p">   We take pride in being among the top most preferred genuine automotive spare parts exporters in India. We specialize in the supply of genuine and aftermarket spare parts for passenger and commercial vehicles manufactured by Tata Motors, Mahindra, Ashok Leyland, Maruti Suzuki, Hyundai, Ford, Honda, EICHER, MAN and other Indian manufactured vehicles.</Typography>
-        <Typography align="left" variant="p">We are already serving our best products and services in more than 45 countries.</Typography>
-        <Typography align="left" variant="p">For Genuine automotive spare parts exports, we also have a very large product range and can undertake any customizations as per consumer or market requirements.</Typography>
-        <Typography align="left" variant="p">Genuine automotive spare parts component exporter from India specializing in complete product range like following :-</Typography>
-        <Typography align="left" variant="p">
+         <Typography align="left" variant="body1">   We take pride in being among the top most preferred genuine automotive spare parts exporters in India. We specialize in the supply of genuine and aftermarket spare parts for passenger and commercial vehicles manufactured by Tata Motors, Mahindra, Ashok Leyland, Maruti Suzuki, Hyundai, Ford, Honda, EICHER, MAN and other Indian manufactured vehicles.</Typography>
+        <Typography align="left" variant="body1">We are already serving our best products and services in more than 45 countries.</Typography>
+        <Typography align="left" variant="body1">For Genuine automotive spare parts exports, we also have a very large product range and can undertake any customizations as per consumer or market requirements.</Typography>
+        <Typography align="left" variant="body1">Genuine automotive spare parts component exporter from India specializing in complete product range like following :-</Typography>
+        <Typography align="left" variant="body1">
             <ul>
            <li> Suzuki Spare parts,</li> 
            <li>Tata Motors Spare parts,</li>
@@ -956,15 +956,15 @@ const [index, setIndex] = React.useState(0);
             <li>Hyundai spare parts (aftermarket).</li>
             </ul>
             </Typography>
-         <Typography align="left" variant="p">Any needs regarding automobile products for any Indian vehicles will be taken care of.</Typography>
-         <Typography align="left" variant="p">We deal in a complete range of genuine and aftermarket spare parts of all the top brands.</Typography>
-         <Typography align="left" variant="p">Smart Parts Exports is a leading automotive component market player</Typography>
-         <Typography align="left" variant="p">With us, You can expect the following:</Typography>
-         <Typography align="left" variant="p">World-class service to all our esteemed clients</Typography>
-         <Typography align="left" variant="p">   • Highly efficient team and super quick response </Typography>
-         <Typography align="left" variant="p">   • Fulfill the bulk spare parts order of the products as we are strongly supported by our vendors </Typography>
-         <Typography align="left" variant="p">  • Superior quality products as there are various rounds of quality assurance tests done before the final delivery to customer</Typography>
-         <Typography align="left" variant="p">  • A quick turnaround time for we have lightning fast dispatch facilities and highly efficient agents.</Typography>
+         <Typography align="left" variant="body1">Any needs regarding automobile products for any Indian vehicles will be taken care of.</Typography>
+         <Typography align="left" variant="body1">We deal in a complete range of genuine and aftermarket spare parts of all the top brands.</Typography>
+         <Typography align="left" variant="body1">Smart Parts Exports is a leading automotive component market player</Typography>
+         <Typography align="left" variant="body1">With us, You can expect the following:</Typography>
+         <Typography align="left" variant="body1">World-class service to all our esteemed clients</Typography>
+         <Typography align="left" variant="body1">   • Highly efficient team and super quick response </Typography>
+         <Typography align="left" variant="body1">   • Fulfill the bulk spare parts order of the products as we are strongly supported by our vendors </Typography>
+         <Typography align="left" variant="body1">  • Superior quality products as there are various rounds of quality assurance tests done before the final delivery to customer</Typography>
+         <Typography align="left" variant="body1">  • A quick turnaround time for we have lightning fast dispatch facilities and highly efficient agents.</Typography>
     
         </Box>
 
