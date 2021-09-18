@@ -3123,17 +3123,15 @@ setCarSearchClicked(!carsearchclicked);
                                 <CardActions>
                                     <Box>
                                         <Grid container>
-                                            <Grid item lg={4}>
-                                                </Grid>
-                                        <Grid item lg={4}>
+                                           
+                                        <Grid item lg={12}>
                                             <Box style={{display: "flex", flexDirection: "row"}}>
-                                        <Typography  style={{ marginLeft: " 94px"}}>Read More</Typography>
+                                        <Typography  style={{ marginLeft: " 520px"}}>Read More</Typography>
                                         <KeyboardArrowDownOutlinedIcon onClick={aboutusparagraph} >
                                         </KeyboardArrowDownOutlinedIcon>
                                         </Box>
                                             </Grid>
-                                            <Grid item lg={4}>
-                                                </Grid>
+                                            
                                         </Grid>
                                         {displaytext ? 
                                         <Grid container>
