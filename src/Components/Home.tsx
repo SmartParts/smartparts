@@ -942,10 +942,13 @@ const aboutusparagraph = () => {
    const smartexportparagraph = (
         <Box>
          <Typography align="left" variant="body1">   We take pride in being among the top most preferred genuine automotive spare parts exporters in India. We specialize in the supply of genuine and aftermarket spare parts for passenger and commercial vehicles manufactured by Tata Motors, Mahindra, Ashok Leyland, Maruti Suzuki, Hyundai, Ford, Honda, EICHER, MAN and other Indian manufactured vehicles.</Typography>
+        <br />
         <Typography align="left" variant="body1">We are already serving our best products and services in more than 45 countries.</Typography>
+        <br />
         <Typography align="left" variant="body1">For Genuine automotive spare parts exports, we also have a very large product range and can undertake any customizations as per consumer or market requirements.</Typography>
+        <br />
         <Typography align="left" variant="body1">Genuine automotive spare parts component exporter from India specializing in complete product range like following :-</Typography>
-        
+        <br />
          
         <Typography align="left" variant="body1">   • Suzuki Spare parts </Typography> 
         <Typography align="left" variant="body1">   •Tata Motors Spare parts </Typography>
@@ -959,11 +962,16 @@ const aboutusparagraph = () => {
         <Typography align="left" variant="body1">   •Hyundai spare parts (aftermarket)
             
             </Typography>
+            <br />
          <Typography align="left" variant="body1">Any needs regarding automobile products for any Indian vehicles will be taken care of.</Typography>
+         <br />
          <Typography align="left" variant="body1">We deal in a complete range of genuine and aftermarket spare parts of all the top brands.</Typography>
+         <br />
          <Typography align="left" variant="body1">Smart Parts Exports is a leading automotive component market player</Typography>
+         <br />
          <Typography align="left" variant="body1">With us, You can expect the following:</Typography>
-         <Typography align="left" variant="body1">World-class service to all our esteemed clients</Typography>
+         <br />
+         <Typography align="left" variant="body1">• World-class service to all our esteemed clients</Typography>
          <Typography align="left" variant="body1">   • Highly efficient team and super quick response </Typography>
          <Typography align="left" variant="body1">   • Fulfill the bulk spare parts order of the products as we are strongly supported by our vendors </Typography>
          <Typography align="left" variant="body1">  • Superior quality products as there are various rounds of quality assurance tests done before the final delivery to customer</Typography>
@@ -3118,8 +3126,8 @@ setCarSearchClicked(!carsearchclicked);
                                             <Grid item lg={4}>
                                                 </Grid>
                                         <Grid item lg={4}>
-                                            <Box style={{display: "flex", flexDirection: "column"}}>
-                                        <Typography  style={{ marginRight: " 1200px"}}>Read More</Typography>
+                                            <Box style={{display: "flex", flexDirection: "row"}}>
+                                        <Typography  style={{ marginLeft: " 94px"}}>Read More</Typography>
                                         <KeyboardArrowDownOutlinedIcon onClick={aboutusparagraph} >
                                         </KeyboardArrowDownOutlinedIcon>
                                         </Box>
