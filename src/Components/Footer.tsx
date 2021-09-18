@@ -164,7 +164,8 @@ export default function Footer(){
     <Box className={classes.addresssection}>
                     <Card className={classes.countries}>
                         <CardActions>
-                        <Typography align="center" variant="h5"><strong>Our branches</strong></Typography>
+                        {/* <Typography align="center" variant="h5"><strong>Our Branches</strong></Typography>
+                        <br /> */}
                         <Grid container justify="space-evenly">
                         <Grid item xs={3} alignItems="center" style={{margin:"90px 0px"}}>
                         <Box className={classes.locationone} >
