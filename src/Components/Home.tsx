@@ -2474,7 +2474,7 @@ setCarSearchClicked(!carsearchclicked);
                             </Link>
                         </Grid>
                         <Grid item xs={1}>
-                            <Button variant="outlined"   style={{margin: "15px 35px 15px 85px",backgroundColor: "white", color: "black", padding: "20px 35px"}} className={classes.space}>
+                            <Button variant="outlined"   style={{margin: "15px 35px 15px 105px",backgroundColor: "white", color: "black", padding: "20px 35px"}} className={classes.space}>
                                 HYUNDAI
                             </Button>
                         </Grid>
@@ -3126,7 +3126,7 @@ setCarSearchClicked(!carsearchclicked);
                                            
                                         <Grid item lg={12}>
                                             <Box style={{display: "flex", flexDirection: "row"}}>
-                                        <Typography  style={{ marginLeft: " 520px"}}>Read More</Typography>
+                                        <Typography  style={{ marginLeft: " 620px"}}>Read More</Typography>
                                         <KeyboardArrowDownOutlinedIcon onClick={aboutusparagraph} >
                                         </KeyboardArrowDownOutlinedIcon>
                                         </Box>
