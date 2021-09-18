@@ -896,7 +896,7 @@ export default function Home() {
     // const [showImage, setShowImage] = React.useState(false);
 //    const [checked, setChecked] = React.useState(false);
     const [selectedbutton, setSelectedButton] = React.useState(false);
-
+    const [displaytext, setDisplayText] = React.useState(false);
     const [anchorEl, setAnchorEl] = React.useState(null);
     const [openpopper, setOpenPopper] = React.useState(false);
     const [placement, setPlacement] = React.useState();
@@ -927,7 +927,9 @@ const vehiclehover = () => {
     setSelectedButton(true);
 };
 const [index, setIndex] = React.useState(0);
-
+const aboutusparagraph = () => {
+    setDisplayText(!displaytext);
+}
   React.useEffect(() => {
     const intervalId = setInterval(() =>
       setIndex(index => index + 1),
@@ -3110,8 +3112,33 @@ setCarSearchClicked(!carsearchclicked);
                                     </Typography>
                                 </CardActions>
                                 <CardActions>
-                                    <Box component="span" >
-                                        <Box style={{display: "flex", flexDirection: "column", margin: "0px 6px"}}>
+                                    <Box>
+                                        <Grid container>
+                                            <Grid item xs={5}>
+                                                </Grid>
+                                        <Grid item xs={2}>
+                                        <Typography align="center" style={{ marginRight: " 10px"}}>Wanna Know More?</Typography>
+                                        <ShowMoreText lines={1} more={<ExpandMore />} less={<ExpandLess />} onClick={aboutusparagraph} expanded={expand} width={30}>
+                                        </ShowMoreText>
+                                            </Grid>
+                                            <Grid item xs={5}>
+                                                </Grid>
+                                        </Grid>
+                                        {displaytext ? 
+                                        <Grid container>
+                                        <Grid item xs={1}>
+                                            
+                                            </Grid>
+                                        <Grid item xs={10}>
+                                        <Typography  style={{fontSize: 15 }}>     
+                                                    {smartexportparagraph}
+                                                   </Typography>
+                                            </Grid>
+                                        <Grid item xs={1}>
+
+                                        </Grid>
+                                        </Grid>: ""}
+                                        {/* <Box style={{display: "flex", flexDirection: "column", margin: "0px 6px"}}>
                                     <Typography align="center" style={{ marginRight: " 10px"}}     >Wanna Know More?</Typography>
                                     
 
@@ -3123,7 +3150,7 @@ setCarSearchClicked(!carsearchclicked);
                                                    </Box >  
                                         </ShowMoreText>
                                         
-                                        </Box>
+                                        </Box> */}
                                     </Box>
                                 </CardActions>
                             </CardContent>
