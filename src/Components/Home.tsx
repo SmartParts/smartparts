@@ -3118,9 +3118,11 @@ setCarSearchClicked(!carsearchclicked);
                                             <Grid item lg={4}>
                                                 </Grid>
                                         <Grid item lg={4}>
-                                        <Typography align="center" style={{ marginRight: " 10px"}}>Wanna Know More?</Typography>
+                                            <Box style={{display: "flex", flexDirection: "column"}}>
+                                        <Typography  style={{ marginRight: " 1200px"}}>Read More</Typography>
                                         <KeyboardArrowDownOutlinedIcon onClick={aboutusparagraph} >
                                         </KeyboardArrowDownOutlinedIcon>
+                                        </Box>
                                             </Grid>
                                             <Grid item lg={4}>
                                                 </Grid>
