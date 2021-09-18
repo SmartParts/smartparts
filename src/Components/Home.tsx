@@ -942,19 +942,19 @@ const [index, setIndex] = React.useState(0);
         <Typography align="left" variant="body1">We are already serving our best products and services in more than 45 countries.</Typography>
         <Typography align="left" variant="body1">For Genuine automotive spare parts exports, we also have a very large product range and can undertake any customizations as per consumer or market requirements.</Typography>
         <Typography align="left" variant="body1">Genuine automotive spare parts component exporter from India specializing in complete product range like following :-</Typography>
-        <Typography align="left" variant="body1">
-            <ul>
-           <li> Suzuki Spare parts,</li> 
-           <li>Tata Motors Spare parts,</li>
-            <li>Ashok Leyland Spare parts, </li>
-            <li>Mahindra Spare parts, </li>
-            <li>Chevrolet Spare Parts, </li>
-            <li>Ford Spare Parts,</li>
-            <li>Nissan Spare Parts, </li>
-            <li>Man Spare parts for CLA ,</li> 
-            <li> Ford Spare parts </li>
-            <li>Hyundai spare parts (aftermarket).</li>
-            </ul>
+        
+         
+        <Typography align="left" variant="body1">   • Suzuki Spare parts </Typography> 
+        <Typography align="left" variant="body1">   •Tata Motors Spare parts </Typography>
+        <Typography align="left" variant="body1">   •Ashok Leyland Spare parts </Typography>
+        <Typography align="left" variant="body1">   •Mahindra Spare parts </Typography>
+        <Typography align="left" variant="body1">   •Chevrolet Spare Parts </Typography>
+        <Typography align="left" variant="body1">   •Ford Spare Parts </Typography>
+        <Typography align="left" variant="body1">   •Nissan Spare Parts </Typography>
+        <Typography align="left" variant="body1">   •Man Spare parts for CLA  </Typography> 
+        <Typography align="left" variant="body1">   • Ford Spare parts  </Typography>
+        <Typography align="left" variant="body1">   •Hyundai spare parts (aftermarket)
+            
             </Typography>
          <Typography align="left" variant="body1">Any needs regarding automobile products for any Indian vehicles will be taken care of.</Typography>
          <Typography align="left" variant="body1">We deal in a complete range of genuine and aftermarket spare parts of all the top brands.</Typography>
@@ -3111,18 +3111,18 @@ setCarSearchClicked(!carsearchclicked);
                                 </CardActions>
                                 <CardActions>
                                     <Box component="span" >
-                                        <Box style={{display: "flex", flexDirection: "row", margin: "0px 6px"}}>
+                                        <Box style={{display: "flex", flexDirection: "column", margin: "0px 6px"}}>
                                     <Typography align="center" style={{ marginRight: " 10px"}}     >Wanna Know More?</Typography>
-                                    <Box style={{display: "flex", flexDirection: "column"}}>
+                                    
 
                                         <ShowMoreText lines={1} more={<ExpandMore />} less={<ExpandLess />} onClick={onClick} expanded={expand} width={30}>
-                                        
+                                        <Box style={{display: "flex", flexDirection: "row"}}>
                                                 <Typography  style={{fontSize: 15 }}>     
                                                     {smartexportparagraph}
                                                    </Typography>
-                                          
+                                                   </Box >  
                                         </ShowMoreText>
-                                        </Box >
+                                        
                                         </Box>
                                     </Box>
                                 </CardActions>
