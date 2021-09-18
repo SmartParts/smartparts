@@ -4,6 +4,7 @@ import {makeStyles, useTheme,withStyles} from "@material-ui/core/styles";
 import InputAdornment from '@material-ui/core/InputAdornment';
 import SearchIcon from '@material-ui/icons/Search';
 import TextTransition, { presets } from "react-text-transition";
+import KeyboardArrowDownOutlinedIcon from '@material-ui/icons/KeyboardArrowDownOutlined';
 // import Container from "@material-ui/core/Container";
 import mainimage from '../image/home/mainimage.png';
 import Autocomplete from '@material-ui/lab/Autocomplete';
@@ -3005,11 +3006,10 @@ setCarSearchClicked(!carsearchclicked);
                         {articletwocollapsed ? 
                         <CardContent>
                         <Typography align="left" gutterBottom variant="h6" component="p" style={{fontSize: 18}}>
-                                <strong>Benefits of buying TATA Genuine spares parts from the leading brand!</strong>
+                                <strong>Fake Spare Parts OR Genuine Spare Parts? Choice is yours.</strong>
                             </Typography>
                             <Typography align="left" variant="body2" color="textSecondary" component="p" style={{fontSize: 12}}>
-                            Smart Parts Export is the largest provider of automobile Genuine spare parts all over the world that has already created wonders in the market.
-                          </Typography>
+                            Fake has become a new reality, be it technology, accessories or clothing, everything in this world has a fake counterpart. Even the automobile spare parts industry is also flooded with fake spare parts and accessories.                          </Typography>
                         </CardContent> : "" }
                     </CardActionArea>
                 </Card>
@@ -3021,12 +3021,12 @@ setCarSearchClicked(!carsearchclicked);
                         {articlethreecollapsed ? 
                         <CardContent>
                             <Typography align="left" gutterBottom variant="h6" component="p" style={{fontSize: 18}}>
-                                <strong>Fake Spare Parts OR Genuine Spare Parts? Choice is yours.</strong>
+                                <strong>Benefits of buying TATA Genuine spares parts from the leading brand!</strong>
+                        
                             </Typography>
 {/* Date  */}
                             <Typography align="left" variant="body2" color="textSecondary" component="p" style={{fontSize: 12}}>
-                            Fake has become a new reality, be it technology, accessories or clothing, everything in this world has a fake counterpart. Even the automobile spare parts industry is also flooded with fake spare parts and accessories.
-                          </Typography>
+                            Smart Parts Export is the largest provider of automobile Genuine spare parts all over the world that has already created wonders in the market.                          </Typography>
                         </CardContent> : ""}
                     </CardActionArea>
                 </Card>
@@ -3061,11 +3061,12 @@ setCarSearchClicked(!carsearchclicked);
                         <CardMedia className={classes.articleimage} onClick={collapsecontenttwo} image={articletwoimage} title="Contemplative Reptile" />
                         {articletwocollapsed ? 
                         <CardContent>
-                        <Typography align="left" gutterBottom variant="h6" component="p" style={{fontSize: 18}}>
-                                <strong>Benefits of buying TATA Genuine spares parts from the leading brand!</strong>
+                         <Typography align="left" gutterBottom variant="h6" component="p" style={{fontSize: 18}}>
+                                <strong>Fake Spare Parts OR Genuine Spare Parts? Choice is yours.</strong>
                             </Typography>
+{/* Date  */}
                             <Typography align="left" variant="body2" color="textSecondary" component="p" style={{fontSize: 12}}>
-                            Smart Parts Export is the largest provider of automobile Genuine spare parts all over the world that has already created wonders in the market.
+                              Fake has become a new reality, be it technology, accessories or clothing, everything in this world has a fake counterpart. Even the automobile spare parts industry is also flooded with fake spare parts and accessories.
                           </Typography>
                         </CardContent> : "" }
                     </CardActionArea>
@@ -3077,12 +3078,12 @@ setCarSearchClicked(!carsearchclicked);
                         <CardMedia className={classes.articleimage} onClick={collapsecontentthree} image={articlethreeimage} title="Contemplative Reptile" />
                         {articlethreecollapsed ? 
                         <CardContent>
-                            <Typography align="left" gutterBottom variant="h6" component="p" style={{fontSize: 18}}>
-                                <strong>Fake Spare Parts OR Genuine Spare Parts? Choice is yours.</strong>
+                          
+                        <Typography align="left" gutterBottom variant="h6" component="p" style={{fontSize: 18}}>
+                                <strong>Benefits of buying TATA Genuine spares parts from the leading brand!</strong>
                             </Typography>
-{/* Date  */}
                             <Typography align="left" variant="body2" color="textSecondary" component="p" style={{fontSize: 12}}>
-                              Fake has become a new reality, be it technology, accessories or clothing, everything in this world has a fake counterpart. Even the automobile spare parts industry is also flooded with fake spare parts and accessories.
+                            Smart Parts Export is the largest provider of automobile Genuine spare parts all over the world that has already created wonders in the market.
                           </Typography>
                         </CardContent> : ""}
                     </CardActionArea>
@@ -3114,14 +3115,14 @@ setCarSearchClicked(!carsearchclicked);
                                 <CardActions>
                                     <Box>
                                         <Grid container>
-                                            <Grid item xs={5}>
+                                            <Grid item lg={4}>
                                                 </Grid>
-                                        <Grid item xs={2}>
+                                        <Grid item lg={4}>
                                         <Typography align="center" style={{ marginRight: " 10px"}}>Wanna Know More?</Typography>
-                                        <ShowMoreText lines={1} more={<ExpandMore />} less={<ExpandLess />} onClick={aboutusparagraph} expanded={expand} width={30}>
-                                        </ShowMoreText>
+                                        <KeyboardArrowDownOutlinedIcon onClick={aboutusparagraph} >
+                                        </KeyboardArrowDownOutlinedIcon>
                                             </Grid>
-                                            <Grid item xs={5}>
+                                            <Grid item lg={4}>
                                                 </Grid>
                                         </Grid>
                                         {displaytext ? 
