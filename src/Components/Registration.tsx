@@ -136,7 +136,7 @@ const submitHandler = async(e) => {
  // post request
  e.preventDefault();
  const {email, password} = user;
- const res = await fetch("https://smart-parts.herokuapp.com/signup", {
+ const res = await fetch("/signup", {  //https://smart-parts.herokuapp.com/signup
    method: "POST",
    headers: {
      "Content-Type": "application/json",
