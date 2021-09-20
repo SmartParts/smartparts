@@ -354,9 +354,9 @@ export default function Footer(){
                         </Typography>
                     </Box>
                     <Box pb={1} className={classes.footertext}>
-                    <Link to="/privacypolicy">    <Typography variant="h6" align="left" className={classes.footercontent} >
-                           <Redirect to="/privacypolicy"> Privacy Policy</Redirect>
-                        </Typography></Link>
+                    <Redirect to="/privacypolicy">    <Typography variant="h6" align="left" className={classes.footercontent} >
+                            Privacy Policy
+                        </Typography></Redirect>
                     </Box>
                     <Box pb={1} className={classes.footertext}>
                         <Typography variant="h6" align="left" className={classes.footercontent} >
