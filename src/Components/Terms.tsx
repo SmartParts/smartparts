@@ -4,7 +4,7 @@ export default function Terms() {
 
     return(
         <Box>
-            <Typography></Typography>
+            <Typography>Terms of Use</Typography>
         </Box>
     )
 }

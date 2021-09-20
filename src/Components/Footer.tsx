@@ -344,10 +344,10 @@ export default function Footer(){
             </Grid>
             <Grid item xs={2}>
                 <Box component="span">
-                    <Typography variant="h5" align="left" className={classes.footerheadings}>
+                <Link to="/privacypolicy"><Typography variant="h5" align="left" className={classes.footerheadings}>
                         
                         Privacy Policy
-                    </Typography>
+                    </Typography></Link>
                     <Box pb={1} pt={3} className={classes.footertext}>
                         <Typography variant="h6" align="left" className={classes.footercontent} >
                             Return Policy
@@ -364,9 +364,9 @@ export default function Footer(){
                         </Typography>
                     </Box>
                     <Box pb={1} className={classes.footertext}>
-                        <Typography variant="h6" align="left" className={classes.footercontent} >
+                    <Link to="/termsofuse"><Typography variant="h6" align="left" className={classes.footercontent} >
                             Terms of Use
-                        </Typography>
+                        </Typography></Link>
                     </Box>
                     <Box pb={1} className={classes.footertext}>
                         <Typography variant="h6" align="left" className={classes.footercontent} >
