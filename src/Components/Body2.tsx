@@ -18,6 +18,8 @@ import BrandList from './BrandList';
 import ProductItem from './ProductItem';
 import Carousel from './Carousel';
 import Helpsupport from './Helpsupport';
+import Terms from './Terms';
+import PrivacyPolicy from './PrivacyPolicy';
 import Chevrolet from './Brandscreens/Cheverolet';
 // import Navbar from './Navbar';
 import Chatbot from './chatbot';
@@ -46,7 +48,9 @@ export default function Body(props) {
                     <Route path="/helpsupport" component={Helpsupport} />
                     <Route path="/carousel" component={Carousel} />
                     <Route path="/chatbot" component={Chatbot} />
-                    <Route path="/vehicle/chevrolet" component={Chevrolet} />                    
+                    <Route path="/vehicle/chevrolet" component={Chevrolet} />   
+                    <Route path="/termsandcondition" component={Terms}   />
+                    <Route path="/privacypolicy" component={PrivacyPolicy}   />               
                     {/* <Route exact path="/result" component={Results}/>
                     <Route exact path="/login" component={Home}/> */}
                 </Switch>   

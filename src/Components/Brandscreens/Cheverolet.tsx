@@ -83,8 +83,19 @@ export default function Chevrolet() {
     const vehicleSelect = (event) => {
       setAge(event.target.value);
     };
-
-
+    
+    // const res = await fetch("/vehicle/chevrolet", {  //https://smart-parts.herokuapp.com/logout
+    //     method: "GET",
+    //    headers: {
+    //     "Content-Type": "application/json",
+      
+    //    },
+      
+       
+    
+    //   })
+    // console.log(res);
+    // }
     const classes = useStyles();
 return(
     <Grid container >
