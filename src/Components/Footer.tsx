@@ -1,7 +1,7 @@
 import React from 'react';
 import {Box,Typography,Grid} from "@material-ui/core";
 import {makeStyles, useTheme} from "@material-ui/core/styles";
-import {Link} from 'react-router-dom';
+import {Link, Redirect} from 'react-router-dom';
 import logo from '../image/logo22.png';
 import Card from '@material-ui/core/Card';
 import CardActions from '@material-ui/core/CardActions';
@@ -354,9 +354,9 @@ export default function Footer(){
                         </Typography>
                     </Box>
                     <Box pb={1} className={classes.footertext}>
-                        <Typography variant="h6" align="left" className={classes.footercontent} >
-                            Privacy Policy
-                        </Typography>
+                    <Link to="/privacypolicy">    <Typography variant="h6" align="left" className={classes.footercontent} >
+                           <Redirect to="/privacypolicy"> Privacy Policy</Redirect>
+                        </Typography></Link>
                     </Box>
                     <Box pb={1} className={classes.footertext}>
                         <Typography variant="h6" align="left" className={classes.footercontent} >
