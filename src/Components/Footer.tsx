@@ -218,14 +218,10 @@ export default function Footer(){
                 And get the full smart parts experience in one go
             </Typography>
         </Typography>
-        <Grid container>
-            <Grid item>
-        <CardMedia className={classes.downloadimages} image={appstore}/>
-        </Grid>
-        <Grid item>
+        
+        <CardMedia className={classes.downloadimages} image={appstore}/> 
         <CardMedia className={classes.downloadimages} image={googleplay}/>
-      </Grid>
-          </Grid>
+      
         </CardActions>
     </Card>
     </Box>
