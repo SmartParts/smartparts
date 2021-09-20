@@ -138,6 +138,7 @@ export default function Login(props){
      const res = await fetch("/login", {   //https://smart-parts.herokuapp.com/login
        method: "POST",
       headers: {
+        
        "Content-Type": "application/json",
      
       },

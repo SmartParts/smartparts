@@ -1651,9 +1651,9 @@ setCarSearchClicked(!carsearchclicked);
                         <Grid item lg={2} >
                            
                            <Box className={classes.brandimages}>
-
+                            <Link to="/vehicle/chevrolet">
                            <img src={cheveroletimg} style={{width: "100%", height: "100%"}} alt="cheverolet"/>
-
+                            </Link>
                            </Box>
                           </Grid>
 

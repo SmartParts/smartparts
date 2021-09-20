@@ -5,10 +5,10 @@ import Card from "@material-ui/core/Card";
 import { CardMedia, CardContent } from '@material-ui/core';
 import { makeStyles , withStyles} from '@material-ui/core/styles';
 import { FavoriteBorder } from '@material-ui/icons';
-import servicepart1 from "../image/home/HYUNDAI OIL.jpg";
-import servicepart2 from "../image/home/Front Pad Set.jpg";
-import servicepart3 from "../image/home/SUZUKI AIR FILTER.jpg";
-import servicepart4 from '../image/home/nissan Spark plugs post.jpg';
+import suzukipartone from '../image/brands/Air Filter.jpg';
+// import suzukiparttwo from '../image/brands/CLUTCH SETDISC & COVER.jpg';
+// import suzukipartthree from '../image/brands/STRUT ASSY FRT SUSPENSION RH.jpg';
+// import suzukipartfour from '../image/home/SUZUKI AIR FILTER.jpg';
 // import DeleteIcon from '@material-ui/icons/Delete';
 // import Button from '@material-ui/core/Button';
 import Checkbox from '@material-ui/core/Checkbox';
@@ -16,7 +16,7 @@ import FormControl from '@material-ui/core/FormControl';
 import NativeSelect from '@material-ui/core/NativeSelect';
 import InputBase from '@material-ui/core/InputBase';
 // import InputLabel from '@material-ui/core/InputLabel';
-// import productbanner from '../image/banner_product.jpg';
+import productbanner from '../image/brands_banner/Suzuki.jpg';
 import Pagination from '@material-ui/lab/Pagination';
 const BootstrapInput = withStyles((theme) => ({
     root: {
@@ -76,26 +76,17 @@ icon: {
     },
   },
 }));
-export default function ProductList() {
+export default function Chevrolet() {
     
-    // const [checked, setChecked] = React.useState(true);
 
     const [age, setAge] = React.useState('');
     const vehicleSelect = (event) => {
       setAge(event.target.value);
     };
-    
-    // const handleChange = (event) => {
-    //     setChecked(event.target.checked);
-    //   };
+
 
     const classes = useStyles();
-
-
-
-
-
-    return(
+return(
     <Grid container >
         <Grid container item xs={3} style={{marginTop: "60px", maxWidth: "18%", display: "block",  backgroundColor: "#141A26",height: "690px", color: "white"}}>
         <Box style={{ marginLeft: "5px", marginTop: "25px"}}>
@@ -206,24 +197,24 @@ export default function ProductList() {
     
     <Grid container item xs={11} style={{marginTop: "60px", maxWidth: "82%" }}>
     
-       <Grid container  style={{ marginTop: "20px"}}>
+       <Grid container  >
        <Grid item>
-         {/* <Box >
-          <img src={productbanner} width="100%" height="100%" />
-          </Box> */}
+         <Box >
+          <img src={productbanner} width="100%" height="100%" alt="product" />
+          </Box>
          </Grid>
             <Grid item xs={3} style={{marginLeft: "20px"}}>
             <Card style={{margin: "10px 10px", width: "220px"}}>
                     <CardActions style={{display: "block"}}>
                      
                     
-                        <CardMedia  className={classes.productimage}  image={servicepart1} title="Product image" > 
+                        <CardMedia  className={classes.productimage}  image={suzukipartone} title="Product image" > 
                         {/* <DeleteIcon className={classes.icon} /> */}
                         <FavoriteBorder style={{marginLeft: 170,  marginTop: 10, position: 'absolute'}}></FavoriteBorder>
                         </CardMedia>
                         <CardContent>
                             <Box >
-                            <Typography>HYUNDAI OIL</Typography>
+                            <Typography>Air Filter</Typography>
                             <Box style={{display: "flex", flexDirection: "row"}}>
                             <Typography>Product description</Typography>
                             {/* <Button style={{backgroundColor: "black", color: "white",  marginLeft: '40px'}}>Add to Cart</Button> */}
@@ -235,77 +226,7 @@ export default function ProductList() {
                     
                 </Card>
             </Grid>
-            <Grid item  xs={3} >
-            <Card style={{margin: "10px 10px", width: "220px"}}>
-                    <CardActions style={{display: "block"}}>
-                     
-                    
-                        <CardMedia  className={classes.productimage}  image={servicepart2} title="Product image" > 
-                        
-                        <FavoriteBorder style={{marginLeft: 170,  marginTop: 10, position: 'absolute'}}></FavoriteBorder>
-                        </CardMedia>
-                        <CardContent>
-                            <Box>
-                            <Typography>FRONT PAD SET</Typography>
-                            <Box style={{display: "flex", flexDirection: "row"}}>
-                            <Typography>Product description</Typography>
-                            {/* <Button style={{backgroundColor: "black", color: "white",  marginLeft: '40px'}}>Add to Cart</Button> */}
-                            </Box>
-                            </Box>
-                        </CardContent>
-                     
-                    </CardActions>
-                    
-                </Card>
-                </Grid>
-                <Grid item  xs={3} >
-            <Card style={{margin: "10px 10px", width: "220px"}}>
 
-                    <CardActions style={{display: "block"}}>
-                     
-                        
-                        <CardMedia  className={classes.productimage}  image={servicepart3} title="Product image" > 
-                        
-                        <FavoriteBorder style={{marginLeft: 170,  marginTop: 10, position: 'absolute'}}></FavoriteBorder>
-                        </CardMedia>
-                        <CardContent>
-                            <Box >
-                            <Typography>SUZUKI AIR FILTER</Typography>
-                            <Box style={{display: "flex", flexDirection: "row"}}>
-                            <Typography>Product description</Typography>
-                            {/* <Button style={{backgroundColor: "black", color: "white",  marginLeft: '40px'}}>Add to Cart</Button> */}
-                            </Box>
-                            </Box>
-                        </CardContent>
-                     
-                    </CardActions>
-                    
-                </Card>
-                </Grid>
-                <Grid item  xs={2} >
-            <Card style={{margin: "10px 10px", width: "220px"}}>
-
-                    <CardActions style={{display: "block"}}>
-                     
-                    
-                        <CardMedia  className={classes.productimage}  image={servicepart4} title="Product image" > 
-                        
-                        <FavoriteBorder style={{marginLeft: 170,  marginTop: 10, position: 'absolute'}}></FavoriteBorder>
-                        </CardMedia>
-                        <CardContent>
-                            <Box>
-                            <Typography>SPARK PLUG POST</Typography>
-                            <Box style={{display: "flex", flexDirection: "row"}}>
-                            <Typography>Product description</Typography>
-                            {/* <Button style={{backgroundColor: "black", color: "white",  marginLeft: '40px'}}>Add to Cart</Button> */}
-                            </Box>
-                            </Box>
-                        </CardContent>
-                     
-                    </CardActions>
-                    
-                </Card>
-                </Grid>
                   
        </Grid>
        <Box className={classes.page}>
