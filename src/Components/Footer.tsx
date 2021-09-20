@@ -1,7 +1,7 @@
 import React from 'react';
 import {Box,Typography,Grid} from "@material-ui/core";
 import {makeStyles, useTheme} from "@material-ui/core/styles";
-import {NavLink} from 'react-router-dom';
+import {Link} from 'react-router-dom';
 import logo from '../image/logo22.png';
 import Card from '@material-ui/core/Card';
 import CardActions from '@material-ui/core/CardActions';
@@ -269,9 +269,9 @@ export default function Footer(){
                         </Typography>
                     </Box>
                     <Box pb={1} className={classes.footertext}>
-                        <Typography variant="h6" align="left" color="textSecondary" className={classes.footercontent} >
-                        <NavLink to="/privacypolicy">  Privacy Policy</NavLink>
-                        </Typography>
+                    <Link to="/privacypolicy"><Typography variant="h6" align="left" color="textSecondary" className={classes.footercontent} >
+                          Privacy Policy
+                        </Typography></Link>
                     </Box>
                     <Box pb={1} className={classes.footertext}>
                         <Typography variant="h6" align="left" color="textSecondary" className={classes.footercontent} >
@@ -279,9 +279,9 @@ export default function Footer(){
                         </Typography>
                     </Box>
                     <Box pb={1} className={classes.footertext}>
-                        <Typography variant="h6" align="left" color="textSecondary"  className={classes.footercontent} >
-                          <NavLink to="/termsofuse">  Terms of Use</NavLink>
-                        </Typography>
+                    <Link to="/termsofuse"> <Typography variant="h6" align="left" color="textSecondary"  className={classes.footercontent} >
+                            Terms of Use
+                        </Typography></Link>
                     </Box>
                     <Box pb={1} className={classes.footertext}>
                         <Typography variant="h6" align="left" color="textSecondary" className={classes.footercontent} >
