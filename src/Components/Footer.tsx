@@ -1,7 +1,7 @@
 import React from 'react';
 import {Box,Typography,Grid} from "@material-ui/core";
 import {makeStyles, useTheme} from "@material-ui/core/styles";
-import {Link} from 'react-router-dom';
+import {NavLink} from 'react-router-dom';
 import logo from '../image/logo22.png';
 import Card from '@material-ui/core/Card';
 import CardActions from '@material-ui/core/CardActions';
@@ -270,7 +270,7 @@ export default function Footer(){
                     </Box>
                     <Box pb={1} className={classes.footertext}>
                         <Typography variant="h6" align="left" color="textSecondary" className={classes.footercontent} >
-                        <Link to="/privacypolicy">  Privacy Policy</Link>
+                        <NavLink to="/privacypolicy">  Privacy Policy</NavLink>
                         </Typography>
                     </Box>
                     <Box pb={1} className={classes.footertext}>
@@ -280,7 +280,7 @@ export default function Footer(){
                     </Box>
                     <Box pb={1} className={classes.footertext}>
                         <Typography variant="h6" align="left" color="textSecondary"  className={classes.footercontent} >
-                          <Link to="/termsandcondition">  Terms of Use</Link>
+                          <NavLink to="/termsofuse">  Terms of Use</NavLink>
                         </Typography>
                     </Box>
                     <Box pb={1} className={classes.footertext}>
