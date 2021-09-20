@@ -5,7 +5,7 @@ import Card from "@material-ui/core/Card";
 import { CardMedia, CardContent } from '@material-ui/core';
 import { makeStyles , withStyles} from '@material-ui/core/styles';
 import { FavoriteBorder } from '@material-ui/icons';
-import suzukipartone from '../image/brands/Air Filter.jpg';
+import suzukipartone from '../../image/brands/Air Filter.jpg';
 // import suzukiparttwo from '../image/brands/CLUTCH SETDISC & COVER.jpg';
 // import suzukipartthree from '../image/brands/STRUT ASSY FRT SUSPENSION RH.jpg';
 // import suzukipartfour from '../image/home/SUZUKI AIR FILTER.jpg';
@@ -16,7 +16,7 @@ import FormControl from '@material-ui/core/FormControl';
 import NativeSelect from '@material-ui/core/NativeSelect';
 import InputBase from '@material-ui/core/InputBase';
 // import InputLabel from '@material-ui/core/InputLabel';
-import productbanner from '../image/brands_banner/Suzuki.jpg';
+import productbanner from '../../image/brands_banner/Suzuki.jpg';
 import Pagination from '@material-ui/lab/Pagination';
 const BootstrapInput = withStyles((theme) => ({
     root: {
