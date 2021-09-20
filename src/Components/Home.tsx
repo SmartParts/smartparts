@@ -27,7 +27,7 @@ import { ThemeProvider } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
 //import bannerVideo from '../../src/video/bannervideo.mp4';
 import Card from '@material-ui/core/Card';
-import {Link} from 'react-router-dom';
+import {Link, NavLink} from 'react-router-dom';
 import CardActionArea from '@material-ui/core/CardActionArea';
 import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
@@ -1651,9 +1651,9 @@ setCarSearchClicked(!carsearchclicked);
                         <Grid item lg={2} >
                            
                            <Box className={classes.brandimages}>
-                            <Link to="/vehicle/chevrolet">
+                            <NavLink to="/vehicle/chevrolet">
                            <img src={cheveroletimg} style={{width: "100%", height: "100%"}} alt="cheverolet"/>
-                            </Link>
+                            </NavLink>
                            </Box>
                           </Grid>
 
