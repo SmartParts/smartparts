@@ -79,7 +79,7 @@ icon: {
 
 const addToCart = async(e) => {            //useEffect
 
-const res = await fetch("https://smart-parts.herokuapp.com/vehicle/chevrolet", {  //https://smart-parts.herokuapp.com/logout
+const res = await fetch("https://smart-parts.herokuapp.com/products/vehicle/chevrolet", {  //https://smart-parts.herokuapp.com/logout
     method: "GET",
    headers: {
     "Content-Type": "application/json",
