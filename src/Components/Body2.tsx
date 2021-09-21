@@ -2,8 +2,10 @@ import React from 'react';
 // import {Grid,Button} from "@material-ui/core";
 // import {makeStyles} from "@material-ui/core/styles";
 // import Sidebar from './Sidebar';
-import { Route, Switch} from 'react-router-dom';
+import { Route, Switch, browserHistory} from 'react-router-dom';
 import {Router} from 'react-router';
+// import { createBrowserHistory } from 'history';
+// import { browserHistory} from {createBrowserHistory};
 import Home from './Home';
 // import Results from './Results';
 import Footer from './Footer';
@@ -22,7 +24,8 @@ import Helpsupport from './Helpsupport';
 import Terms from './Terms';
 import PrivacyPolicy from './PrivacyPolicy';
 import Chevrolet from './Brandscreens/Cheverolet';
-import { createBrowserHistory } from 'history';
+
+
 // import Navbar from './Navbar';
 import Chatbot from './chatbot';
 
@@ -33,7 +36,7 @@ export default function Body(props) {
         //     {/* <Grid item xs={3} className={classes.item1} container><Sidebar/></Grid> */}
         //     <Grid item lg={12} className={classes.item2} container>
                  <Switch>
-                      <Router history={createBrowserHistory}>
+                      <Router history={browserHistory}>
                     <Route exact path="/" component={Home}/>
                     {/* <Route path="/navbar" component={Navbar} />  */}
                     <Route path="/footer" component={Footer} />
