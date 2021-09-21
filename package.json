@@ -2,7 +2,7 @@
   "name": "onelogview",
   "version": "0.1.0",
   "private": true,
-  "proxy": { "/products/vehicle/chevrolet": { "target": "https://smart-parts.herokuapp.com", "secure": false }  },
+  "proxy": { "/products/vehicle/**": { "target": "https://smart-parts.herokuapp.com", "secure": false }  },
   "dependencies": {
     "@material-ui/core": "^4.11.4",
     "@material-ui/icons": "^4.11.2",
