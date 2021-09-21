@@ -2,7 +2,7 @@ import React from 'react';
 // import {Grid,Button} from "@material-ui/core";
 // import {makeStyles} from "@material-ui/core/styles";
 // import Sidebar from './Sidebar';
-import { Route, Switch} from 'react-router-dom';
+import { Route, Switch, Redirect} from 'react-router-dom';
 
 
 // import { createBrowserHistory } from 'history';
@@ -38,7 +38,7 @@ export default function Body(props) {
         //     <Grid item lg={12} className={classes.item2} container>
                  <Switch>
                       
-                    <Route exact path="/" component={Home}/>
+                    <Route exact path="/" component={Home} render={({ location }) => <Redirect to={location.hash.replace('#', '')} />}/>
                     {/* <Route path="/navbar" component={Navbar} />  */}
                     <Route path="/footer" component={Footer} />
                     <Route path="/login" render={()=><Login {...props}/>}/>
