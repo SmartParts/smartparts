@@ -2,8 +2,8 @@ import React from 'react';
 // import {Grid,Button} from "@material-ui/core";
 // import {makeStyles} from "@material-ui/core/styles";
 // import Sidebar from './Sidebar';
-import { Route, Switch, Redirect} from 'react-router-dom';
-import {Router, hashHistory} from 'react-router';
+import { Route, Switch, Redirect, HashRouter} from 'react-router-dom';
+import {Router} from 'react-router';
 import Home from './Home';
 // import Results from './Results';
 import Footer from './Footer';
@@ -32,7 +32,7 @@ export default function Body(props) {
         //     {/* <Grid item xs={3} className={classes.item1} container><Sidebar/></Grid> */}
         //     <Grid item lg={12} className={classes.item2} container>
                  <Switch>
-                      <Router history={hashHistory}>
+                      <HashRouter>
                     <Route exact path="/" component={Home}/>
                     {/* <Route path="/navbar" component={Navbar} />  */}
                     <Route path="/footer" component={Footer} />
@@ -55,7 +55,7 @@ export default function Body(props) {
                     <Route path="/privacypolicy" component={PrivacyPolicy}   />               
                     {/* <Route exact path="/result" component={Results}/>
                     <Route exact path="/login" component={Home}/> */}
-                </Router>
+                </HashRouter>
                 </Switch>   
         //     </Grid>
         // </Grid>
