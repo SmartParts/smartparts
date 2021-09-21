@@ -1,6 +1,6 @@
 import {useState} from 'react'; 
 import Navbar from './Components/Navbar';
-// import {BrowserRouter} from 'react-router-dom';
+import {BrowserRouter} from 'react-router-dom';
 // import Home from './Components/Home';
 // import Others from './Components/Others';
 import Body2 from './Components/Body2';
@@ -42,12 +42,12 @@ const classes= useStyles();
       <CssBaseline/>
       <Grid className={classes.root}>
       <Paper square className={classes.paper} >
-      {/* <BrowserRouter>       */}
+      <BrowserRouter>      
   
         <Navbar isLogin={isLogin} setIsLogin ={setIsLogin} onThemeChangeHandler={onThemeChangeHandler}/> 
          {/* not required in myprofile */}
         <Body2 setIsLogin ={setIsLogin} />
-      {/* </BrowserRouter> */}
+      </BrowserRouter>
       </Paper>
       </Grid>
       </ThemeProvider>

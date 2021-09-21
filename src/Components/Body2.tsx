@@ -2,7 +2,7 @@ import React from 'react';
 // import {Grid,Button} from "@material-ui/core";
 // import {makeStyles} from "@material-ui/core/styles";
 // import Sidebar from './Sidebar';
-import {BrowserRouter, Route, Switch} from 'react-router-dom';
+import { Route, Switch} from 'react-router-dom';
 
 
 // import { createBrowserHistory } from 'history';
@@ -33,14 +33,10 @@ import Chatbot from './chatbot';
 export default function Body(props) {
     
     return (
-
-            
         // <Grid container className={classes.root}> 
         //     {/* <Grid item xs={3} className={classes.item1} container><Sidebar/></Grid> */}
         //     <Grid item lg={12} className={classes.item2} container>
-            
-        <BrowserRouter>
-            <Switch>
+                 <Switch>
                       
                     <Route exact path="/" component={Home}/>
                     {/* <Route path="/navbar" component={Navbar} />  */}
@@ -65,8 +61,7 @@ export default function Body(props) {
                     {/* <Route exact path="/result" component={Results}/>
                     <Route exact path="/login" component={Home}/> */}
                 
-                </Switch>
-                </BrowserRouter>   
+                </Switch>   
         //     </Grid>
         // </Grid>
     )
