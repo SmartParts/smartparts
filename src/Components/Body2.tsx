@@ -2,8 +2,9 @@ import React from 'react';
 // import {Grid,Button} from "@material-ui/core";
 // import {makeStyles} from "@material-ui/core/styles";
 // import Sidebar from './Sidebar';
-import { Route, Switch, browserHistory} from 'react-router-dom';
+import { Route, Switch} from 'react-router-dom';
 import {Router} from 'react-router';
+import history from './history';
 // import { createBrowserHistory } from 'history';
 // import { browserHistory} from {createBrowserHistory};
 import Home from './Home';
@@ -36,7 +37,7 @@ export default function Body(props) {
         //     {/* <Grid item xs={3} className={classes.item1} container><Sidebar/></Grid> */}
         //     <Grid item lg={12} className={classes.item2} container>
                  <Switch>
-                      <Router history={browserHistory}>
+                      <Router history={history}>
                     <Route exact path="/" component={Home}/>
                     {/* <Route path="/navbar" component={Navbar} />  */}
                     <Route path="/footer" component={Footer} />
