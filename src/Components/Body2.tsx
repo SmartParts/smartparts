@@ -2,7 +2,7 @@ import React from 'react';
 // import {Grid,Button} from "@material-ui/core";
 // import {makeStyles} from "@material-ui/core/styles";
 // import Sidebar from './Sidebar';
-import { Route, Switch} from 'react-router-dom';
+import { Route, Switch, Redirect} from 'react-router-dom';
 import Home from './Home';
 // import Results from './Results';
 import Footer from './Footer';
@@ -49,7 +49,7 @@ export default function Body(props) {
                     <Route path="/carousel" component={Carousel} />
                     <Route path="/chatbot" component={Chatbot} />
                     <Route path="/vehicle/chevrolet" component={Chevrolet} />   
-                    <Route path="/termsofuse" component={Terms}   />
+                    <Redirect  to="/termsofuse" component={Terms}   />
                     <Route path="/privacypolicy" component={PrivacyPolicy}   />               
                     {/* <Route exact path="/result" component={Results}/>
                     <Route exact path="/login" component={Home}/> */}
