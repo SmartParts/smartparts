@@ -1,5 +1,5 @@
 import React from 'react';
-import {Box,Typography,Grid} from "@material-ui/core";
+import {Box,Typography,Grid, Button} from "@material-ui/core";
 import CardActions from "@material-ui/core/CardActions";
 import Card from "@material-ui/core/Card";
 import { CardMedia, CardContent } from '@material-ui/core';
@@ -16,7 +16,7 @@ import FormControl from '@material-ui/core/FormControl';
 import NativeSelect from '@material-ui/core/NativeSelect';
 import InputBase from '@material-ui/core/InputBase';
 // import InputLabel from '@material-ui/core/InputLabel';
-import productbanner from '../../image/brands_banner/Suzuki.jpg';
+import productbanner from '../../image/brands_banner/chevrolet.jpg';
 import Pagination from '@material-ui/lab/Pagination';
 const BootstrapInput = withStyles((theme) => ({
     root: {
@@ -76,6 +76,21 @@ icon: {
     },
   },
 }));
+
+const addToCart = async(e) => {            //useEffect
+
+const res = await fetch("/vehicle/chevrolet", {  //https://smart-parts.herokuapp.com/logout
+    method: "GET",
+   headers: {
+    "Content-Type": "application/json",
+  
+   },
+  
+   
+
+  })
+  console.log(res);
+}
 export default function Chevrolet() {
     
 
@@ -228,7 +243,7 @@ return(
                             <Typography>Air Filter</Typography>
                             <Box style={{display: "flex", flexDirection: "row"}}>
                             <Typography>Product description</Typography>
-                            {/* <Button style={{backgroundColor: "black", color: "white",  marginLeft: '40px'}}>Add to Cart</Button> */}
+                             <Button onClick={addToCart} style={{backgroundColor: "black", color: "white",  marginLeft: '40px'}}>Add to Cart</Button> 
                             </Box>
                             </Box>
                         </CardContent>
