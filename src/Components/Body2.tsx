@@ -3,7 +3,7 @@ import React from 'react';
 // import {makeStyles} from "@material-ui/core/styles";
 // import Sidebar from './Sidebar';
 import { Route, Switch, Redirect, HashRouter} from 'react-router-dom';
-import {Router} from 'react-router';
+// import {Router} from 'react-router';
 import Home from './Home';
 // import Results from './Results';
 import Footer from './Footer';
