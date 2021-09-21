@@ -79,7 +79,7 @@ icon: {
 
 const addToCart = async(e) => {            //useEffect
 
-const res = await fetch("/products/vehicle/chevrolet", {  //https://smart-parts.herokuapp.com/logout     //proxy:  { "/products/vehicle/**": { "target": "https://smart-parts.herokuapp.com", "secure": false }  },
+const res = await fetch("https://smart-parts.herokuapp.com/products/vehicle/chevrolet", {  //https://smart-parts.herokuapp.com/logout     //proxy:  { "/products/vehicle/**": { "target": "https://smart-parts.herokuapp.com", "secure": false }  },
 
     method: "GET",
    headers: {
