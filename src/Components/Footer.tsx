@@ -172,8 +172,9 @@ export default function Footer(){
     <Box className={classes.addresssection}>
                     <Card className={classes.countries}>
                         <CardActions>
-                        {/* <Typography align="center" variant="h5"><strong>Our Branches</strong></Typography>
-                        <br /> */}
+                            <Box style={{display: "flex", flexDirection:"row"}}>
+                         <Typography align="center" variant="h5"><strong>Our Branches</strong></Typography>
+                        </Box>
                         <Grid container justify="space-evenly">
                         <Grid item xs={3} alignItems="center" style={{margin:"90px 0px"}}>
                         <Box className={classes.locationone} >
@@ -325,24 +326,35 @@ export default function Footer(){
                     </Typography>
                 </Box>
                 <Box>
-                    <Box style={{display: "flex", flexDirection: "row"}}>
+                    <Box style={{display: "flex", flexDirection: "row", marginTop: "100px", marginLeft: "48px"}}>
+                      
                         <Box style={{width: "30px", height: "30px"}}>
+                        <Link to="https://in.pinterest.com/smartpartsexports/_created/">
                     <img src={youtubeicon} style={{ width: "100%", height: "100%"}} alt="youtube" />
+                    </Link>
                     </Box>
                     <Box style={{width: "30px", height: "30px"}}>
+                    <Link to="https://www.facebook.com/smartpartsexports">
                     <img src={facebookicon} style={{ width: "100%", height: "100%"}} alt="facebook" />
+                    </Link>
                     </Box>
                     <Box style={{width: "30px", height: "30px"}}>
+                    <Link to="https://twitter.com/SmartParts4">
                     <img src={twittericon} style={{ width: "100%", height: "100%"}} alt="twitter" />
+                    </Link>
                     </Box>
                     <Box style={{width: "30px", height: "30px"}}>
+                    <Link to="https://www.instagram.com/smartpartsexports/">
                     <img src={instagramicon} style={{ width: "100%", height: "100%"}} alt="instagram" />
+                    </Link>
                     </Box>
                     <Box style={{width: "30px", height: "30px"}}>
+                    <Link to="https://www.linkedin.com/company/14630168/admin/">
                     <img src={linkedinicon} style={{ width: "100%", height: "100%"}} alt="linkedin" />
+                    </Link>
                     </Box>
                     </Box>
-                    <Typography>Follow Us</Typography>
+                    <Typography style={{marginRight: "391px",   marginTop: "10px"}}>Follow Us</Typography>
                 </Box>
             </Grid>
             <Grid item xs={2}>
