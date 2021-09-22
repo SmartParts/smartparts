@@ -168,8 +168,21 @@ export default function Footer(){
     const theme = useTheme();
     const issmallscreen = useMediaQuery(theme.breakpoints.down("sm"));
 
-    const handleClick = () => {
-        window.location.assign('https://in.pinterest.com/smartpartsexports/_created/');
+    const youtubeClick = () => {
+        window.location.assign('https://www.youtube.com/channel/UCbhzF_ASa4zUSqaM__tbMHQ');
+    }
+
+    const instagramClick = () => {
+        window.location.assign('https://www.instagram.com/smartpartsexports/');
+    }
+    const facebookClick = () => {
+        window.location.assign('https://www.facebook.com/smartpartsexports');
+    }
+    const linkedinClick = () => {
+        window.location.assign('https://www.linkedin.com/company/14630168/admin/');
+    }
+    const twitterClick = () => {
+        window.location.assign('https://twitter.com/SmartParts4');
     }
     return (
         <Box >
@@ -334,31 +347,31 @@ export default function Footer(){
                       
                         <Box style={{width: "30px", height: "30px"}}>
                     
-                    <img src={youtubeicon} onClick={handleClick} style={{ width: "100%", height: "100%"}} alt="youtube" />
+                    <img src={youtubeicon} onClick={youtubeClick} style={{ width: "100%", height: "100%"}} alt="youtube" />
                 
                     </Box>
                     <Box style={{width: "30px", height: "30px"}}>
-                    <Link to="https://www.facebook.com/smartpartsexports">
-                    <img src={facebookicon} style={{ width: "100%", height: "100%"}} alt="facebook" />
-                    </Link>
+                    
+                    <img src={facebookicon} onClick={facebookClick} style={{ width: "100%", height: "100%"}} alt="facebook" />
+                    
                     </Box>
                     <Box style={{width: "30px", height: "30px"}}>
-                    <Link to="https://twitter.com/SmartParts4">
-                    <img src={twittericon} style={{ width: "100%", height: "100%"}} alt="twitter" />
-                    </Link>
+                    
+                    <img src={twittericon} onClick={twitterClick} style={{ width: "100%", height: "100%"}} alt="twitter" />
+                    
                     </Box>
                     <Box style={{width: "30px", height: "30px"}}>
-                    <Link to="https://www.instagram.com/smartpartsexports/">
-                    <img src={instagramicon} style={{ width: "100%", height: "100%"}} alt="instagram" />
-                    </Link>
+                    
+                    <img src={instagramicon} onClick={instagramClick} style={{ width: "100%", height: "100%"}} alt="instagram" />
+                    
                     </Box>
                     <Box style={{width: "30px", height: "30px"}}>
-                    <Link to="https://www.linkedin.com/company/14630168/admin/">
-                    <img src={linkedinicon} style={{ width: "100%", height: "100%"}} alt="linkedin" />
-                    </Link>
+                    
+                    <img src={linkedinicon} onClick={linkedinClick} style={{ width: "100%", height: "100%"}} alt="linkedin" />
+                    
                     </Box>
                     </Box>
-                    <Typography style={{marginRight: "341px",   marginTop: "10px"}}>Follow Us</Typography>
+                    <Typography style={{marginLeft: "5px",   marginTop: "10px"}}>Follow Us</Typography>
                 </Box>
             </Grid>
             <Grid item xs={2}>
