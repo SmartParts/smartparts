@@ -186,13 +186,13 @@ export default function Footer(){
     }
     return (
         <Box >
-                <Box >
-                <Typography align="center" variant="h4" style={{paddingTop: "40px", color: "black"}}><strong>Our Branches</strong></Typography>
-                 </Box>
+                
     <Box className={classes.addresssection}>
                     <Card className={classes.countries}>
                         <CardActions>
-                        
+                        <Box>
+                        <Typography align="center" variant="h4" style={{paddingTop: "40px", color: "black"}}><strong>Our Branches</strong></Typography>
+                        </Box>        
                         <Grid container justify="space-evenly">
                         <Grid item xs={3} alignItems="center" style={{margin:"90px 0px"}}>
                         <Box className={classes.locationone} >
