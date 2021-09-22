@@ -3453,37 +3453,90 @@ setCarSearchClicked(!carsearchclicked);
             FAQ
         </Typography>
         <Box style={{margin: "25px"}}>
+            
      <Accordion>
         <AccordionSummary
           expandIcon={<ExpandMore />}
           aria-controls="panel1a-content"
           id="panel1a-header"
         >
-          <Typography>Accordion 1</Typography>
+          <Typography>What is this website about? </Typography>
         </AccordionSummary>
         <AccordionDetails>
           <Typography>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-            malesuada lacus ex, sit amet blandit leo lobortis eget.
+            Smart Parts Export is a leading Indian exporter of automotive spare parts mainly for passenger and commercial vehicles. We are here to provide world-class service to all our esteemed clients. Our sheer professionalism and dedication towards our services has enabled us to make our presence felt in more than 80 countries spread over 5 continents.
+            We take pride in being among the top most preferred genuine automotive spare parts exporters in India. We specialize in the supply of genuine and aftermarket spare parts for passenger and commercial vehicles manufactured by Tata Motors, Mahindra, Ashok Leyland, Maruti Suzuki, Hyundai, Ford, Honda, EICHER, MAN and other Indian manufactured vehicles.
+
           </Typography>
         </AccordionDetails>
       </Accordion>
+      <Box style={{marginTop: "25px"}}>
       <Accordion>
+      
         <AccordionSummary
           expandIcon={<ExpandMore />}
           aria-controls="panel2a-content"
           id="panel2a-header"
         >
-          <Typography>Accordion 2</Typography>
+          <Typography>Do you provide genuine automotive spare parts?</Typography>
         </AccordionSummary>
         <AccordionDetails>
           <Typography>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-            malesuada lacus ex, sit amet blandit leo lobortis eget.
+          Yes we deal in 100% genuine quality of  automotive spare parts, as we are directly associated with all the Top brands in India.
           </Typography>
         </AccordionDetails>
       </Accordion>
-   
+   </Box>
+   <Box style={{marginTop: "25px"}}>
+      <Accordion>
+      
+        <AccordionSummary
+          expandIcon={<ExpandMore />}
+          aria-controls="panel2a-content"
+          id="panel2a-header"
+        >
+          <Typography> In how many countries do you deliver your automotive spare parts?</Typography>
+        </AccordionSummary>
+        <AccordionDetails>
+          <Typography>
+          We are already serving our best products and services in more than 80 countries.
+          For Genuine automotive spare parts, we also have a very large product range and can undertake any customizations as per consumer or market requirements.
+
+          </Typography>
+        </AccordionDetails>
+      </Accordion>
+   </Box>
+   <Box style={{marginTop: "25px"}}>
+      <Accordion>
+      
+        <AccordionSummary
+          expandIcon={<ExpandMore />}
+          aria-controls="panel2a-content"
+          id="panel2a-header"
+        >
+          <Typography> In which brands do you deal in?</Typography>
+        </AccordionSummary>
+        <AccordionDetails>
+          <Typography>
+          We deal in all the top brands of India and also we are directly associated with all these brands which are mentioned below. 
+            Genuine automotive spare parts component exporter from India specializing in complete product range like following :-
+            • Suzuki Spare parts
+            •Tata Motors Spare parts
+            •Ashok Leyland Spare parts
+            •Mahindra Spare parts
+            •Chevrolet Spare Parts
+            •Ford Spare Parts
+            •Nissan Spare Parts
+            •Man Spare parts for CLA
+            • Ford Spare parts
+            •Hyundai spare parts (aftermarket)
+
+
+
+          </Typography>
+        </AccordionDetails>
+      </Accordion>
+   </Box>
       </Box>
       </Box>
  <Box className={classes.chatbox}>
