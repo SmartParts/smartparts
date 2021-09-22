@@ -371,7 +371,7 @@ export default function Footer(){
                     
                     </Box>
                     </Box>
-                    <Typography style={{marginLeft: "5px",   marginTop: "10px"}}>Follow Us</Typography>
+                    <Typography style={{marginLeft: "-103px",   marginTop: "10px"}}>Follow Us</Typography>
                 </Box>
             </Grid>
             <Grid item xs={2}>
