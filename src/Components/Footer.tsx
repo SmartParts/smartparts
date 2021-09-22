@@ -12,6 +12,13 @@ import CardMedia from "@material-ui/core/CardMedia";
 import googleplay from '../image/home/Google Play.svg';
 import appstore from '../image/home/App Store.svg';
 import { useMediaQuery } from '@material-ui/core';
+import facebookicon from '../image/sociallinks/facebook.png';
+import twittericon from '../image/sociallinks/twitter.png';
+import youtubeicon from '../image/sociallinks/youtube.png';
+import linkedinicon from '../image/sociallinks/linkedin.png';
+import instagramicon from '../image/sociallinks/instagram.png';
+
+
 const useStyles = makeStyles((theme)=>({
 
     footer: {
@@ -316,6 +323,26 @@ export default function Footer(){
                     <Typography variant="h5" className={classes.logocontent}  align="left">
                         for car spare parts
                     </Typography>
+                </Box>
+                <Box>
+                    <Box style={{display: "flex", flexDirection: "column"}}>
+                        <Box style={{width: "20px", height: "20px"}}>
+                    <img src={youtubeicon} style={{ width: "100%", height: "100%"}} alt="youtube" />
+                    </Box>
+                    <Box style={{width: "20px", height: "20px"}}>
+                    <img src={facebookicon} style={{ width: "100%", height: "100%"}} alt="facebook" />
+                    </Box>
+                    <Box style={{width: "20px", height: "20px"}}>
+                    <img src={twittericon} style={{ width: "100%", height: "100%"}} alt="twitter" />
+                    </Box>
+                    <Box style={{width: "20px", height: "20px"}}>
+                    <img src={instagramicon} style={{ width: "100%", height: "100%"}} alt="instagram" />
+                    </Box>
+                    <Box style={{width: "20px", height: "20px"}}>
+                    <img src={linkedinicon} style={{ width: "100%", height: "100%"}} alt="linkedin" />
+                    </Box>
+                    </Box>
+                    <Typography>Follow Us</Typography>
                 </Box>
             </Grid>
             <Grid item xs={2}>
