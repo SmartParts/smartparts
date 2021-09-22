@@ -1,7 +1,7 @@
 import React from 'react';
 import {Box,Typography,Grid} from "@material-ui/core";
 import {makeStyles, useTheme} from "@material-ui/core/styles";
-import {Link} from 'react-router-dom';
+import {Link, Redirect} from 'react-router-dom';
 import logo from '../image/logo22.png';
 import Card from '@material-ui/core/Card';
 import CardActions from '@material-ui/core/CardActions';
@@ -167,6 +167,10 @@ export default function Footer(){
     const  classes= useStyles();
     const theme = useTheme();
     const issmallscreen = useMediaQuery(theme.breakpoints.down("sm"));
+
+    const handleClick = () => {
+        window.location.assign('https://in.pinterest.com/smartpartsexports/_created/');
+    }
     return (
         <Box >
     <Box className={classes.addresssection}>
@@ -329,14 +333,14 @@ export default function Footer(){
                     <Box style={{display: "flex", flexDirection: "row", marginTop: "100px", marginLeft: "48px"}}>
                       
                         <Box style={{width: "30px", height: "30px"}}>
-                        <Link to="https://in.pinterest.com/smartpartsexports/_created/">
-                    <img src={youtubeicon} style={{ width: "100%", height: "100%"}} alt="youtube" />
-                    </Link>
+                    
+                    <img src={youtubeicon} onClick={handleClick} style={{ width: "100%", height: "100%"}} alt="youtube" />
+                
                     </Box>
                     <Box style={{width: "30px", height: "30px"}}>
-                    <Link to="https://www.facebook.com/smartpartsexports">
+                    <Redirect to="https://www.facebook.com/smartpartsexports">
                     <img src={facebookicon} style={{ width: "100%", height: "100%"}} alt="facebook" />
-                    </Link>
+                    </Redirect>
                     </Box>
                     <Box style={{width: "30px", height: "30px"}}>
                     <Link to="https://twitter.com/SmartParts4">
