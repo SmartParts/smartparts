@@ -6,6 +6,7 @@ import SearchIcon from '@material-ui/icons/Search';
 import TextTransition, { presets } from "react-text-transition";
 import {Accordion,  AccordionSummary, AccordionDetails} from '@material-ui/core';
 import KeyboardArrowDownOutlinedIcon from '@material-ui/icons/KeyboardArrowDownOutlined';
+import KeyboardArrowUpOutlinedIcon from '@material-ui/icons/KeyboardArrowUpOutlined';
 // import Container from "@material-ui/core/Container";
 import mainimage from '../image/home/mainimage.png';
 import Autocomplete from '@material-ui/lab/Autocomplete';
@@ -930,7 +931,10 @@ const vehiclehover = () => {
 };
 const [index, setIndex] = React.useState(0);
 const aboutusparagraph = () => {
-    setDisplayText(!displaytext);
+    setDisplayText(true);
+}
+const hideaboutusparagraph = () => {
+    setDisplayText(displaytext);
 }
   React.useEffect(() => {
     const intervalId = setInterval(() =>
@@ -3143,6 +3147,9 @@ setCarSearchClicked(!carsearchclicked);
                                         <Typography  style={{fontSize: 15 }}>     
                                                     {smartexportparagraph}
                                                    </Typography>
+                                                   <Typography  style={{ marginLeft: " 620px"}}>Read Less</Typography>
+                                        <KeyboardArrowUpOutlinedIcon onClick={hideaboutusparagraph} >
+                                        </KeyboardArrowUpOutlinedIcon>
                                             </Grid>
                                         <Grid item xs={1}>
 
