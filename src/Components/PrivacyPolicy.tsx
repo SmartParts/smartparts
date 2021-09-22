@@ -1,5 +1,5 @@
 import React from 'react';
-import {Box, Typography} from '@material-ui/core';
+ import {Box} from '@material-ui/core';
 
 export default function PrivacyPolicy() {
 
@@ -7,6 +7,7 @@ export default function PrivacyPolicy() {
         // <Box>
         //     <Typography>Privacy Policy</Typography>
         // </Box>
+        <Box>
         <section className="header">
         <h1>Privacy Policy</h1>
        
@@ -497,7 +498,7 @@ export default function PrivacyPolicy() {
        </div>
        </div>
        </section>
-       
+       </Box>
         )
 
 
