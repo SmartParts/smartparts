@@ -213,7 +213,7 @@ const facebookregistration = () => {
 }
 
 const googleregistration = () => {
-  window.location.assign('https://accounts.google.com/gsi/select?client_id=49625052041-kgt0hghf445lmcmhijv46b715m2mpbct.apps.googleusercontent.com&ux_mode=popup&ui_mode=card&as=oHo%2F9WfQPSX%2BXnL7whPMiQ&channel_id=168a44f70afbeb7e3ba6be8fa29daf8d2fa69b4242211957bbb3be7606a3fa08&origin=https%3A%2F%2Ftwitter.com');
+  window.location.assign('https://www.google.com/account/about/');
 }
     return (
       <>
@@ -299,8 +299,8 @@ const googleregistration = () => {
           <Button variant="outlined" onClick={facebookregistration} style={{width: "100%"}} >
               Sign up with Facebook
           </Button>
-          <Button variant="outlined" onClick={googleregistration} style={{width: "100%"}} >
-              Sign up with Facebook
+          <Button variant="outlined" onClick={googleregistration} style={{width: "100%", marginTop: "15px"}} >
+              Sign up with Google
           </Button>
           </div>
        </form>

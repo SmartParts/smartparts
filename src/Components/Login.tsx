@@ -170,7 +170,7 @@ export default function Login(props){
   window.location.assign('https://www.facebook.com/');
 }
 const googlelogin = () => {
-  window.location.assign('https://accounts.google.com/gsi/select?client_id=49625052041-kgt0hghf445lmcmhijv46b715m2mpbct.apps.googleusercontent.com&ux_mode=popup&ui_mode=card&as=oHo%2F9WfQPSX%2BXnL7whPMiQ&channel_id=168a44f70afbeb7e3ba6be8fa29daf8d2fa69b4242211957bbb3be7606a3fa08&origin=https%3A%2F%2Ftwitter.com');
+  window.location.assign('https://www.google.com/account/about/');
 }
  
   return (
@@ -238,7 +238,7 @@ const googlelogin = () => {
           <Button variant="outlined" onClick={facebooklogin} style={{width: "100%"}} >
               Sign in with Facebook
           </Button>
-          <Button variant="outlined" onClick={googlelogin} style={{width: "100%"}} >
+          <Button variant="outlined" onClick={googlelogin} style={{width: "100%", marginTop: "15px"}} >
               Sign in with Google
           </Button>
           </div>
