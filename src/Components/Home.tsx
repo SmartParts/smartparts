@@ -934,7 +934,8 @@ const aboutusparagraph = () => {
     setDisplayText(true);
 }
 const hideaboutusparagraph = () => {
-    setDisplayText(displaytext);
+    setDisplayText(false);
+    console.log(displaytext);
 }
   React.useEffect(() => {
     const intervalId = setInterval(() =>
@@ -3138,8 +3139,8 @@ setCarSearchClicked(!carsearchclicked);
                                             </Grid>
                                             
                                         </Grid>
-                                        {displaytext ? 
-                                        <Grid container>
+                                        {displaytext === false ? ""
+                                        : <Grid container>
                                         <Grid item xs={1}>
                                             
                                             </Grid>
@@ -3147,14 +3148,21 @@ setCarSearchClicked(!carsearchclicked);
                                         <Typography  style={{fontSize: 15 }}>     
                                                     {smartexportparagraph}
                                                    </Typography>
-                                                   <Typography  style={{ marginLeft: " 620px"}}>Read Less</Typography>
-                                        <KeyboardArrowUpOutlinedIcon onClick={hideaboutusparagraph} >
-                                        </KeyboardArrowUpOutlinedIcon>
+                                                   
                                             </Grid>
                                         <Grid item xs={1}>
 
                                         </Grid>
-                                        </Grid>: ""}
+                                        </Grid>}
+                                        <Grid container>
+                                        <Grid item lg={12}>
+                                            <Box style={{display: "flex", flexDirection: "row"}}>
+                                        <Typography  style={{ marginLeft: " 620px"}}>Read Less</Typography>
+                                        <KeyboardArrowUpOutlinedIcon onClick={hideaboutusparagraph} >
+                                        </KeyboardArrowUpOutlinedIcon>
+                                        </Box>
+                                            </Grid>
+                                            </Grid>
                                         {/* <Box style={{display: "flex", flexDirection: "column", margin: "0px 6px"}}>
                                     <Typography align="center" style={{ marginRight: " 10px"}}     >Wanna Know More?</Typography>
                                     
