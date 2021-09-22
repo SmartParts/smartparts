@@ -189,7 +189,7 @@ export default function Footer(){
     <Box className={classes.addresssection}>
                     <Card className={classes.countries}>
                         <CardActions>
-                            <Box style={{display: "flex", flexDirection:"row"}}>
+                            <Box style={{display: "flex", flexDirection:"column"}}>
                          <Typography align="center" variant="h5"><strong>Our Branches</strong></Typography>
                         </Box>
                         <Grid container justify="space-evenly">

@@ -3449,9 +3449,10 @@ setCarSearchClicked(!carsearchclicked);
     </div>
  </Box> */}
  <Box>
-     <Box>
-         <Typography>FAQ</Typography>
-         </Box>
+ <Typography variant="h4" className={classes.articleheading}>
+            FAQ
+        </Typography>
+        <Box style={{margin: "25px"}}>
      <Accordion>
         <AccordionSummary
           expandIcon={<ExpandMore />}
@@ -3482,15 +3483,8 @@ setCarSearchClicked(!carsearchclicked);
           </Typography>
         </AccordionDetails>
       </Accordion>
-      <Accordion disabled>
-        <AccordionSummary
-          expandIcon={<ExpandMore />}
-          aria-controls="panel3a-content"
-          id="panel3a-header"
-        >
-          <Typography>Disabled Accordion</Typography>
-        </AccordionSummary>
-      </Accordion>
+   
+      </Box>
       </Box>
  <Box className={classes.chatbox}>
    <Popper  open={openpopper} anchorEl={anchorEl} placement={placement} transition>
