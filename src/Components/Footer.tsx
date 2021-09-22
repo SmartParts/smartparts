@@ -1,7 +1,7 @@
 import React from 'react';
 import {Box,Typography,Grid} from "@material-ui/core";
 import {makeStyles, useTheme} from "@material-ui/core/styles";
-import {Link, Redirect} from 'react-router-dom';
+import {Link} from 'react-router-dom';
 import logo from '../image/logo22.png';
 import Card from '@material-ui/core/Card';
 import CardActions from '@material-ui/core/CardActions';
@@ -338,9 +338,9 @@ export default function Footer(){
                 
                     </Box>
                     <Box style={{width: "30px", height: "30px"}}>
-                    <Redirect to="https://www.facebook.com/smartpartsexports">
+                    <Link to="https://www.facebook.com/smartpartsexports">
                     <img src={facebookicon} style={{ width: "100%", height: "100%"}} alt="facebook" />
-                    </Redirect>
+                    </Link>
                     </Box>
                     <Box style={{width: "30px", height: "30px"}}>
                     <Link to="https://twitter.com/SmartParts4">
@@ -358,7 +358,7 @@ export default function Footer(){
                     </Link>
                     </Box>
                     </Box>
-                    <Typography style={{marginRight: "391px",   marginTop: "10px"}}>Follow Us</Typography>
+                    <Typography style={{marginRight: "341px",   marginTop: "10px"}}>Follow Us</Typography>
                 </Box>
             </Grid>
             <Grid item xs={2}>
