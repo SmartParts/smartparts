@@ -14,8 +14,7 @@ const useStyles = makeStyles((theme) =>({
     },
     policybox: {
        display: 'flex',
-       marginTop: "30px",
-       marginBottom: "30px",
+       margin: "60px 30px 30px 30px",
        borderRadius: "25px",
     }
     }));
