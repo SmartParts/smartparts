@@ -902,6 +902,7 @@ export default function Home() {
     const [displaytext, setDisplayText] = React.useState(false);
     const [anchorEl, setAnchorEl] = React.useState(null);
     const [openpopper, setOpenPopper] = React.useState(false);
+    const [readmoredisappear, setReadmoreDisappear] = React.useState(false);
     const [placement, setPlacement] = React.useState();
     const handleClick = (newPlacement) => (event) => {
         setAnchorEl(event.currentTarget);
@@ -932,10 +933,13 @@ const vehiclehover = () => {
 const [index, setIndex] = React.useState(0);
 const aboutusparagraph = () => {
     setDisplayText(true);
+    setReadmoreDisappear(true);
 }
 const hideaboutusparagraph = () => {
     setDisplayText(false);
+    setReadmoreDisappear(false);
     console.log(displaytext);
+    
 }
   React.useEffect(() => {
     const intervalId = setInterval(() =>
@@ -1059,6 +1063,7 @@ const hideaboutusparagraph = () => {
      const [carsearchclicked, setCarSearchClicked] = React.useState(false);
      const theme = useTheme();
      const [iscollapsed, setIsCollapsed] = React.useState(false);
+     const [clickedtwice, setClickedTwice] = React.useState(false);
      const [articletwocollapsed, setArticletwoCollapsed] = React.useState(false);
      const [articlethreecollapsed, setArticleThreeCollapsed] = React.useState(false);
      const isMatch = useMediaQuery(theme.breakpoints.down('sm'));
@@ -1069,6 +1074,11 @@ const hideaboutusparagraph = () => {
 const collapsecontent = () => {
     setIsCollapsed(true);
     console.log(iscollapsed);
+    setClickedTwice(true);
+}
+const togglecontent = () => {
+    setIsCollapsed(!iscollapsed);
+
 }
 const collapsecontenttwo = () => {
     setArticletwoCollapsed(true);
@@ -3057,8 +3067,8 @@ setCarSearchClicked(!carsearchclicked);
             <Grid item xs={4}>
             <Card className={classes.article} style={{display: "flex", marginLeft: " 25px", marginRight: "55px"}}>
                     <CardActionArea style={{alignItems: "center"}}>
-                        <CardMedia className={classes.articleimage} onClick={collapsecontent} image={articleoneimage} title="Contemplative Reptile" />
-                      {iscollapsed ? "" :
+                        <CardMedia className={classes.articleimage} onClick={clickedtwice ? togglecontent : collapsecontent} image={articleoneimage} title="Contemplative Reptile" />
+                      {iscollapsed ? " " :
                         <CardContent>
                         <Typography align="left" gutterBottom variant="h6" component="p" style={{fontSize: 18}}>
                                 <strong>Did you know the facts about Mahindra Spare Parts!!</strong>
@@ -3129,6 +3139,7 @@ setCarSearchClicked(!carsearchclicked);
                                 </CardActions>
                                 <CardActions>
                                     <Box>
+                                        {readmoredisappear ? " " :
                                         <Grid container>
                                            
                                         <Grid item lg={12}>
@@ -3140,6 +3151,7 @@ setCarSearchClicked(!carsearchclicked);
                                             </Grid>
                                             
                                         </Grid>
+                                            }
                                         {displaytext === false ? ""
                                         : <Grid container>
                                         <Grid item xs={1}>
