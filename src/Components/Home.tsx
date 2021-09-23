@@ -1067,15 +1067,16 @@ const hideaboutusparagraph = () => {
      const isMatchlargescreen = useMediaQuery(theme.breakpoints.down("lg"));
 
 const collapsecontent = () => {
-    setIsCollapsed(!iscollapsed);
-
+    setIsCollapsed(true);
+    console.log(iscollapsed);
 }
 const collapsecontenttwo = () => {
-    setArticletwoCollapsed(!articletwocollapsed);
-
+    setArticletwoCollapsed(true);
+    console.log(articletwocollapsed);
 }
 const collapsecontentthree = () => {
-    setArticleThreeCollapsed(!articlethreecollapsed);
+    setArticleThreeCollapsed(true);
+    console.log(articlethreecollapsed);
 }
      const carsearch = () =>{
 setCarSearchClicked(!carsearchclicked);
@@ -3057,7 +3058,7 @@ setCarSearchClicked(!carsearchclicked);
             <Card className={classes.article} style={{display: "flex", marginLeft: " 25px", marginRight: "55px"}}>
                     <CardActionArea style={{alignItems: "center"}}>
                         <CardMedia className={classes.articleimage} onClick={collapsecontent} image={articleoneimage} title="Contemplative Reptile" />
-                      {iscollapsed ? 
+                      {iscollapsed ? "" :
                         <CardContent>
                         <Typography align="left" gutterBottom variant="h6" component="p" style={{fontSize: 18}}>
                                 <strong>Did you know the facts about Mahindra Spare Parts!!</strong>
@@ -3065,7 +3066,7 @@ setCarSearchClicked(!carsearchclicked);
                             <Typography align="left" variant="body2" color="textSecondary" component="p" style={{fontSize: 12}}>
                             Now, automotive spare parts are something that most of us hardly don’t care about. As a matter of fact, not many car owners hardly understand the difference between a genuine and a fake spare part.
                           </Typography>
-                        </CardContent> : "" }
+                        </CardContent>  }
                     </CardActionArea>
                 </Card>
             </Grid>
@@ -3073,7 +3074,7 @@ setCarSearchClicked(!carsearchclicked);
                 <Card className={classes.article} style={{display: "flex"}}>
                     <CardActionArea style={{alignItems: "center"}}>
                         <CardMedia className={classes.articleimage} onClick={collapsecontenttwo} image={articletwoimage} title="Contemplative Reptile" />
-                        {articletwocollapsed ? 
+                        {articletwocollapsed ? " " :
                         <CardContent>
                          <Typography align="left" gutterBottom variant="h6" component="p" style={{fontSize: 18}}>
                                 <strong>Fake Spare Parts OR Genuine Spare Parts? Choice is yours.</strong>
@@ -3082,7 +3083,7 @@ setCarSearchClicked(!carsearchclicked);
                             <Typography align="left" variant="body2" color="textSecondary" component="p" style={{fontSize: 12}}>
                               Fake has become a new reality, be it technology, accessories or clothing, everything in this world has a fake counterpart. Even the automobile spare parts industry is also flooded with fake spare parts and accessories.
                           </Typography>
-                        </CardContent> : "" }
+                        </CardContent>  }
                     </CardActionArea>
                 </Card>
             </Grid>
@@ -3090,7 +3091,7 @@ setCarSearchClicked(!carsearchclicked);
                 <Card className={classes.article} style={{display: "flex", marginRight: "30px"}}>
                     <CardActionArea style={{alignItems: "left"}}>
                         <CardMedia className={classes.articleimage} onClick={collapsecontentthree} image={articlethreeimage} title="Contemplative Reptile" />
-                        {articlethreecollapsed ? 
+                        {articlethreecollapsed ? " " :
                         <CardContent>
                           
                         <Typography align="left" gutterBottom variant="h6" component="p" style={{fontSize: 18}}>
@@ -3099,7 +3100,7 @@ setCarSearchClicked(!carsearchclicked);
                             <Typography align="left" variant="body2" color="textSecondary" component="p" style={{fontSize: 12}}>
                             Smart Parts Export is the largest provider of automobile Genuine spare parts all over the world that has already created wonders in the market.
                           </Typography>
-                        </CardContent> : ""}
+                        </CardContent>}
                     </CardActionArea>
                 </Card>
             </Grid>
@@ -3148,13 +3149,7 @@ setCarSearchClicked(!carsearchclicked);
                                         <Typography  style={{fontSize: 15 }}>     
                                                     {smartexportparagraph}
                                                    </Typography>
-                                                   
-                                            </Grid>
-                                        <Grid item xs={1}>
-
-                                        </Grid>
-                                        </Grid>}
-                                        <Grid container>
+                                                   <Grid container>
                                         <Grid item lg={12}>
                                             <Box style={{display: "flex", flexDirection: "row"}}>
                                         <Typography  style={{ marginLeft: " 620px"}}>Read Less</Typography>
@@ -3162,7 +3157,13 @@ setCarSearchClicked(!carsearchclicked);
                                         </KeyboardArrowUpOutlinedIcon>
                                         </Box>
                                             </Grid>
+                                            </Grid>           
                                             </Grid>
+                                        <Grid item xs={1}>
+
+                                        </Grid>
+                                        </Grid>}
+                                        
                                         {/* <Box style={{display: "flex", flexDirection: "column", margin: "0px 6px"}}>
                                     <Typography align="center" style={{ marginRight: " 10px"}}     >Wanna Know More?</Typography>
                                     

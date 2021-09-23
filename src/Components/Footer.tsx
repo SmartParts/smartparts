@@ -9,6 +9,7 @@ import singaporeimg from '../image/other/Singapore.svg';
 import indiaimg from '../image/other/India.svg';
 import dubaiimg from '../image/other/Dubai.svg';
 import CardMedia from "@material-ui/core/CardMedia";
+import CardContent from "@material-ui/core/CardContent";
 import googleplay from '../image/home/Google Play.svg';
 import appstore from '../image/home/App Store.svg';
 import { useMediaQuery } from '@material-ui/core';
@@ -188,10 +189,13 @@ export default function Footer(){
         <Box >
                 
     <Box className={classes.addresssection}>
-    <Box>
-                        <Typography align="center" variant="h4" style={{paddingTop: "40px", color: "black"}}><strong>Our Branches</strong></Typography>
-                        </Box>
+    
                     <Card className={classes.countries}>
+                    <CardContent>
+                        <Box>
+                                            <Typography align="center" variant="h4" style={{paddingTop: "40px", color: "black"}}><strong>Our Branches</strong></Typography>
+                                            </Box>
+                        </CardContent>
                         <CardActions>
         
                         <Grid container justify="space-evenly">
