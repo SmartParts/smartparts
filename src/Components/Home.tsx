@@ -2601,22 +2601,22 @@ setCarSearchClicked(!carsearchclicked);
                             </Button>
                         </Grid>
                         <Grid item xs={1}>
-                            <Button variant="outlined"   style={{margin: "15px 35px 15px 185px",backgroundColor: "white", color: "black", padding: "20px 85px"}} className={classes.space}>
+                            <Button variant="outlined"   style={{margin: "15px 35px 15px 195px",backgroundColor: "white", color: "black", padding: "20px 85px"}} className={classes.space}>
                                 NISSAN
                             </Button>
                         </Grid>
                         <Grid item xs={1}>
-                            <Button variant="outlined"   style={{margin: "15px 35px 15px 235px",backgroundColor: "white", color: "black", padding: "20px 85px"}} className={classes.space}>
+                            <Button variant="outlined"   style={{margin: "15px 35px 15px 265px",backgroundColor: "white", color: "black", padding: "20px 85px"}} className={classes.space}>
                                 FORD
                             </Button>
                         </Grid>
                         <Grid item xs={1}>
-                            <Button variant="outlined"   style={{margin: "15px 35px 15px 270px", backgroundColor: "white", color: "black", padding: "20px 95px"}} className={classes.space}>
+                            <Button variant="outlined"   style={{margin: "15px 35px 15px 300px", backgroundColor: "white", color: "black", padding: "20px 95px"}} className={classes.space}>
                                 MAHINDRA
                             </Button>
                         </Grid>
                         <Grid item xs={1}>
-                            <Button variant="outlined"   style={{margin: "15px 35px 15px 375px",backgroundColor: "white", color: "black", padding: "20px 95px"}} className={classes.space}>
+                            <Button variant="outlined"   style={{margin: "15px 35px 15px 405px",backgroundColor: "white", color: "black", padding: "20px 95px"}} className={classes.space}>
                                 TATA
                             </Button>
                         </Grid>
@@ -3539,8 +3539,16 @@ setCarSearchClicked(!carsearchclicked);
         </AccordionSummary>
         <AccordionDetails>
           <Typography>
-          We are already serving our best products and services in more than 80 countries.
-          For Genuine automotive spare parts, we also have a very large product range and can undertake any customizations as per consumer or market requirements.
+          We are already serving our best products and services in more than 80 countries mentioned below -
+          </Typography>
+          <Typography>
+        Latin America, Brazil, Mexico, Colombia, Egypt, Yemen, Italy, South Africa, Argentina, Uae, Tunisia, Mali, Tanzania, Uganda, Sudan, Argentina, Peru, Venezuela, Saudi Arabia, Iran, Iraq
+        France, Italy, Spain, Poland, Romania, Angola, Kenya, Ghana, Uruguay, Chile, Ecuador, Guatemala, Algeria, Turkey, Israel, Kazakhstan, Greece, Netherlands, Hungary, Belgium, Madagascar, Niger, Zambia, Paraguay, Cuba, United States, Canada, Lebanon, Syria, Russia, Australia, Indonesia, Philippines, Vietnam, Malaysia, Zimbabwe, Portugal, Libya, Ukraine, Uzbekistan, Morocco, Germany, United Kingdom, Singapore, Thailand, Nigeria, Ethiopia, Dr Congo, South Africa, Mozambique, Ivory Coast, Cameroon etc
+        </Typography>
+        <Typography>
+        For Genuine automotive spare parts, we also have a very large product range and can undertake any customizations as per consumer or market requirements.
+
+
 
           </Typography>
         </AccordionDetails>
