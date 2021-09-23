@@ -2596,27 +2596,27 @@ setCarSearchClicked(!carsearchclicked);
                             </Link>
                         </Grid>
                         <Grid item xs={1}>
-                            <Button variant="outlined"   style={{margin: "15px 35px 15px 105px",backgroundColor: "white", color: "black", padding: "20px 85px"}} className={classes.space}>
+                            <Button variant="outlined"   style={{margin: "15px 35px 15px 135px",backgroundColor: "white", color: "black", padding: "20px 85px"}} className={classes.space}>
                                 HYUNDAI
                             </Button>
                         </Grid>
                         <Grid item xs={1}>
-                            <Button variant="outlined"   style={{margin: "15px 35px 15px 165px",backgroundColor: "white", color: "black", padding: "20px 85px"}} className={classes.space}>
+                            <Button variant="outlined"   style={{margin: "15px 35px 15px 185px",backgroundColor: "white", color: "black", padding: "20px 85px"}} className={classes.space}>
                                 NISSAN
                             </Button>
                         </Grid>
                         <Grid item xs={1}>
-                            <Button variant="outlined"   style={{margin: "15px 35px 15px 215px",backgroundColor: "white", color: "black", padding: "20px 85px"}} className={classes.space}>
+                            <Button variant="outlined"   style={{margin: "15px 35px 15px 235px",backgroundColor: "white", color: "black", padding: "20px 85px"}} className={classes.space}>
                                 FORD
                             </Button>
                         </Grid>
                         <Grid item xs={1}>
-                            <Button variant="outlined"   style={{margin: "15px 35px 15px 240px", backgroundColor: "white", color: "black", padding: "20px 95px"}} className={classes.space}>
+                            <Button variant="outlined"   style={{margin: "15px 35px 15px 270px", backgroundColor: "white", color: "black", padding: "20px 95px"}} className={classes.space}>
                                 MAHINDRA
                             </Button>
                         </Grid>
                         <Grid item xs={1}>
-                            <Button variant="outlined"   style={{margin: "15px 35px 15px 345px",backgroundColor: "white", color: "black", padding: "20px 95px"}} className={classes.space}>
+                            <Button variant="outlined"   style={{margin: "15px 35px 15px 375px",backgroundColor: "white", color: "black", padding: "20px 95px"}} className={classes.space}>
                                 TATA
                             </Button>
                         </Grid>

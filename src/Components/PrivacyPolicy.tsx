@@ -6,7 +6,7 @@ import CardContent from '@material-ui/core/CardContent';
 import { makeStyles } from '@material-ui/core/styles';
 const useStyles = makeStyles((theme) =>({
     ourpolicy: {
-        marginTop: "65px",
+        marginTop: "95px",
         marginLeft: "25px",
     },
     propermargin: {
