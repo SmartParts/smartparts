@@ -961,15 +961,15 @@ const hideaboutusparagraph = () => {
         <br />
          
         <Typography align="left" variant="body1">   • Suzuki Spare parts </Typography> 
-        <Typography align="left" variant="body1">   •Tata Motors Spare parts </Typography>
-        <Typography align="left" variant="body1">   •Ashok Leyland Spare parts </Typography>
-        <Typography align="left" variant="body1">   •Mahindra Spare parts </Typography>
-        <Typography align="left" variant="body1">   •Chevrolet Spare Parts </Typography>
-        <Typography align="left" variant="body1">   •Ford Spare Parts </Typography>
-        <Typography align="left" variant="body1">   •Nissan Spare Parts </Typography>
-        <Typography align="left" variant="body1">   •Man Spare parts for CLA  </Typography> 
+        <Typography align="left" variant="body1">   • Tata Motors Spare parts </Typography>
+        <Typography align="left" variant="body1">   • Ashok Leyland Spare parts </Typography>
+        <Typography align="left" variant="body1">   • Mahindra Spare parts </Typography>
+        <Typography align="left" variant="body1">   • Chevrolet Spare Parts </Typography>
+        <Typography align="left" variant="body1">   • Ford Spare Parts </Typography>
+        <Typography align="left" variant="body1">   • Nissan Spare Parts </Typography>
+        <Typography align="left" variant="body1">   • Man Spare parts for CLA  </Typography> 
         <Typography align="left" variant="body1">   • Ford Spare parts  </Typography>
-        <Typography align="left" variant="body1">   •Hyundai spare parts (aftermarket)
+        <Typography align="left" variant="body1">   • Hyundai spare parts (aftermarket)
             
             </Typography>
             <br />
@@ -982,10 +982,10 @@ const hideaboutusparagraph = () => {
          <Typography align="left" variant="body1">With us, You can expect the following:</Typography>
          <br />
          <Typography align="left" variant="body1">• World-class service to all our esteemed clients</Typography>
-         <Typography align="left" variant="body1">   • Highly efficient team and super quick response </Typography>
-         <Typography align="left" variant="body1">   • Fulfill the bulk spare parts order of the products as we are strongly supported by our vendors </Typography>
-         <Typography align="left" variant="body1">  • Superior quality products as there are various rounds of quality assurance tests done before the final delivery to customer</Typography>
-         <Typography align="left" variant="body1">  • A quick turnaround time for we have lightning fast dispatch facilities and highly efficient agents.</Typography>
+         <Typography align="left" variant="body1">• Highly efficient team and super quick response </Typography>
+         <Typography align="left" variant="body1">• Fulfill the bulk spare parts order of the products as we are strongly supported by our vendors </Typography>
+         <Typography align="left" variant="body1">• Superior quality products as there are various rounds of quality assurance tests done before the final delivery to customer</Typography>
+         <Typography align="left" variant="body1">• A quick turnaround time for we have lightning fast dispatch facilities and highly efficient agents.</Typography>
     
         </Box>
 
