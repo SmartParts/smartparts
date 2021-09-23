@@ -32,24 +32,29 @@ export default function PrivacyPolicy() {
              <Typography variant="h5" >
                Privacy Policy
              </Typography>
-           
+             <Box className={classes.propermargin} >    
              <Typography variant="body1" >
              Effective date: December 06, 2019
        
        
               </Typography>
+            </Box>
+            <Box className={classes.propermargin} >
               <Typography variant="body1" >
            Smart Parts Export ("us", "we", or "our") operates the http://smartpartsexport.com/ website (hereinafter referred to as the "Service").
             </Typography>
-       
+       </Box>
+       <Box className={classes.propermargin} >
            <Typography variant="body1">
             This page informs you of our policies regarding the collection, use, and disclosure of personal data when you use our Service and the choices you have associated with that data.
            </Typography>
+           </Box>
+           <Box className={classes.propermargin} >
              <Typography variant="body1" >
                We use your data to provide and improve the Service. By using the Service, you agree to the collection and use of information in accordance with this policy. Unless otherwise defined in this Privacy Policy, the terms used in this Privacy Policy have the same meanings as in our Terms and Conditions, accessible from http://smartpartsexport.com/
                </Typography>
        
-         
+         </Box>
        
        
         <Box className={classes.propermargin} >
@@ -93,7 +98,7 @@ export default function PrivacyPolicy() {
               </Typography>
               </Box>
        </Box>
-       </Box>
+       
        
        
        <Box className={classes.propermargin}>
@@ -104,7 +109,7 @@ export default function PrivacyPolicy() {
              </Typography>
              <Box className={classes.propermargin}>
              <Typography variant="h6" >
-               <b>Personal Data</b>
+               Personal Data
               </Typography>
               </Box>
               <Box className={classes.propermargin}>
@@ -161,9 +166,9 @@ export default function PrivacyPolicy() {
               <Typography variant="body1" >
                 Example of Cookies We use:
                 
-                <Typography> •<b>Session Cookies</b>We use Session Cookies to operate our Service.</Typography>
-                <Typography> •<b>Preference Cookies</b>We use Preference Cookies to remember your preferences and various settings.</Typography>
-                <Typography>  •<b>Security Cookies</b>We use Security Cookies for security purposes.</Typography>
+                <Typography> •Session Cookies: We use Session Cookies to operate our Service.</Typography>
+                <Typography> •Preference Cookies: We use Preference Cookies to remember your preferences and various settings.</Typography>
+                <Typography>  •Security Cookies: We use Security Cookies for security purposes.</Typography>
                 
               </Typography>
               </Box>
@@ -539,6 +544,7 @@ export default function PrivacyPolicy() {
        
               </Typography>
            
+       </Box>
        </Box>
        </Box>
        </Box>
