@@ -1,7 +1,7 @@
 import React from 'react';
 import {Box,Typography,Grid} from "@material-ui/core";
 import {makeStyles, useTheme} from "@material-ui/core/styles";
-import {Link} from 'react-router-dom';
+import {NavLink, Link} from 'react-router-dom';
 import logo from '../image/logo22.png';
 import Card from '@material-ui/core/Card';
 import CardActions from '@material-ui/core/CardActions';
@@ -406,19 +406,19 @@ export default function Footer(){
             </Grid>
             <Grid item xs={2}>
                 <Box component="span">
-                <Link to="/privacypolicy"><Typography variant="h5" align="left" className={classes.footerheadings}>
+                <Typography variant="h5" align="left" className={classes.footerheadings}>
                         
                         Privacy Policy
-                    </Typography></Link>
+                    </Typography>
                     <Box pb={1} pt={3} className={classes.footertext}>
                         <Typography variant="h6" align="left" className={classes.footercontent} >
                             Return Policy
                         </Typography>
                     </Box>
                     <Box pb={1} className={classes.footertext}>
-                    <Link to="/privacypolicy">    <Typography variant="h6" align="left" className={classes.footercontent} >
+                    <NavLink to="/privacypolicy">    <Typography variant="h6" align="left" className={classes.footercontent} >
                             Privacy Policy
-                        </Typography></Link>
+                        </Typography></NavLink>
                     </Box>
                     <Box pb={1} className={classes.footertext}>
                         <Typography variant="h6" align="left" className={classes.footercontent} >

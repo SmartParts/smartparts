@@ -56,7 +56,7 @@ export default function Body(props) {
                     <Route path="/carousel" component={Carousel} />
                     <Route path="/chatbot" component={Chatbot} />
                     <Route path="/vehicle/chevrolet" component={Chevrolet} />   
-                    <Route  to="/termsofuse" component={Terms}   />
+                    <Route path="/termsofuse" component={Terms}   />
                     <Route path="/privacypolicy" component={Privacypolicy}   />               
                     {/* <Route exact path="/result" component={Results}/>
                     <Route exact path="/login" component={Home}/> */}
