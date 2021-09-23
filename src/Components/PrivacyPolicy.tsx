@@ -1,5 +1,6 @@
 
 import {Box, Typography} from '@material-ui/core';
+import Grid from '@material-ui/core/Grid';
 import { makeStyles } from '@material-ui/core/styles';
 const useStyles = makeStyles((theme) =>({
     ourpolicy: {
@@ -13,9 +14,11 @@ export default function PrivacyPolicy() {
         // <Box>
         //     <Typography>Privacy Policy</Typography>
         // </Box>
-        <Box className={classes.ourpolicy} >
-             <Typography>Privacy Policy</Typography>
-{/* 
+        // <Box className={classes.ourpolicy} >
+        //      <Typography>Privacy Policy</Typography>
+<Box>
+<Grid container className={classes.ourpolicy} >
+            <Grid item  >
         <Typography variant="h1">Privacy Policy</Typography>
        
        
@@ -504,7 +507,8 @@ export default function PrivacyPolicy() {
            
        </Box>
        </Box>
-        */}
+       </Grid>
+       </Grid>
        </Box>
         );
 
