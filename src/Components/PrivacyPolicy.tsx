@@ -5,6 +5,7 @@ import { makeStyles } from '@material-ui/core/styles';
 const useStyles = makeStyles((theme) =>({
     ourpolicy: {
         marginTop: "65px",
+        marginLeft: "25px",
     },
     }));
 export default function PrivacyPolicy() {
@@ -17,16 +18,16 @@ export default function PrivacyPolicy() {
         // <Box className={classes.ourpolicy} >
         //      <Typography>Privacy Policy</Typography>
 <Box>
-<Grid container className={classes.ourpolicy} >
+<Grid container  >
             <Grid item  >
         
        
        
-        <Box >
+        <Box className={classes.ourpolicy}>
           <Box >
             <Box >
            
-             <Typography variant="h4" >
+             <Typography variant="h5" >
                Privacy Policy
              </Typography>
            
@@ -53,7 +54,7 @@ export default function PrivacyPolicy() {
        
         <Box >
           <Box >
-          <Typography variant="h4" >
+          <Typography variant="h5" >
                Defination
              </Typography>
        
@@ -86,11 +87,11 @@ export default function PrivacyPolicy() {
        
         <Box >
           <Box >
-          <Typography variant="h4" >
+          <Typography variant="h5" >
           Information Collection and Use
        
              </Typography>
-             <Typography variant="h4" >
+             <Typography variant="h6" >
              We collect several different types of information for various purposes to provide and improve our Service to you.
               </Typography>
        </Box>
@@ -99,11 +100,11 @@ export default function PrivacyPolicy() {
        
        <Box >
           <Box >
-          <Typography variant="h4" >
+          <Typography variant="h5" >
          Types Of Data Collected
        
              </Typography>
-             <Typography variant="h4" >
+             <Typography variant="h6" >
                <b>Personal Data</b>
               </Typography>
               <Typography variant="body1" >
@@ -122,7 +123,7 @@ export default function PrivacyPolicy() {
        
        <Box >
           <Box >
-          <Typography variant="h4" >
+          <Typography variant="h6" >
        Usage Data
        
              </Typography>
@@ -137,7 +138,7 @@ export default function PrivacyPolicy() {
        
        <Box >
           <Box >
-          <Typography variant="h4" >
+          <Typography variant="h6" >
        Tracking Cookies Data
        
              </Typography>
@@ -170,7 +171,7 @@ export default function PrivacyPolicy() {
        
        <Box >
           <Box >
-          <Typography variant="h4" >
+          <Typography variant="h6" >
        Use of Data
        
              </Typography>
@@ -192,7 +193,7 @@ export default function PrivacyPolicy() {
        
        <Box >
           <Box >
-          <Typography variant="h4" >
+          <Typography variant="h6" >
           Transfer Of Data
        
              </Typography>
@@ -228,7 +229,7 @@ export default function PrivacyPolicy() {
        
        <Box >
           <Box >
-          <Typography variant="h4" >
+          <Typography variant="h6" >
           Disclosure Of Data
        
        
@@ -277,7 +278,7 @@ export default function PrivacyPolicy() {
        
        <Box >
           <Box >
-          <Typography variant="h4" >
+          <Typography variant="h6" >
           Security of Data
        
              </Typography>
@@ -295,7 +296,7 @@ export default function PrivacyPolicy() {
        
        <Box >
           <Box >
-          <Typography variant="h4" >
+          <Typography variant="h6" >
           Service Providers
        
        
@@ -317,7 +318,7 @@ export default function PrivacyPolicy() {
        
        <Box >
           <Box >
-          <Typography variant="h4" >
+          <Typography variant="h6" >
           Analytics
        
        
@@ -370,7 +371,7 @@ export default function PrivacyPolicy() {
        
        <Box >
           <Box >
-          <Typography variant="h4" >
+          <Typography variant="h5" >
           Links to Other Sites
        
        
@@ -401,7 +402,7 @@ export default function PrivacyPolicy() {
        
        <Box >
           <Box >
-          <Typography variant="h4" >
+          <Typography variant="h5" >
           Children's Privacys
        
        
@@ -433,7 +434,7 @@ export default function PrivacyPolicy() {
        
        <Box >
           <Box >
-          <Typography variant="h4" >
+          <Typography variant="h5" >
           Changes to This Privacy Policy
        
        
@@ -478,7 +479,7 @@ export default function PrivacyPolicy() {
        
        <Box >
           <Box >
-          <Typography variant="h4" >
+          <Typography variant="h5" >
           Contact Us
        
        
