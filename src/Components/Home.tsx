@@ -827,6 +827,9 @@ const useStyles = makeStyles((theme)=>({
         },
         
     },
+    inrow: {
+        flexDirection: "column",
+    },
     banner: {
         marginTop: "65px",
          width: "auto" , 
@@ -3537,7 +3540,7 @@ setCarSearchClicked(!carsearchclicked);
         >
           <Typography> In how many countries do you deliver your automotive spare parts?</Typography>
         </AccordionSummary>
-        <AccordionDetails>
+        <AccordionDetails className={classes.inrow}>
           <Typography>
           We are already serving our best products and services in more than 80 countries mentioned below -
           </Typography>

@@ -6,7 +6,7 @@ import CardContent from '@material-ui/core/CardContent';
 import { makeStyles } from '@material-ui/core/styles';
 const useStyles = makeStyles((theme) =>({
     ourpolicy: {
-        marginTop: "95px",
+        marginTop: "65px",
         marginLeft: "25px",
     },
     propermargin: {
@@ -27,8 +27,8 @@ export default function PrivacyPolicy() {
         // </Box>
         // <Box className={classes.ourpolicy} >
         //      <Typography>Privacy Policy</Typography>
-<Box>
-       
+<Box >
+       <Box style={{marginTop: "65px"}}>
 <Grid container  >
             <Grid item  >
         
@@ -561,6 +561,7 @@ export default function PrivacyPolicy() {
        </Card>
        </Grid>
        </Grid>
+       </Box>
        </Box>
         );
 
