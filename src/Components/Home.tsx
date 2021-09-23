@@ -1065,7 +1065,9 @@ const hideaboutusparagraph = () => {
      const [iscollapsed, setIsCollapsed] = React.useState(false);
      const [clickedtwice, setClickedTwice] = React.useState(false);
      const [articletwocollapsed, setArticletwoCollapsed] = React.useState(false);
+     const [clickedtwicetwo, setClickedTwiceTwo] = React.useState(false);
      const [articlethreecollapsed, setArticleThreeCollapsed] = React.useState(false);
+     const [clickedtwicethree, setClickedTwiceThree] = React.useState(false);
      const isMatch = useMediaQuery(theme.breakpoints.down('sm'));
      const isMatchtabletscreen = useMediaQuery(theme.breakpoints.down('xs'));
      const isMatchmediumscreen = useMediaQuery(theme.breakpoints.down('md'));
@@ -1080,13 +1082,23 @@ const togglecontent = () => {
     setIsCollapsed(!iscollapsed);
 
 }
+const togglecontenttwo = () => {
+    setArticletwoCollapsed(!articletwocollapsed);
+
+}
+const togglecontentthree = () => {
+    setArticleThreeCollapsed(!articlethreecollapsed);
+
+}
 const collapsecontenttwo = () => {
     setArticletwoCollapsed(true);
     console.log(articletwocollapsed);
+    setClickedTwiceTwo(true);
 }
 const collapsecontentthree = () => {
     setArticleThreeCollapsed(true);
     console.log(articlethreecollapsed);
+    setClickedTwiceThree(true);
 }
      const carsearch = () =>{
 setCarSearchClicked(!carsearchclicked);
@@ -3083,7 +3095,7 @@ setCarSearchClicked(!carsearchclicked);
             <Grid item xs={4}>
                 <Card className={classes.article} style={{display: "flex"}}>
                     <CardActionArea style={{alignItems: "center"}}>
-                        <CardMedia className={classes.articleimage} onClick={collapsecontenttwo} image={articletwoimage} title="Contemplative Reptile" />
+                        <CardMedia className={classes.articleimage} onClick={clickedtwicetwo ? togglecontenttwo : collapsecontenttwo} image={articletwoimage} title="Contemplative Reptile" />
                         {articletwocollapsed ? " " :
                         <CardContent>
                          <Typography align="left" gutterBottom variant="h6" component="p" style={{fontSize: 18}}>
@@ -3100,7 +3112,7 @@ setCarSearchClicked(!carsearchclicked);
             <Grid item xs={4}>
                 <Card className={classes.article} style={{display: "flex", marginRight: "30px"}}>
                     <CardActionArea style={{alignItems: "left"}}>
-                        <CardMedia className={classes.articleimage} onClick={collapsecontentthree} image={articlethreeimage} title="Contemplative Reptile" />
+                        <CardMedia className={classes.articleimage} onClick={clickedtwicethree ? togglecontentthree : collapsecontentthree} image={articlethreeimage} title="Contemplative Reptile" />
                         {articlethreecollapsed ? " " :
                         <CardContent>
                           
