@@ -169,8 +169,20 @@ export default function Login(props){
   
   window.location.assign('https://www.facebook.com/');
 }
-const googlelogin = () => {
-  window.location.assign('https://www.google.com/account/about/');
+const googlelogin = async(e) => {
+  // window.location.assign('https://www.google.com/account/about/');
+  const res = await fetch("/google", {   //https://smart-parts.herokuapp.com/login
+    method: "GET",
+   headers: {
+     
+    "Content-Type": "application/json",
+  
+   },
+
+   
+
+  })
+  console.log(res);
 }
  
   return (
