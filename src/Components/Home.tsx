@@ -2590,13 +2590,13 @@ setCarSearchClicked(!carsearchclicked);
                     <Grid container>
                         <Grid item xs={1}>
                             <Link to="/brandlist">
-                            <Button variant="outlined"  style={{margin: "15px", backgroundColor: "white", color: "black", padding: "20px 55px"}} className={classes.space}>
+                            <Button variant="outlined"  style={{margin: "15px", backgroundColor: "white", color: "black", padding: "20px 85px"}} className={classes.space}>
                                 SUZUKI
                             </Button>
                             </Link>
                         </Grid>
                         <Grid item xs={1}>
-                            <Button variant="outlined"   style={{margin: "15px 35px 15px 65px",backgroundColor: "white", color: "black", padding: "20px 55px"}} className={classes.space}>
+                            <Button variant="outlined"   style={{margin: "15px 35px 15px 95px",backgroundColor: "white", color: "black", padding: "20px 85px"}} className={classes.space}>
                                 HYUNDAI
                             </Button>
                         </Grid>

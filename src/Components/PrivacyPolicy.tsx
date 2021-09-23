@@ -1,6 +1,8 @@
 
 import {Box, Typography} from '@material-ui/core';
 import Grid from '@material-ui/core/Grid';
+import Card from '@material-ui/core/Card';
+import CardContent from '@material-ui/core/CardContent';
 import { makeStyles } from '@material-ui/core/styles';
 const useStyles = makeStyles((theme) =>({
     ourpolicy: {
@@ -10,6 +12,12 @@ const useStyles = makeStyles((theme) =>({
     propermargin: {
         marginTop: "25px",
     },
+    policybox: {
+       display: 'flex',
+       marginTop: "30px",
+       marginBottom: "30px",
+       borderRadius: "25px",
+    }
     }));
 export default function PrivacyPolicy() {
     const classes = useStyles();
@@ -21,11 +29,13 @@ export default function PrivacyPolicy() {
         // <Box className={classes.ourpolicy} >
         //      <Typography>Privacy Policy</Typography>
 <Box>
+       
 <Grid container  >
             <Grid item  >
         
        
-       
+            <Card className={classes.policybox}  >
+                   <CardContent>
         <Box className={classes.ourpolicy}>
          
            
@@ -548,6 +558,8 @@ export default function PrivacyPolicy() {
        </Box>
        </Box>
        </Box>
+       </CardContent>
+       </Card>
        </Grid>
        </Grid>
        </Box>
