@@ -1,14 +1,21 @@
-import React from 'react';
- import {Box, Typography} from '@material-ui/core';
 
+import {Box, Typography} from '@material-ui/core';
+import { makeStyles } from '@material-ui/core/styles';
+const useStyles = makeStyles((theme) =>({
+    ourpolicy: {
+        marginTop: "65px",
+    },
+    }));
 export default function PrivacyPolicy() {
-
-    return(
+    const classes = useStyles();
+    
+        return(
         // <Box>
         //     <Typography>Privacy Policy</Typography>
         // </Box>
-        <Box style={{marginTop: "65px"}}>
-
+        <Box className={classes.ourpolicy} >
+             <Typography>Privacy Policy</Typography>
+{/* 
         <Typography variant="h1">Privacy Policy</Typography>
        
        
@@ -497,9 +504,9 @@ export default function PrivacyPolicy() {
            
        </Box>
        </Box>
-       
+        */}
        </Box>
-        )
+        );
 
 
 }

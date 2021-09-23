@@ -23,7 +23,7 @@ import ProductItem from './ProductItem';
 import Carousel from './Carousel';
 import Helpsupport from './Helpsupport';
 import Terms from './Terms';
-import PrivacyPolicy from './PrivacyPolicy';
+import Privacypolicy from './PrivacyPolicy';
 import Chevrolet from './Brandscreens/Cheverolet';
 
 
@@ -57,7 +57,7 @@ export default function Body(props) {
                     <Route path="/chatbot" component={Chatbot} />
                     <Route path="/vehicle/chevrolet" component={Chevrolet} />   
                     <Route  to="/termsofuse" component={Terms}   />
-                    <Route path="/privacypolicy" component={PrivacyPolicy}   />               
+                    <Route path="/privacypolicy" component={Privacypolicy}   />               
                     {/* <Route exact path="/result" component={Results}/>
                     <Route exact path="/login" component={Home}/> */}
                 
