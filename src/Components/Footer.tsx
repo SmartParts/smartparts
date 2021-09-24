@@ -113,7 +113,7 @@ const useStyles = makeStyles((theme)=>({
       '@global': {
       'MuiCardActions-spacing > :not(:first-child)': {
         marginLeft: "32px !important",
-    },
+    }},
       footercontent:{
         fontSize: '1.1rem',
         fontFamily: 'nano-sans',
