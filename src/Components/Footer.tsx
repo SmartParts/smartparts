@@ -110,7 +110,7 @@ const useStyles = makeStyles((theme)=>({
         width: "15%",
 
       },
-      'MuiCardActions-spacing > :not(:first-child)' {
+      'MuiCardActions-spacing > :not(:first-child)': {
         marginLeft: "32px",
     },
       footercontent:{
