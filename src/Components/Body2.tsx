@@ -42,7 +42,7 @@ export default function Body(props) {
         //     <Grid item lg={12} className={classes.item2} container>
                  <Switch>
                       
-                    <Route exact path="/" component={Home} render={location.hash ? RemoveHashFromUrl() : <Home />} />  
+                    <Route exact path="/"  >{location.hash ? RemoveHashFromUrl() : <Home />}</Route>  
                     {/* <Route path="/navbar" component={Navbar} />
                     render={({ location }) => <Redirect to={location.hash.replace('#', '')} />}
                     */}
