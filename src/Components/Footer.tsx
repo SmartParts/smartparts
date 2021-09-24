@@ -108,10 +108,11 @@ const useStyles = makeStyles((theme)=>({
     downloadimages: {
         height: 140,
         width: "15%",
-        marginLeft: "32px",
+        
       },
+      '@global': {
       'MuiCardActions-spacing > :not(:first-child)': {
-        marginLeft: "32px",
+        marginLeft: "32px !important",
     },
       footercontent:{
         fontSize: '1.1rem',
@@ -253,8 +254,8 @@ export default function Footer(){
                 And get the full smart parts experience in one go
             </Typography>
         </Typography>
-        <img src={appstore} className={classes.downloadimages} alt="Appstore" />
-        {/* <CardMedia className={classes.downloadimages} image={appstore}/>  */}
+        
+         <CardMedia className={classes.downloadimages} image={appstore}/>  
         <CardMedia className={classes.downloadimages} image={googleplay}/>
       
         </CardActions>
