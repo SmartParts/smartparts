@@ -2,8 +2,8 @@ import React from 'react';
 // import {Grid,Button} from "@material-ui/core";
 // import {makeStyles} from "@material-ui/core/styles";
 // import Sidebar from './Sidebar';
-import { Route, Switch, Redirect} from 'react-router-dom';
-
+import { Route, Switch} from 'react-router-dom';
+import {useLocation} from 'react-router-dom';
 
 // import { createBrowserHistory } from 'history';
 // import { browserHistory} from {createBrowserHistory};
@@ -31,15 +31,21 @@ import Chevrolet from './Brandscreens/Cheverolet';
 import Chatbot from './chatbot';
 
 export default function Body(props) {
-    
+    const location = useLocation();
+    const RemoveHashFromUrl = () => {
+        const url = window.location.href.replace('/#', '');
+        window.location.href = url;
+    };
     return (
         // <Grid container className={classes.root}> 
         //     {/* <Grid item xs={3} className={classes.item1} container><Sidebar/></Grid> */}
         //     <Grid item lg={12} className={classes.item2} container>
                  <Switch>
                       
-                    <Route exact path="/" component={Home} render={({ location }) => <Redirect to={location.hash.replace('#', '')} />}/>
-                    {/* <Route path="/navbar" component={Navbar} />  */}
+                    <Route exact path="/" component={Home} render={location.hash ? RemoveHashFromUrl() : <Home />} />  
+                    {/* <Route path="/navbar" component={Navbar} />
+                    render={({ location }) => <Redirect to={location.hash.replace('#', '')} />}
+                    */}
                     <Route path="/footer" component={Footer} />
                     <Route path="/login" render={()=><Login {...props}/>}/>
                     <Route path="/registration" component={Registration} />
