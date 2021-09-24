@@ -108,10 +108,9 @@ const useStyles = makeStyles((theme)=>({
     downloadimages: {
         height: 140,
         width: "15%",
-        marginLeft: "32px !important",
+        
       },
-      
-
+   
       footercontent:{
         fontSize: '1.1rem',
         fontFamily: 'nano-sans',
@@ -252,7 +251,7 @@ export default function Footer(){
                 And get the full smart parts experience in one go
             </Typography>
         </Typography>
-        
+        {/* <img src={appstore} className={classes.downloadimages} /> */}
          <CardMedia className={classes.downloadimages} image={appstore}/>  
         <CardMedia className={classes.downloadimages} image={googleplay}/>
       
