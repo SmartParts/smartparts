@@ -108,11 +108,11 @@ const useStyles = makeStyles((theme)=>({
     downloadimages: {
         height: 140,
         width: "15%",
-
+        'MuiCardActions-spacing > :not(:first-child)': {
+            marginLeft: "32px",
+        },
       },
-      'MuiCardActions-spacing > :not(:first-child)': {
-        marginLeft: "32px",
-    },
+
       footercontent:{
         fontSize: '1.1rem',
         fontFamily: 'nano-sans',
