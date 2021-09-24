@@ -3,7 +3,7 @@ import React from 'react';
 // import {makeStyles} from "@material-ui/core/styles";
 // import Sidebar from './Sidebar';
 import { Route, Switch} from 'react-router-dom';
-// import {useLocation} from 'react-router-dom';
+ import {useLocation} from 'react-router-dom';
 
 // import { createBrowserHistory } from 'history';
 // import { browserHistory} from {createBrowserHistory};
@@ -31,7 +31,7 @@ import Chevrolet from './Brandscreens/Cheverolet';
 import Chatbot from './chatbot';
 
 export default function Body(props) {
-    // const location = useLocation();
+     const location = useLocation();
     const RemoveHashFromUrl = () => {
         const url = window.location.href.replace('/#', '');
         window.location.href = url;
@@ -42,7 +42,7 @@ export default function Body(props) {
         //     <Grid item lg={12} className={classes.item2} container>
                  <Switch>
                       
-                    <Route exact path="/"  >{location.hash ? RemoveHashFromUrl() : <Home />}</Route>  
+                    <Route exact path="/"  >{location.hash.includes('response') ? RemoveHashFromUrl() : <Home />}</Route>  
                     {/* <Route path="/navbar" component={Navbar} />
                     render={({ location }) => <Redirect to={location.hash.replace('#', '')} />}
                     */}
