@@ -1,6 +1,6 @@
 import {useState} from 'react'; 
 import Navbar from './Components/Navbar';
-import {HashRouter} from 'react-router-dom';
+import {BrowserRouter} from 'react-router-dom';
 // import Home from './Components/Home';
 // import Others from './Components/Others';
 import Body2 from './Components/Body2';
