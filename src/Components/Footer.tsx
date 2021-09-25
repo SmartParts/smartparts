@@ -251,7 +251,7 @@ export default function Footer(){
                 And get the full smart parts experience in one go
             </Typography>
         </Typography>
-        {/* <img src={appstore} className={classes.downloadimages} /> */}
+        {/*add grid <img src={appstore} className={classes.downloadimages} /> */}
          <CardMedia className={classes.downloadimages} image={appstore}/>  
         <CardMedia className={classes.downloadimages} image={googleplay}/>
       

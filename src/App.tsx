@@ -42,12 +42,12 @@ const classes= useStyles();
       <CssBaseline/>
       <Grid className={classes.root}>
       <Paper square className={classes.paper} >
-      <HashRouter>      
+      <BrowserRouter>      
   
         <Navbar isLogin={isLogin} setIsLogin ={setIsLogin} onThemeChangeHandler={onThemeChangeHandler}/> 
          {/* not required in myprofile */}
         <Body2 setIsLogin ={setIsLogin} />
-      </HashRouter>
+      </BrowserRouter>
       </Paper>
       </Grid>
       </ThemeProvider>
