@@ -87,10 +87,12 @@ const res = await fetch("https://smart-parts.herokuapp.com/products/vehicle/chev
   
    },
   
-   
+
 
   })
   console.log(res);
+  const data = await res.json();
+  console.log(data);
 }
 export default function Chevrolet() {
     

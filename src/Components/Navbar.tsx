@@ -307,7 +307,7 @@ setDarkTheme(!darktheme);
 
     // get request
   
-    const res = await fetch("/logout", {  //https://smart-parts.herokuapp.com/logout
+    const res = await fetch("https://smart-parts.herokuapp.com/logout", {  //https://smart-parts.herokuapp.com/logout
       method: "GET",
      headers: {
       "Content-Type": "application/json",
