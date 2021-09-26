@@ -1,4 +1,5 @@
 import React from 'react';
+import { useEffect} from 'react';
 import {Box,Typography,Grid, Button} from "@material-ui/core";
 import CardActions from "@material-ui/core/CardActions";
 import Card from "@material-ui/core/Card";
@@ -18,6 +19,7 @@ import InputBase from '@material-ui/core/InputBase';
 // import InputLabel from '@material-ui/core/InputLabel';
 import productbanner from '../../image/brands_banner/chevrolet.jpg';
 import Pagination from '@material-ui/lab/Pagination';
+import SingleProduct from './SingleProduct';
 const BootstrapInput = withStyles((theme) => ({
     root: {
       'label + &': {
@@ -77,26 +79,28 @@ icon: {
   },
 }));
 
-const addToCart = async(e) => {            //useEffect
 
-const res = await fetch("https://smart-parts.herokuapp.com/products/vehicle/chevrolet", {  //https://smart-parts.herokuapp.com/logout     //proxy:  { "/products/vehicle/**": { "target": "https://smart-parts.herokuapp.com", "secure": false }  },
 
-    method: "GET",
-   headers: {
-    "Content-Type": "application/json",
+// const addToCart = async(e) => {            //useEffect
+
+// const res = await fetch("https://smart-parts.herokuapp.com/products/vehicle/chevrolet", {  //https://smart-parts.herokuapp.com/logout     //proxy:  { "/products/vehicle/**": { "target": "https://smart-parts.herokuapp.com", "secure": false }  },
+
+//     method: "GET",
+//    headers: {
+//     "Content-Type": "application/json",
   
-   },
+//    },
   
 
 
-  })
-  console.log(res);
-  const data = await res.json();
-  console.log(data);
-}
+//   })
+//   console.log(res);
+//   const data = await res.json();
+//   console.log(data);
+// }
 export default function Chevrolet() {
     
-
+const [products, setProducts] = React.useState(null);
     const [age, setAge] = React.useState('');
     const vehicleSelect = (event) => {
       setAge(event.target.value);
@@ -115,7 +119,17 @@ export default function Chevrolet() {
     // console.log(res);
     // }
     const classes = useStyles();
-return(
+    useEffect(() => {
+
+        fetch('https://smart-parts.herokuapp.com/products/vehicle/chevrolet')
+        .then(res =>{
+            return res.json();
+        })
+        .then(data =>   {
+            setProducts(data);
+        });
+    },[]);
+    return(
     <Grid container >
         <Grid container item xs={3} style={{marginTop: "60px", maxWidth: "18%", display: "block",  backgroundColor: "#141A26",height: "690px", color: "white"}}>
         <Box style={{ marginLeft: "5px", marginTop: "25px"}}>
@@ -232,29 +246,10 @@ return(
           <img src={productbanner} width="100%" height="100%" alt="product" />
           </Box>
          </Grid>
-            <Grid item xs={3} style={{marginLeft: "20px"}}>
-            <Card style={{margin: "10px 10px", width: "220px"}}>
-                    <CardActions style={{display: "block"}}>
-                     
-                    
-                        <CardMedia  className={classes.productimage}  image={suzukipartone} title="Product image" > 
-                        {/* <DeleteIcon className={classes.icon} /> */}
-                        <FavoriteBorder style={{marginLeft: 170,  marginTop: 10, position: 'absolute'}}></FavoriteBorder>
-                        </CardMedia>
-                        <CardContent>
-                            <Box >
-                            <Typography>Air Filter</Typography>
-                            <Box style={{display: "flex", flexDirection: "row"}}>
-                            <Typography>Product description</Typography>
-                             <Button onClick={addToCart} style={{backgroundColor: "black", color: "white",  marginLeft: '40px'}}>Add to Cart</Button> 
-                            </Box>
-                            </Box>
-                        </CardContent>
-                     
-                    </CardActions>
-                    
-                </Card>
-            </Grid>
+            {/*  */}
+            <Box>
+                {products && <SingleProduct products={products} />}
+            </Box>
 
                   
        </Grid>
