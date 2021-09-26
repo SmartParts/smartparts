@@ -100,7 +100,7 @@ icon: {
 // }
 export default function Chevrolet() {
     
-const [products, setProducts] = React.useState([]);
+const [products, setProducts] = React.useState(null);
     const [age, setAge] = React.useState('');
     const vehicleSelect = (event) => {
       setAge(event.target.value);
@@ -131,6 +131,7 @@ const [products, setProducts] = React.useState([]);
         });
     },[]);
     console.log(products);
+    console.log(res);
     return(
     <Grid container >
         <Grid container item xs={3} style={{marginTop: "60px", maxWidth: "18%", display: "block",  backgroundColor: "#141A26",height: "690px", color: "white"}}>
