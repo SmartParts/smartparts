@@ -1,12 +1,12 @@
 import React from 'react';
 import { useEffect} from 'react';
-import {Box,Typography,Grid, Button} from "@material-ui/core";
-import CardActions from "@material-ui/core/CardActions";
-import Card from "@material-ui/core/Card";
-import { CardMedia, CardContent } from '@material-ui/core';
+import {Box,Typography,Grid} from "@material-ui/core";
+// import CardActions from "@material-ui/core/CardActions";
+// import Card from "@material-ui/core/Card";
+// import { CardMedia, CardContent } from '@material-ui/core';
 import { makeStyles , withStyles} from '@material-ui/core/styles';
-import { FavoriteBorder } from '@material-ui/icons';
-import suzukipartone from '../../image/brands/Air Filter.jpg';
+// import { FavoriteBorder } from '@material-ui/icons';
+// import suzukipartone from '../../image/brands/Air Filter.jpg';
 // import suzukiparttwo from '../image/brands/CLUTCH SETDISC & COVER.jpg';
 // import suzukipartthree from '../image/brands/STRUT ASSY FRT SUSPENSION RH.jpg';
 // import suzukipartfour from '../image/home/SUZUKI AIR FILTER.jpg';
