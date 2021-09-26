@@ -100,7 +100,7 @@ icon: {
 // }
 export default function Chevrolet() {
     
-const [products, setProducts] = React.useState(null);
+const [products, setProducts] = React.useState([]);
     const [age, setAge] = React.useState('');
     const vehicleSelect = (event) => {
       setAge(event.target.value);
