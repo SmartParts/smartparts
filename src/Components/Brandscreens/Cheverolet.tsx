@@ -127,9 +127,10 @@ const [products, setProducts] = React.useState(null);
         })
         .then(data => {
             setProducts(data);
-            console.log(products);
+            
         });
     },[]);
+    console.log(products);
     return(
     <Grid container >
         <Grid container item xs={3} style={{marginTop: "60px", maxWidth: "18%", display: "block",  backgroundColor: "#141A26",height: "690px", color: "white"}}>
@@ -250,7 +251,7 @@ const [products, setProducts] = React.useState(null);
             {/*  */}
             <Grid item xs={3} style={{marginLeft: "20px"}}>
             <Box>
-                { <SingleProduct products={products} />}
+                <SingleProduct products={products} />
             </Box>
 
                   </Grid>
