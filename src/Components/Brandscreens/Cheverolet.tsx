@@ -250,9 +250,9 @@ const [products, setProducts] = React.useState(null);
          </Grid>
             {/*  */}
             <Grid item xs={3} style={{marginLeft: "20px"}}>
-            <Box>
-                <SingleProduct products={products} />
-            </Box>
+            
+            {products &&  <SingleProduct products={products} />}
+            
 
                   </Grid>
        </Grid>
