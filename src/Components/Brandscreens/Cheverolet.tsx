@@ -247,11 +247,12 @@ const [products, setProducts] = React.useState(null);
           </Box>
          </Grid>
             {/*  */}
+            <Grid item xs={3} style={{marginLeft: "20px"}}>
             <Box>
                 {products && <SingleProduct products={products} />}
             </Box>
 
-                  
+                  </Grid>
        </Grid>
        <Box className={classes.page}>
        <Pagination count={10} variant="outlined" shape="rounded" />
