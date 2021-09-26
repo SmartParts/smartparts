@@ -125,8 +125,9 @@ const [products, setProducts] = React.useState(null);
         .then(res =>{
             return res.json();
         })
-        .then(data =>   {
+        .then(data => {
             setProducts(data);
+            console.log(products);
         });
     },[]);
     return(
@@ -249,7 +250,7 @@ const [products, setProducts] = React.useState(null);
             {/*  */}
             <Grid item xs={3} style={{marginLeft: "20px"}}>
             <Box>
-                {products && <SingleProduct products={products} />}
+                { <SingleProduct products={products} />}
             </Box>
 
                   </Grid>
