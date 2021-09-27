@@ -19,7 +19,7 @@ import InputBase from '@material-ui/core/InputBase';
 // import InputLabel from '@material-ui/core/InputLabel';
 import productbanner from '../../image/brands_banner/chevrolet.jpg';
 import Pagination from '@material-ui/lab/Pagination';
-import SingleProduct from './SingleProduct';
+// import SingleProduct from './SingleProduct';
 const BootstrapInput = withStyles((theme) => ({
     root: {
       'label + &': {
@@ -258,7 +258,7 @@ const [products, setProducts] = React.useState(null);
             {/*  */}
             <Grid item xs={3} style={{marginLeft: "20px"}}>
             
-            {products &&  <SingleProduct products={products} />}
+            {/* {products &&  <SingleProduct products={products} />} */}
             
 
                   </Grid>
