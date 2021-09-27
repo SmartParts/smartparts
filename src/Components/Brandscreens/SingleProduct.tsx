@@ -8,8 +8,8 @@ export default function SingleProduct({products}) {
         <Box style={{marginTop: "120px"}}>
 {products.map(function(product,index){
     return  (     <Box key={index}>
-        <Typography>{product.Description}</Typography>
-        <Typography>{product.Partno}</Typography>
+        <Typography>{product[index].Description}</Typography>
+        <Typography>{product[index].Partno}</Typography>
     </Box>
 );
 })
