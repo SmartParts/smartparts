@@ -142,7 +142,7 @@ export default function Chevrolet() {
 
         .then(data => {
             console.log(data);
-            setProducts(data => [ ...data, products]);
+            setProducts(products => [...products, data]);
             
         
         });
