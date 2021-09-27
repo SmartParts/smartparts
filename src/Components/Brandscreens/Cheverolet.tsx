@@ -100,7 +100,7 @@ icon: {
 // }
 export default function Chevrolet() {
     
- const [products, setProducts] = React.useState([]);
+ const [products, setProducts] = React.useState([{}]);
     const [age, setAge] = React.useState('');
     const vehicleSelect = (event) => {
       setAge(event.target.value);
@@ -118,6 +118,11 @@ export default function Chevrolet() {
     //   })
     // console.log(res);
     // }
+    // : data.map(product => ({
+    //     Sno: product.Sno,
+    //     Partno: product.Partno,
+    //     Description: product.Description,})
+    //     )
     const classes = useStyles();
 
     useEffect(() => {
@@ -137,18 +142,15 @@ export default function Chevrolet() {
 
         .then(data => {
             console.log(data);
-            setProducts({products: data.map(item => ({
-                Sno: item.S.No.,
-                partno: item.PartNo.,
-                Description: item.Description,})
-                )
-            })            
+            setProducts(data => [ ...data, products]);
+            
+        
         });
 
     },[]);
     
 
-     console.log(products);
+
  
     return(
     <Grid container >
@@ -271,7 +273,7 @@ export default function Chevrolet() {
             <Grid item xs={3} style={{marginLeft: "20px"}}>
              {products.map((product, index) => {
                  return(
-        <Typography variant="body1" key={index}>{product.Description}</Typography>
+        <Typography variant="body1" key={index}>{product[index].Description}</Typography>
               ) })} 
 
             {/* {Object.keys(products).map((key) => {
