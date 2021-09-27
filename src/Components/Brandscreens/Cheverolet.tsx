@@ -100,7 +100,7 @@ icon: {
 // }
 export default function Chevrolet() {
     
- const [products, setProducts] = React.useState(null);
+ const [products, setProducts] = React.useState([]);
     const [age, setAge] = React.useState('');
     const vehicleSelect = (event) => {
       setAge(event.target.value);
@@ -122,7 +122,13 @@ export default function Chevrolet() {
 
     useEffect(() => {
 
-        fetch('https://smart-parts.herokuapp.com/products/vehicle/chevrolet')
+        fetch('https://smart-parts.herokuapp.com/products/vehicle/chevrolet', {
+        method: "GET",
+        headers: {
+            "Content-Type": "application/json",
+        },
+   
+      })
         .then(res =>{
             console.log(res);
             return res.json();
@@ -135,9 +141,10 @@ export default function Chevrolet() {
             
         });
     },[]);
+    
 
      console.log(products);
-
+ 
     return(
     <Grid container >
         <Grid container item xs={3} style={{marginTop: "60px", maxWidth: "18%", display: "block",  backgroundColor: "#141A26",height: "690px", color: "white"}}>
@@ -257,7 +264,22 @@ export default function Chevrolet() {
          </Grid>
             {/*  */}
             <Grid item xs={3} style={{marginLeft: "20px"}}>
-            
+            {/* {products.map((product, index) => (
+        <Typography variant="body1" key={index}>{product.description}</Typography>
+      ))} */}
+
+            {Object.keys(products).map((key) => {
+                    return (
+                    <div key={key}>
+                        <h1>{key}</h1>
+                        {products[key].map((dataItem, index) => {
+                            return (
+                            <span key={index}>{dataItem.Description}</span>
+                            )
+                        })}
+                    </div>
+                    )
+                })}
             {/* {products &&  <SingleProduct products={products} />} */}
             
 
