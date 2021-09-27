@@ -262,28 +262,31 @@ export default function Chevrolet() {
           <img src={productbanner} width="100%" height="100%" alt="product" />
           </Box>
          </Grid>
-            {/*  */}
-            <Grid item xs={3} style={{marginLeft: "20px"}}>
-             {/* {products.map((product, index) => (
-        <Typography variant="body1" key={index}>{product.description}</Typography>
-      ))}  */}
-
+{/*             
+                          {products.map((product, index) => {
+                 return(
+        <Typography variant="body1" key={product.Description} className="product">{product.Description}</Typography>
+              ) })}   */}
+            <Box>
             {Object.keys(products).map((key) => {
-                    
+                    return (
                     <div key={key}>
                         <h1>{key}</h1>
                         {products[key].map((dataItem, index) => {
-                      
-                            <Typography variant="body1" key={index}>{dataItem.Description}</Typography>
-                      
+                            return (
+                                <Grid item xs={3} style={{marginLeft: "20px"}}>
+
+                                <Typography variant="body1" key={index}>{dataItem.Description}</Typography>
+                                </Grid>
+                            )
                         })}
                     </div>
-                    
+                    )
                 })}
             {/* {products &&  <SingleProduct products={products} />} */}
             
 
-                  </Grid>
+        </Box>
        </Grid>
        <Box className={classes.page}>
        <Pagination count={10} variant="outlined" shape="rounded" />
