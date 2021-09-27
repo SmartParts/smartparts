@@ -149,7 +149,7 @@ export default function Chevrolet() {
 
     },[]);
     
-
+    console.log(products);
 
  
     return(
@@ -271,7 +271,7 @@ export default function Chevrolet() {
          </Grid>
             {/*  */}
             <Grid item xs={3} style={{marginLeft: "20px"}}>
-             {products.map((product, index) => {
+             {products && products.map((product, index) => {
                  return(
         <Typography variant="body1" key={index}>{product[index].Description}</Typography>
               ) })} 
