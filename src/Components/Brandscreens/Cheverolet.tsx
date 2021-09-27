@@ -137,9 +137,14 @@ export default function Chevrolet() {
 
         .then(data => {
             console.log(data);
-            setProducts(data);
-            
+            setProducts({products: data.map(item => ({
+                Sno: item.S.No.,
+                partno: item.PartNo.,
+                Description: item.Description,})
+                )
+            })            
         });
+
     },[]);
     
 
@@ -262,31 +267,29 @@ export default function Chevrolet() {
           <img src={productbanner} width="100%" height="100%" alt="product" />
           </Box>
          </Grid>
-{/*             
-                          {products.map((product, index) => {
+            {/*  */}
+            <Grid item xs={3} style={{marginLeft: "20px"}}>
+             {products.map((product, index) => {
                  return(
-        <Typography variant="body1" key={product.Description} className="product">{product.Description}</Typography>
-              ) })}   */}
-            <Box>
-            {Object.keys(products).map((key) => {
+        <Typography variant="body1" key={index}>{product.Description}</Typography>
+              ) })} 
+
+            {/* {Object.keys(products).map((key) => {
                     return (
                     <div key={key}>
                         <h1>{key}</h1>
                         {products[key].map((dataItem, index) => {
                             return (
-                                <Grid item xs={3} style={{marginLeft: "20px"}}>
-
-                                <Typography variant="body1" key={index}>{dataItem.Description}</Typography>
-                                </Grid>
+                            <span key={index}>{dataItem.Description}</span>
                             )
                         })}
                     </div>
                     )
-                })}
+                })} */}
             {/* {products &&  <SingleProduct products={products} />} */}
             
 
-        </Box>
+                  </Grid>
        </Grid>
        <Box className={classes.page}>
        <Pagination count={10} variant="outlined" shape="rounded" />
