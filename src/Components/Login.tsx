@@ -167,11 +167,11 @@ export default function Login(props){
  //     if (res.email == loginuser.email)
  const facebooklogin = () => {
   
-  window.location.assign('https://www.facebook.com/');
+  // window.location.assign('https://www.facebook.com/');
 }
 const googlelogin = async(e) => {
   // window.location.assign('https://www.google.com/account/about/');
-  const res = await fetch("/google", {   //https://smart-parts.herokuapp.com/login
+  const res = await fetch("https://smart-parts.herokuapp.com/google", {   //https://smart-parts.herokuapp.com/login
     method: "GET",
    headers: {
      
