@@ -270,12 +270,15 @@ export default function Chevrolet() {
           </Box>
          </Grid>
             {/*  */}
-            <Grid item xs={3} style={{marginLeft: "20px"}}>
+          
+             <Box>
              {products && products.map((product, index) => {
                  return(
-        <Typography variant="body1" key={index}>{product[index].Description}</Typography>
+                    <Grid item xs={3} style={{marginLeft: "20px"}}>
+                    <Typography variant="body1" key={index}>{product[index].Description}</Typography>
+              </Grid>
               ) })} 
-
+            </Box>
             {/* {Object.keys(products).map((key) => {
                     return (
                     <div key={key}>
@@ -291,7 +294,7 @@ export default function Chevrolet() {
             {/* {products &&  <SingleProduct products={products} />} */}
             
 
-                  </Grid>
+                  
        </Grid>
        <Box className={classes.page}>
        <Pagination count={10} variant="outlined" shape="rounded" />
