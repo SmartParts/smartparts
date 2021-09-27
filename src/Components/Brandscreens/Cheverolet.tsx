@@ -264,21 +264,21 @@ export default function Chevrolet() {
          </Grid>
             {/*  */}
             <Grid item xs={3} style={{marginLeft: "20px"}}>
-            {/* {products.map((product, index) => (
+             {/* {products.map((product, index) => (
         <Typography variant="body1" key={index}>{product.description}</Typography>
-      ))} */}
+      ))}  */}
 
             {Object.keys(products).map((key) => {
-                    return (
+                    
                     <div key={key}>
                         <h1>{key}</h1>
                         {products[key].map((dataItem, index) => {
-                            return (
-                            <span key={index}>{dataItem.Description}</span>
-                            )
+                      
+                            <Typography variant="body1" key={index}>{dataItem.Description}</Typography>
+                      
                         })}
                     </div>
-                    )
+                    
                 })}
             {/* {products &&  <SingleProduct products={products} />} */}
             
