@@ -2,7 +2,7 @@ import React from 'react';
 // import {Grid,Button} from "@material-ui/core";
 // import {makeStyles} from "@material-ui/core/styles";
 // import Sidebar from './Sidebar';
-import { Link,Route, Switch} from 'react-router-dom';
+import { Route, Switch} from 'react-router-dom';
  import {useLocation} from 'react-router-dom';
 
 // import { createBrowserHistory } from 'history';
@@ -48,7 +48,7 @@ export default function Body(props) {
                     render={({ location }) => <Redirect to={location.hash.replace('#', '')} />}
                     */}
                     <Route path="/footer" component={Footer} />
-                    <Route  render={()=><Login {...props}/>}><Link to="https://smartpartsexports.com/login"></Link></Route>
+                    <Route path="/login" render={()=><Login {...props}/>}/>
                     <Route path="/registration" component={Registration} />
                     <Route path="/shoppingcart" component={ShoppingCart} />
                     <Route path="/wishlist" component={WishList} />
