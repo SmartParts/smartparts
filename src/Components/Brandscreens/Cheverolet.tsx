@@ -142,8 +142,7 @@ export default function Chevrolet() {
 
         .then(data => {
             console.log(data);
-            setProducts(products => [...products, data]);
-            
+          setProducts([...data]);  
         
         });
 
@@ -272,12 +271,16 @@ export default function Chevrolet() {
             {/*  */}
           
              <Box>
-             {products && products.map((product, index) => {
+             <Grid item xs={3} style={{marginLeft: "20px"}}>
+             {products.length!==1 && products.map((product, index) => {
                  return(
-                    <Grid item xs={3} style={{marginLeft: "20px"}}>
-                    <Typography variant="body1" key={index}>{product[index].Description}</Typography>
-              </Grid>
+                   <Box> 
+                    {console.log(index,product)}
+                    <Typography variant="body1" key={index}>{(product as any).Description}</Typography>
+                    
+              </Box>
               ) })} 
+            </Grid>
             </Box>
             {/* {Object.keys(products).map((key) => {
                     return (

@@ -2,7 +2,7 @@ import React from 'react';
 // import {Grid,Button} from "@material-ui/core";
 // import {makeStyles} from "@material-ui/core/styles";
 // import Sidebar from './Sidebar';
-import { Route, Switch} from 'react-router-dom';
+import { Link,Route, Switch} from 'react-router-dom';
  import {useLocation} from 'react-router-dom';
 
 // import { createBrowserHistory } from 'history';
@@ -40,6 +40,7 @@ export default function Body(props) {
         // <Grid container className={classes.root}> 
         //     {/* <Grid item xs={3} className={classes.item1} container><Sidebar/></Grid> */}
         //     <Grid item lg={12} className={classes.item2} container>
+                 
                  <Switch>
                       
                     <Route exact path="/"  >{location.hash ? RemoveHashFromUrl() : <Home />}</Route>  
@@ -47,7 +48,7 @@ export default function Body(props) {
                     render={({ location }) => <Redirect to={location.hash.replace('#', '')} />}
                     */}
                     <Route path="/footer" component={Footer} />
-                    <Route path="/login" render={()=><Login {...props}/>}/>
+                    <Route  render={()=><Login {...props}/>}><Link to="https://smartpartsexports.com/login"></Link></Route>
                     <Route path="/registration" component={Registration} />
                     <Route path="/shoppingcart" component={ShoppingCart} />
                     <Route path="/wishlist" component={WishList} />
@@ -68,6 +69,7 @@ export default function Body(props) {
                     <Route exact path="/login" component={Home}/> */}
                 
                 </Switch>   
+
         //     </Grid>
         // </Grid>
     )
